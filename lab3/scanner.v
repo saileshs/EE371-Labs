@@ -1,6 +1,6 @@
 `include "buffer.v"
 
-module scanner (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
+module scanner (state, data_count, flush_buffer, start_second_buffer, ready_to_transfer, start_scan, transfer, go_to_standby, clk, rst);
 	output reg [2:0] state;
 	output wire [6:0] data_count;
 	output reg flush_buffer, start_second_buffer, ready_to_transfer;
