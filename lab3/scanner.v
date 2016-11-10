@@ -1,28 +1,19 @@
-module scanner (scan, transfer, goToStandby, clk, rst);
-	input scan, transfer, goToStandby, clk, rst;
+`include "buffer.v"
+
+module scanner (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
 	output reg [2:0] state;
+	output wire [6:0] data_count;
+	output reg flush_buffer, start_second_buffer, ready_to_transfer;
+	input start_scan, transfer, go_to_standby, clk, rst;
+
 	reg [2:0] next;
-	reg [24:0] tBase = 25'b0;
-	reg [6:0] current_count = 7'b0;
-	reg counter_reset, count_enable;
+
+	buffer buff (data_count, start_scan, flush_buffer, transfer, clk, rst);
 
 	parameter lowPower = 3'b000, active = 3'b001, standby = 3'b010, idle = 3'b011, flush = 3'b100;
 
-	always@(posedge clk)
-		tBase <= tBase + 1'b1;
-	
-	always@(posedge tBase[1])begin
-		if(!counter_reset)
-			current_count <= 7'b0;
-		else if (count_enable)
-			current_count <= current_count + 1'b1;
-	end
-
 	always @(posedge clk or negedge rst) begin
 		if (~rst) begin
-			counter_reset <= 1'b0;
-			current_count <= 7'b0;
-			count_enable <= 1'b0;
 			state <= lowPower;
 		end else begin
 			state <= next;
@@ -31,18 +22,27 @@ module scanner (scan, transfer, goToStandby, clk, rst);
 
 	always @(posedge clk) begin
 		case (state)
-			lowPower: 	begin if (scan) next <= active;
-							else if (goToStandby) next <= standby;
+			lowPower: 	begin if (start_scan) next <= active;
+							else if (go_to_standby) next <= standby;
 							else next <= lowPower;
 						end
-			active:		begin if (transfer) next <= lowPower;
-							else if (~transfer) next <= idle;
+			active:		begin
+							if (data_count >= 7'd80) ready_to_transfer <= 1'b1;
+							if (data_count >= 7'd90) start_second_buffer <= 1'b1;
+							if (transfer && data_count >= 7'd100) next <= lowPower;
+							else if (~transfer && data_count >= 7'd100) next <= idle;
 							else next <= active;
-
-
+						end
+			standby: 	begin if (start_scan) next <= active;
+							else next <= standby;
+						end
+			idle: 		begin if (transfer) next <= lowPower;
+							else next <= flush;
+						end
+			flush: 		begin
+							flush_buffer <= 1'b1;
+							next <= lowPower;
+						end
 		endcase
 	end
-
-
-
 endmodule
