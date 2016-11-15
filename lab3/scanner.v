@@ -1,12 +1,13 @@
 `include "buffer.v"
 
-module scanner (state, data_count, flush_buffer, ready_second_buffer, start_second_buffer, ready_to_transfer, start_scan, transfer, go_to_standby, clk, rst);
+module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
 	output reg [2:0] state;
 	output wire [7:0] data_count;
-	output reg flush_buffer, ready_second_buffer, start_second_buffer, ready_to_transfer;
-	input start_scan, transfer, go_to_standby, clk, rst;
+	output reg ready_second_buffer, start_second_buffer, ready_to_transfer;
+	input start_scan, transfer, go_to_standby, flush_signal, clk, rst;
 
 	reg [2:0] next;
+	reg flush_buffer;
 
 	buffer buff (data_count, start_scan, flush_buffer, transfer, clk, rst);
 
@@ -44,8 +45,11 @@ module scanner (state, data_count, flush_buffer, ready_second_buffer, start_seco
 			standby: 	begin if (start_scan) next <= active;
 							else next <= standby;
 						end
-			idle: 		begin if (transfer) next <= lowPower;
-							else next <= flush;
+			idle: 		begin 
+							ready_to_transfer <= 1'b1;
+							if (transfer) next <= lowPower;
+							else if (flush_signal) next <= flush;
+							else next <= idle;
 						end
 			flush: 		begin
 							flush_buffer <= 1'b1;
