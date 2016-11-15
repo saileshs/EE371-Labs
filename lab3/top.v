@@ -97,8 +97,10 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 			4'b1001: hex2 = nine;
 			default: hex2 = 7'b1111111;
 		endcase
+
+	end
 	
-end module
+endmodule // top
 
 module BCD(number, hundreds, tens, ones);
    // I/O Signal Definitions

@@ -22,12 +22,13 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 	end
 
 	always @(posedge clk) begin
+		
+		ready_second_buffer <= 1'b0;
+		ready_to_transfer <= 1'b0;
+		start_second_buffer <= 1'b0;
+		flush_buffer <= 1'b0;
+		
 		case (state)
-			ready_second_buffer <= 1'b0;
-			ready_to_transfer <= 1'b0;
-			start_second_buffer <= 1'b0;
-			flush_buffer <= 1'b0;
-
 			lowPower: 	begin if (start_scan) next <= active;
 							else if (go_to_standby) next <= standby;
 							else next <= lowPower;
