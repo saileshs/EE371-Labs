@@ -17,7 +17,7 @@ module buffer(data_count, scanning, flush, transfer, clk ,rst);
 			increase: if(data_count < 7'd100)
 						data_count <= data_count + 1'b1;
 			decrease: if(data_count > 7'd0)
-						data_count <= data_count - 1'b1;
+						data_count <= data_count - 1'b2;
 			dump: data_count <= 7'd0;
 			default: data_count <= data_count;
 		endcase
