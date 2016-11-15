@@ -1,14 +1,34 @@
-module top (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
-	input start_scan, go_to_standby, flush_buffer, start_second_buffer, ready_to_transfer, transfer, clk, rst;
+`include "scanner.v"
+
+module top (start_scan, transfer, clk, rst);
+	input start_scan, go_to_standby, flush_buffer, transfer, clk, rst;
+	wire start_second_buffer, ready_to_transfer, flush_buffer, ready_second_buffer, ready_first_buffer;
+	reg go_to_standby1, go_to_standby2;
 	output reg [6:0] hex0, hex1, hex2;
-	output wire [6:0] data_count;
+	output wire [7:0] data_count;
 	wire data_count;
-	
+	wire [3:0] hundreds, tens, ones;
+
+
 	parameter zero = 7'b1000000, one = 7'b1111001, two = 7'b0100100, three = 7'b0110000, four = 7'b0011001, five = 7'b0010010, 
 		six = 7'b0000010, seven = 7'b1111000, eight = 7'b0000000, nine = 7'b0011000;
 	
-	scanner (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
+	scanner scan (start_scan, data_count, flush_buffer, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, ready_first_buffer, clk, rst);
+	scanner scan2 (start_scan2, data_count2, flush_buffer2, ready_first_buffer, start_first_buffer, ready_to_transfer2, transfer2, ready_second_buffer, clk, rst);
 	
+	BCD hex_display (data_count, hundreds, tens, ones);
+
+
+	/*
+		Buffer 1: 80% THEN ready_to_transfer == 1. go_to_standby == 1. Scanner 2 enters STANDBY state.
+		Buffer 1: 90%, THEN start_second_buffer == 1. Scanner 2 enters ACTIVE state.
+		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 0 THEN Buffer 1 enters IDLE state
+		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: < 50% THEN transfer Buffer 1 data 
+																		and Scanner 1 enters LOW POWER state
+		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: >= 50% THEN flush Buffer 1 data
+
+
+	*/
 	always @(posedge clk) begin
 		case (ones)
 			4'b0000: hex0 = zero;
