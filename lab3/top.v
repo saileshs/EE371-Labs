@@ -3,7 +3,7 @@
 module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_input, clk, rst);
 	input start_scan, transfer_input, clk, rst;
 	wire start_scan1, start_second_buffer, ready_to_transfer, ready_second_buffer; // For scanner 1
-	reg go_to_standby1, go_to_standby2, flush_signal, flush_signal2, transfer, transfer2;
+	reg go_to_standby1 = 1'b0, go_to_standby2 = 1'b0, flush_signal = 1'b0, flush_signal2 = 1'b0, transfer = 1'b0, transfer2 = 1'b0;
 	output reg [6:0] hex0, hex1, hex2;
 	output wire [7:0] data_count, data_count2;
 	wire start_scan2, start_first_buffer, ready_first_buffer, ready_to_transfer2;
