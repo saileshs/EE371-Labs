@@ -1,7 +1,7 @@
 `include "scanner.v"
 
-module top (start_scan, transfer_input, clk, rst);
-	input start_scan, go_to_standby, transfer_input, clk, rst;
+module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_input, clk, rst);
+	input start_scan, transfer_input, clk, rst;
 	wire start_scan1, start_second_buffer, ready_to_transfer, ready_second_buffer; // For scanner 1
 	reg go_to_standby1, go_to_standby2, flush_signal, flush_signal2, transfer, transfer2;
 	output reg [6:0] hex0, hex1, hex2;
