@@ -1,13 +1,12 @@
 module top (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
-	input start_scan, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst;
+	input start_scan, go_to_standby, flush_buffer, start_second_buffer, ready_to_transfer, transfer, clk, rst;
 	output reg [6:0] hex0, hex1, hex2;
 	output wire [6:0] data_count;
-	wire scanning, flush, transfer, start_scan, data_count;
+	wire data_count;
 	
 	parameter zero = 7'b1000000, one = 7'b1111001, two = 7'b0100100, three = 7'b0110000, four = 7'b0011001, five = 7'b0010010, 
 		six = 7'b0000010, seven = 7'b1111000, eight = 7'b0000000, nine = 7'b0011000;
 	
-	buffer(data_count, scanning, flush, transfer, clk ,rst);
 	scanner (start_scan, data_count, flush_buffer, start_second_buffer, ready_to_transfer, transfer, go_to_standby, clk, rst);
 	
 	always @(posedge clk) begin
