@@ -1,9 +1,9 @@
 `include "buffer.v"
 
-module scanner (state, data_count, flush_buffer, start_second_buffer, ready_to_transfer, start_scan, transfer, go_to_standby, clk, rst);
+module scanner (state, data_count, flush_buffer, ready_second_buffer, start_second_buffer, ready_to_transfer, start_scan, transfer, go_to_standby, clk, rst);
 	output reg [2:0] state;
-	output wire [6:0] data_count;
-	output reg flush_buffer, start_second_buffer, ready_to_transfer;
+	output wire [7:0] data_count;
+	output reg flush_buffer, ready_second_buffer, start_second_buffer, ready_to_transfer;
 	input start_scan, transfer, go_to_standby, clk, rst;
 
 	reg [2:0] next;
@@ -22,15 +22,23 @@ module scanner (state, data_count, flush_buffer, start_second_buffer, ready_to_t
 
 	always @(posedge clk) begin
 		case (state)
+			ready_second_buffer <= 1'b0;
+			ready_to_transfer <= 1'b0;
+			start_second_buffer <= 1'b0;
+			flush_buffer <= 1'b0;
+
 			lowPower: 	begin if (start_scan) next <= active;
 							else if (go_to_standby) next <= standby;
 							else next <= lowPower;
 						end
 			active:		begin
-							if (data_count >= 7'd80) ready_to_transfer <= 1'b1;
-							if (data_count >= 7'd90) start_second_buffer <= 1'b1;
-							if (transfer && data_count >= 7'd100) next <= lowPower;
-							else if (~transfer && data_count >= 7'd100) next <= idle;
+							if (data_count >= 8'd80) begin
+								ready_to_transfer <= 1'b1;
+								ready_second_buffer <= 1'b1;
+							end
+							if (data_count >= 8'd90) start_second_buffer <= 1'b1;
+							if (transfer && data_count >= 8'd100) next <= lowPower;
+							else if (~transfer && data_count >= 8'd100) next <= idle;
 							else next <= active;
 						end
 			standby: 	begin if (start_scan) next <= active;
