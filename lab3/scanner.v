@@ -30,7 +30,7 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 		case (state)
 			lowPower: 	 begin
 							ready_to_transfer <= 1'b0;
-							if (start_scan)
+							if (start_scan && transfer == 1'b0)
 								next <= active;
 							else if (go_to_standby) 
 								next <= standby;

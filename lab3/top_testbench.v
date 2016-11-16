@@ -11,13 +11,19 @@ module top_testbench();
 	parameter stimdelay = 5000;
 	
 	initial begin
-		rst = 1'b0;clk = 1;
+		rst = 0;clk = 1; transfer_input = 1;
 		#1;
-		rst = 1'b1;
+		rst = 1;
 		#1;
-		start_scan = 1'b0;
+		start_scan = 0;
 		#4;
-		start_scan = 1'b1;
+		start_scan = 1;
+		#4;
+		start_scan =0;
+		#4
+		transfer_input = 0;
+		
+		
 		#stimdelay;
 		$finish;
 	end

@@ -16,7 +16,7 @@ module buffer(data_count, scanning, flush, transfer, clk ,rst);
 			hold: data_count <= data_count;
 			increase: 	if(data_count < 8'd100)
 							data_count <= data_count + 8'd1;
-			decrease: 	if (data_count == 8'd1) 
+			decrease: 	if (data_count <= 8'd1) 
 							data_count <= 8'd0;
 						else if(data_count > 8'd0)
 							data_count <= data_count - 8'd2;
