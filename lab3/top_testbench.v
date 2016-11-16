@@ -15,11 +15,11 @@ module top_testbench();
 		#1;
 		rst = 1;
 		#1;
-		start_scan = 0;
-		#4;
 		start_scan = 1;
 		#4;
-		start_scan =0;
+		start_scan = 0;
+		#4;
+		start_scan =1;
 		#4
 		transfer_input = 0;
 		

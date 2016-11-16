@@ -45,6 +45,10 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							if (data_count >= 8'd80) begin
 								ready_to_transfer <= 1'b1;
 								ready_second_buffer <= 1'b1;
+								if(transfer) begin
+									transferring <= 1'b1;
+									next <= lowPower;
+								end
 							end
 							if (data_count >= 8'd90) 
 								start_second_buffer <= 1'b1;
@@ -66,10 +70,12 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							ready_second_buffer <= 1'b0;
 							start_second_buffer <= 1'b0;
 							ready_to_transfer <= 1'b1;
-							if (transfer)
+							if (transfer)begin
 								transferring <= 1'b1;
 								next <= lowPower;
-							else if (flush_signal) next <= flush;
+							end
+							else if (flush_signal)
+								next <= flush;
 							else begin
 								transferring <= 1'b0;
 								next <= idle;
