@@ -41,16 +41,16 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 			flush_signal2 <= 1'b0;
 		end
 
-		if (ready_to_transfer && ~transfer_input) transfer <= 1'b1;
+		if (ready_to_transfer && (~transfer_input)) transfer <= 1'b1;
 		else if (data_count == 8'b0) transfer <= 1'b0;
 
-		if (ready_to_transfer2 && ~transfer_input) transfer2 <= 1'b1;
+		if (ready_to_transfer2 && (~transfer_input)) transfer2 <= 1'b1;
 		else if (data_count2 == 8'b0) transfer2 <= 1'b0;
 
-		if (data_count2 >= 8'd50 && data_count == 8'd100) flush_signal <= 1'b1;
+		if ((data_count2 >= 8'd50) && (data_count == 8'd100)) flush_signal <= 1'b1;
 		else flush_signal <= 1'b0;
 
-		if (data_count >= 8'd50 && data_count2 == 8'd100) flush_signal2 <= 1'b1;
+		if ((data_count >= 8'd50) && (data_count2 == 8'd100)) flush_signal2 <= 1'b1;
 		else flush_signal2 <= 1'b0;
 
 	end
