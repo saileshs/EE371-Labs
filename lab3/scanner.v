@@ -5,11 +5,11 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 	output wire [7:0] data_count;
 	output reg ready_second_buffer = 1'b0, start_second_buffer = 1'b0, ready_to_transfer;
 	input start_scan, transfer, go_to_standby, flush_signal, clk, rst;
-	reg scanning;
+	reg scanning, transferring;
 
 	reg [2:0] next;
 	reg flush_buffer = 1'b0;
-	buffer buff (data_count, scanning, flush_buffer, transfer, clk, rst);
+	buffer buff (data_count, scanning, flush_buffer, transferring, clk, rst);
 
 	parameter lowPower = 3'b000, active = 3'b001, standby = 3'b010, idle = 3'b011, flush = 3'b100;
 
@@ -41,6 +41,7 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 						end
 			active:		begin
 							scanning <= 1'b1;
+							transferring <= 1'b0;
 							if (data_count >= 8'd80) begin
 								ready_to_transfer <= 1'b1;
 								ready_second_buffer <= 1'b1;
@@ -52,27 +53,31 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							end else 
 								next <= active;
 						end
-			standby: 	 	begin
+			standby: 	begin
+							transferring <= 1'b0;
 							scanning <= 1'b0;
 							if (start_scan) 
 								next <= active;
 							else 
 								next <= standby;
-							end
+						end
 			idle: 		begin
 							scanning <= 1'b0;
 							ready_second_buffer <= 1'b0;
 							start_second_buffer <= 1'b0;
 							ready_to_transfer <= 1'b1;
 							if (transfer)
+								transferring <= 1'b1;
 								next <= lowPower;
-							else if 
-								(flush_signal) next <= flush;
-							else 
+							else if (flush_signal) next <= flush;
+							else begin
+								transferring <= 1'b0;
 								next <= idle;
+							end
 						end
 			flush: 		begin
 							scanning <= 1'b0;
+							transferring <= 1'b0;
 							flush_buffer <= 1'b1;
 							next <= lowPower;
 						end
