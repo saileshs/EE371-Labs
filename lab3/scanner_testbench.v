@@ -17,12 +17,14 @@ module scanner_testbench();
 		#1;
 		rst = 1'b1;
 		#1;
-		start_scan = 1'b1;
-		#0;
 		start_scan = 1'b0;
+		#1;
+		start_scan = 1'b1;
+		transfer = 1'b0;
 		#4;
+		start_scan = 1'b1;
+		#10;
 		transfer = 1'b1;
-		
 		#stimdelay;
 		$finish;
 	end
