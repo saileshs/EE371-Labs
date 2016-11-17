@@ -2,148 +2,84 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -4.247
-TNS   : -32.088
-
-Type  : Slow 1100mV 85C Model Setup 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -4.123
-TNS   : -31.234
-
-Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -3.891
-TNS   : -250.776
-
-Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -2.581
-TNS   : -92.107
-
-Type  : Slow 1100mV 85C Model Hold 'scanner:scan|buffer:buff|tBase[21]'
-Slack : 0.458
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 10.157
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.477
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.152
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.452
-TNS   : -64.548
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -0.394
-TNS   : -4.788
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -0.394
-TNS   : -4.657
-
-Type  : Slow 1100mV 0C Model Setup 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -4.180
-TNS   : -32.493
-
-Type  : Slow 1100mV 0C Model Setup 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -4.090
-TNS   : -32.080
-
-Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -3.779
-TNS   : -234.984
-
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -2.729
-TNS   : -103.789
-
-Type  : Slow 1100mV 0C Model Hold 'scanner:scan|buffer:buff|tBase[21]'
-Slack : 0.470
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 30.412
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.485
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.884
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.473
-TNS   : -69.299
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -0.394
-TNS   : -4.718
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -0.394
-TNS   : -4.613
-
-Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.216
-TNS   : -134.542
-
-Type  : Fast 1100mV 85C Model Setup 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -2.144
-TNS   : -16.041
-
-Type  : Fast 1100mV 85C Model Setup 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -2.084
-TNS   : -14.884
-
-Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -1.649
-TNS   : -60.173
-
-Type  : Fast 1100mV 85C Model Hold 'scanner:scan|buffer:buff|tBase[21]'
-Slack : 0.169
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.360
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.185
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 10.249
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.495
-TNS   : -11.893
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -0.064
-TNS   : -0.127
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.045
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.139
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.674
-TNS   : -102.896
-
-Type  : Fast 1100mV 0C Model Setup 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : -1.952
-TNS   : -15.287
-
-Type  : Fast 1100mV 0C Model Setup 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -1.865
-TNS   : -14.355
-
-Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -1.690
-TNS   : -66.227
-
-Type  : Fast 1100mV 0C Model Hold 'scanner:scan|buffer:buff|tBase[21]'
-Slack : 0.158
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.564
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.167
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.838
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.499
-TNS   : -11.691
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.387
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'scanner:scan|buffer:buff|tBase[21]'
-Slack : -0.019
-TNS   : -0.037
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.940
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'scanner:scan2|buffer:buff|tBase[21]'
-Slack : 0.068
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.040
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 31.280
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.126
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 13.329
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.027
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 31.494
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.145
 TNS   : 0.000
 
 ------------------------------------------------------------

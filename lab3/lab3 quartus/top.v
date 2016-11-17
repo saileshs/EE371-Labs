@@ -25,16 +25,6 @@ module top (hex0, hex1, hex2, hex3, hex4, hex5, state, state2, ready_to_transfer
 	BCD hex_display2 (data_count2, hundreds2, tens2, ones2);
 
 
-	/*
-		Buffer 1: 80% THEN ready_to_transfer == 1. go_to_standby == 1. Scanner 2 enters STANDBY state. DONE
-		Buffer 1: 90%, THEN start_second_buffer == 1. Scanner 2 enters ACTIVE state. DONE
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 0 THEN Buffer 1 enters IDLE state DONE
-
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: < 50% THEN transfer Buffer 1 data 
-																		and Scanner 1 enters LOW POWER state
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: >= 50% THEN flush Buffer 1 data
-	*/
-
 	always @(posedge clk) begin
 		if (~rst) begin
 			transfer <= 1'b0;

@@ -23,9 +23,6 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 
 	always @(posedge clk) begin
 		
-		//ready_second_buffer <= 1'b0;
-		//ready_to_transfer <= 1'b0;
-		//start_second_buffer <= 1'b0;
 		flush_buffer <= 1'b0;
 		
 		case (state)
@@ -44,7 +41,6 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							end
 			active:		begin
 							scanning <= 1'b1;
-							//transferring <= 1'b0;
 							if(transfer) begin
 								next <= transtage;
 							end else if (data_count == 8'd100) begin
