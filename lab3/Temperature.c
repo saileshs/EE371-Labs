@@ -4,7 +4,7 @@
 
 #define MAX_BUF 64
 
-void main(void)
+int main(void)
 {
 
    float temp_buf;
@@ -12,19 +12,30 @@ void main(void)
    char unit_o[MAX_BUF];
    char unit_d[MAX_BUF];
 
-   printf("Welcome to tempreture converter\n");
+   printf("Welcome to temperature converter\n");
 
    while(1){
-       printf("Please enter the tempreture value\n");
+      int correctInput = 0;
 
-       scanf("%f", &temp_buf);
+      while (!correctInput) {
+       
+        printf("Please enter the temperature value\n");
+
+        scanf("%f", &temp_buf);
 
 
-       printf("Please enter the scale of this tempreture in Celsius, Fahrenheit or Kelvin\n");
-       scanf("%s", unit_o);
+        printf("Please enter the scale of this temperature in Celsius, Fahrenheit or Kelvin\n");
+        scanf("%s", unit_o);
 
+        if ( (unit_o[0] == 'K' || unit_o[0] == 'k') && temp_buf < 0 ) {
+          correctInput = 0;
+          printf("Error! Temperature cannot be below 0 Kelvin. Please try again.\n");
+        } else {
+          correctInput = 1;
+        }
+      }
 
-       printf("Please enter the scale of the tempreture you wish to convert it into\n");
+       printf("Please enter the scale of the temperature you wish to convert it into\n");
        scanf("%s", unit_d);
 
 
@@ -44,7 +55,7 @@ void main(void)
           temp_result = temp_buf + 273.15;
        }
 
-       printf("The resulting tempreture is %.3f %c \n\n", temp_result, unit_d[0]);
+       printf("The resulting temperature is %.3f %c \n\n", temp_result, unit_d[0]);
    }
-   return;
+   return 0;
 }
