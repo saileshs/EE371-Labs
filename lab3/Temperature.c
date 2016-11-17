@@ -1,4 +1,4 @@
-#include <stdio.h>
+d#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -18,7 +18,7 @@ int main(void)
       int correctInput = 0;
 
       while (!correctInput) {
-       
+
         printf("Please enter the temperature value\n");
 
         scanf("%f", &temp_buf);
