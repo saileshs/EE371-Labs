@@ -1,0 +1,14 @@
+
+State Machine - |top|scanner:scan2|buffer:buff|sema
+Name sema.00 sema.increase sema.decrease sema.dump 
+sema.dump 0 0 0 0 
+sema.decrease 0 0 1 1 
+sema.increase 0 1 0 1 
+sema.00 1 0 0 1 
+
+State Machine - |top|scanner:scan|buffer:buff|sema
+Name sema.00 sema.increase sema.decrease sema.dump 
+sema.dump 0 0 0 0 
+sema.decrease 0 0 1 1 
+sema.increase 0 1 0 1 
+sema.00 1 0 0 1 
