@@ -1,15 +1,16 @@
-`include "scanner.v"
+//`include "scanner.v"
 
-module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_input, clk, rst);
+module top (hex0, hex1, hex2, hex3, hex4, hex5, state, state2, ready_to_transfer, ready_to_transfer2, start_scan, transfer_input, clk, rst);
 	input start_scan, transfer_input, clk, rst;
 	wire start_scan1, start_second_buffer, ready_to_transfer, ready_second_buffer; // For scanner 1
-	reg go_to_standby1 = 1'b0, go_to_standby2 = 1'b0, flush_signal = 1'b0, flush_signal2 = 1'b0, transfer = 1'b0, transfer2 = 1'b0;
-	output reg [6:0] hex0, hex1, hex2;
-	output wire [7:0] data_count, data_count2;
+	reg flush_signal = 1'b0, flush_signal2 = 1'b0, transfer = 1'b0, transfer2 = 1'b0;
+	output reg [6:0] hex0, hex1, hex2, hex3, hex4, hex5;
+	wire [7:0] data_count, data_count2;
 	wire start_scan2, start_first_buffer, ready_first_buffer, ready_to_transfer2;
-	wire [3:0] hundreds, tens, ones;
-
-	wire [2:0] state, state2;
+	wire [3:0] hundreds1, tens1, ones1;
+	wire [3:0] hundreds2, tens2, ones2;
+	output [2:0] state, state2;
+	output ready_to_transfer, ready_to_transfer2;
 
 	parameter zero = 7'b1000000, one = 7'b1111001, two = 7'b0100100, three = 7'b0110000, four = 7'b0011001, five = 7'b0010010, 
 		six = 7'b0000010, seven = 7'b1111000, eight = 7'b0000000, nine = 7'b0011000;
@@ -20,18 +21,9 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 	scanner scan (start_scan1, data_count, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, ready_first_buffer, state, clk, rst);
 	scanner scan2 (start_scan2, data_count2, ready_first_buffer, start_first_buffer, ready_to_transfer2, transfer2, flush_signal2, ready_second_buffer, state2, clk, rst);
 	
-	BCD hex_display (data_count, hundreds, tens, ones);
+	BCD hex_display1 (data_count, hundreds1, tens1, ones1);
+	BCD hex_display2 (data_count2, hundreds2, tens2, ones2);
 
-
-	/*
-		Buffer 1: 80% THEN ready_to_transfer == 1. go_to_standby == 1. Scanner 2 enters STANDBY state. DONE
-		Buffer 1: 90%, THEN start_second_buffer == 1. Scanner 2 enters ACTIVE state. DONE
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 0 THEN Buffer 1 enters IDLE state DONE
-
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: < 50% THEN transfer Buffer 1 data 
-																		and Scanner 1 enters LOW POWER state
-		Buffer 1: 100%, ready_to_trasfer == 1, transfer == 1, Buffer 2: >= 50% THEN flush Buffer 1 data
-	*/
 
 	always @(posedge clk) begin
 		if (~rst) begin
@@ -56,7 +48,7 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 	end
 
 	always @(posedge clk) begin
-		case (ones)
+		case (ones1)
 			4'b0000: hex0 = zero;
 			4'b0001: hex0 = one;
 			4'b0010: hex0 = two;
@@ -70,7 +62,7 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 			default: hex0 = 7'b1111111;
 		endcase
 			
-		case (tens)
+		case (tens1)
 			4'b0000: hex1 = zero;
 			4'b0001: hex1 = one;
 			4'b0010: hex1 = two;
@@ -84,7 +76,7 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 			default: hex1 = 7'b1111111;
 		endcase
 		
-		case (hundreds)
+		case (hundreds1)
 			4'b0000: hex2 = zero;
 			4'b0001: hex2 = one;
 			4'b0010: hex2 = two;
@@ -96,6 +88,48 @@ module top (hex0, hex1, hex2, data_count, data_count2, start_scan, transfer_inpu
 			4'b1000: hex2 = eight;
 			4'b1001: hex2 = nine;
 			default: hex2 = 7'b1111111;
+		endcase
+		
+		case (ones2)
+			4'b0000: hex3 = zero;
+			4'b0001: hex3 = one;
+			4'b0010: hex3 = two;
+			4'b0011: hex3 = three;
+			4'b0100: hex3 = four;
+			4'b0101: hex3 = five;
+			4'b0110: hex3 = six;
+			4'b0111: hex3 = seven;
+			4'b1000: hex3 = eight;
+			4'b1001: hex3 = nine;
+			default: hex3 = 7'b1111111;
+		endcase
+			
+		case (tens2)
+			4'b0000: hex4 = zero;
+			4'b0001: hex4 = one;
+			4'b0010: hex4 = two;
+			4'b0011: hex4 = three;
+			4'b0100: hex4 = four;
+			4'b0101: hex4 = five;
+			4'b0110: hex4 = six;
+			4'b0111: hex4 = seven;
+			4'b1000: hex4 = eight;
+			4'b1001: hex4 = nine;
+			default: hex4 = 7'b1111111;
+		endcase
+		
+		case (hundreds2)
+			4'b0000: hex5 = zero;
+			4'b0001: hex5 = one;
+			4'b0010: hex5 = two;
+			4'b0011: hex5 = three;
+			4'b0100: hex5 = four;
+			4'b0101: hex5 = five;
+			4'b0110: hex5 = six;
+			4'b0111: hex5 = seven;
+			4'b1000: hex5 = eight;
+			4'b1001: hex5 = nine;
+			default: hex5 = 7'b1111111;
 		endcase
 
 	end
@@ -122,13 +156,13 @@ module BCD(number, hundreds, tens, ones);
       // Loop eight times
       for (i=0; i<8; i=i+1) begin
          if (shift[11:8] >= 5)
-            shift[11:8] = shift[11:8] + 3;
+            shift[11:8] = shift[11:8] + 4'd3;
             
          if (shift[15:12] >= 5)
-            shift[15:12] = shift[15:12] + 3;
+            shift[15:12] = shift[15:12] + 4'd3;
             
          if (shift[19:16] >= 5)
-            shift[19:16] = shift[19:16] + 3;
+            shift[19:16] = shift[19:16] + 4'd3;
          
          // Shift entire register left once
          shift = shift << 1;

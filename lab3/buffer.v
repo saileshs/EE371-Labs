@@ -11,16 +11,18 @@ module buffer(data_count, scanning, flush, transfer, clk ,rst);
 	always@(posedge clk)
 		tBase <= tBase + 1'b1;
 	
-	always@(posedge tBase[1]) begin
+	always@(posedge tBase[21]) begin
 		case(sema)
 			hold: data_count <= data_count;
 			increase: 	if(data_count < 8'd100)
 							data_count <= data_count + 8'd1;
 			decrease: 	if (data_count <= 8'd1) 
 							data_count <= 8'd0;
-						else if(data_count > 8'd0)
+							else if(data_count > 8'd0)
 							data_count <= data_count - 8'd2;
-			dump: 		data_count <= 8'b0;
+							
+			dump:			data_count <= 8'd0;
+			
 			default: 	data_count <= data_count;
 		endcase
 	end
@@ -29,11 +31,10 @@ module buffer(data_count, scanning, flush, transfer, clk ,rst);
 	always@(posedge clk or negedge rst) begin
 		if(~rst) begin
 			sema <= dump;
-			data_count <= 8'd0;
 		end
 		else if (flush) begin
 			sema <= dump;
-			data_count <= 8'd0;
+
 		end
 		else if (scanning)
 			sema <= increase;

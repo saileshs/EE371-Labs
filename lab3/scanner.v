@@ -1,4 +1,4 @@
-`include "buffer.v"
+//`include "buffer.v"
 
 module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
 	output reg [2:0] state;
@@ -11,7 +11,7 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 	reg flush_buffer = 1'b0;
 	buffer buff (data_count, scanning, flush_buffer, transferring, clk, rst);
 
-	parameter lowPower = 3'b000, active = 3'b001, standby = 3'b010, idle = 3'b011, flush = 3'b100;
+	parameter lowPower = 3'b000, active = 3'b001, standby = 3'b010, idle = 3'b011, flush = 3'b100, transtage = 3'b101;
 
 	always @(posedge clk or negedge rst) begin
 		if (~rst) begin
@@ -23,39 +23,39 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 
 	always @(posedge clk) begin
 		
-		//ready_second_buffer <= 1'b0;
-		//ready_to_transfer <= 1'b0;
-		//start_second_buffer <= 1'b0;
 		flush_buffer <= 1'b0;
 		
 		case (state)
-			lowPower: 	 begin
+			lowPower: 	begin
+							transferring <= 1'b0;
 							scanning <= 1'b0;
 							ready_to_transfer <= 1'b0;
+							ready_second_buffer <= 1'b0;
+							start_second_buffer <= 1'b0;
 							if (start_scan && transfer == 1'b0)
 								next <= active;
 							else if (go_to_standby) 
 								next <= standby;
 							else
 								next <= lowPower;
-						end
+							end
 			active:		begin
 							scanning <= 1'b1;
-							transferring <= 1'b0;
-							if (data_count >= 8'd80) begin
-								ready_to_transfer <= 1'b1;
-								ready_second_buffer <= 1'b1;
-								if(transfer) begin
-									transferring <= 1'b1;
-									next <= lowPower;
-								end
-							end
-							if (data_count >= 8'd90) 
-								start_second_buffer <= 1'b1;
-							if (data_count == 8'd100) begin
+							if(transfer) begin
+								next <= transtage;
+							end else if (data_count == 8'd100) begin
 								next <= idle;
 							end else 
 								next <= active;
+								
+							if (data_count >= 8'd80) begin
+								ready_to_transfer <= 1'b1;
+								ready_second_buffer <= 1'b1;
+								
+							end
+							if (data_count >= 8'd90) 
+								start_second_buffer <= 1'b1;
+
 						end
 			standby: 	begin
 							transferring <= 1'b0;
@@ -85,8 +85,20 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							scanning <= 1'b0;
 							transferring <= 1'b0;
 							flush_buffer <= 1'b1;
-							next <= lowPower;
-						end
+							if(data_count == 8'd0)
+								next <= lowPower;
+							else
+								next <= flush;
+							end
+			transtage : begin
+								scanning <= 1'b0;
+								transferring <= 1'b1;
+								if(data_count == 8'd0)
+									next <= lowPower;
+								else
+									next <= transtage;
+							end
+								
 		endcase
 	end
 endmodule

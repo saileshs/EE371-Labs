@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:36:31  NOVEMBER 16, 2016"
-set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name LAST_QUARTUS_VERSION 14.0
 set_global_assignment -name VERILOG_FILE top.v
 set_global_assignment -name VERILOG_FILE scanner.v
 set_global_assignment -name VERILOG_FILE buffer.v
@@ -205,9 +205,6 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=2048" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
