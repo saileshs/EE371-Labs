@@ -1,4 +1,4 @@
-//`include "buffer.v"
+`include "buffer.v"
 
 module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
 	output reg [2:0] state;
@@ -46,12 +46,10 @@ module scanner (start_scan, data_count, ready_second_buffer, start_second_buffer
 							end else if (data_count == 8'd100) begin
 								next <= idle;
 							end else 
-								next <= active;
-								
+								next <= active;	
 							if (data_count >= 8'd80) begin
 								ready_to_transfer <= 1'b1;
-								ready_second_buffer <= 1'b1;
-								
+								ready_second_buffer <= 1'b1;	
 							end
 							if (data_count >= 8'd90) 
 								start_second_buffer <= 1'b1;

@@ -1,16 +1,18 @@
-//`include "scanner.v"
+`include "scanner.v"
 
 module top (hex0, hex1, hex2, hex3, hex4, hex5, state, state2, ready_to_transfer, ready_to_transfer2, start_scan, transfer_input, clk, rst);
+	output ready_to_transfer, ready_to_transfer2;
+	output [2:0] state, state2;
 	input start_scan, transfer_input, clk, rst;
-	wire start_scan1, start_second_buffer, ready_to_transfer, ready_second_buffer; // For scanner 1
+	wire start_scan1, start_second_buffer, ready_second_buffer; // For scanner 1
 	reg flush_signal = 1'b0, flush_signal2 = 1'b0, transfer = 1'b0, transfer2 = 1'b0;
 	output reg [6:0] hex0, hex1, hex2, hex3, hex4, hex5;
 	wire [7:0] data_count, data_count2;
-	wire start_scan2, start_first_buffer, ready_first_buffer, ready_to_transfer2;
+	wire start_scan2, start_first_buffer, ready_first_buffer;
 	wire [3:0] hundreds1, tens1, ones1;
 	wire [3:0] hundreds2, tens2, ones2;
-	output [2:0] state, state2;
-	output ready_to_transfer, ready_to_transfer2;
+	
+	
 
 	parameter zero = 7'b1000000, one = 7'b1111001, two = 7'b0100100, three = 7'b0110000, four = 7'b0011001, five = 7'b0010010, 
 		six = 7'b0000010, seven = 7'b1111000, eight = 7'b0000000, nine = 7'b0011000;

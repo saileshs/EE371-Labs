@@ -1,4 +1,4 @@
-d#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -55,7 +55,7 @@ int main(void)
           temp_result = temp_buf + 273.15;
        }
 
-       printf("The resulting temperature is %.3f %c \n\n", temp_result, unit_d[0]);
+       printf("The resulting temperature is %.3f %c \n\n", temp_result, toupper(unit_d[0]));
    }
    return 0;
 }

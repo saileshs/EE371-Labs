@@ -8,8 +8,8 @@
 void main(void){
 
     int dev_num;
-    float result_ps;
-    float result_ns;
+    double  result_ps;
+    double  result_ns;
 
     printf("This program can help you calculate the total delay\n");
     printf("of signal through your logic circuit \n\n");
