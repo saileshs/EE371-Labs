@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions,Library/Processors and Peripherals/Peripherals,Library/Basic Functions/Simulation; Debug and Verification,Library/Processors and Peripherals,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Project,Library,Library/Basic Functions/On Chip Memory" />
+ <window width="1936" height="1056" x="-129" y="0" />
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="471" />
+   <clocksource preferredWidth="470" />
+   <frequency preferredWidth="452" />
+  </columns>
+ </clocktable>
+ <generation testbench_system="NONE" block_symbol_file="0" />
+ <hdlexample language="VERILOG" />
+</preferences>

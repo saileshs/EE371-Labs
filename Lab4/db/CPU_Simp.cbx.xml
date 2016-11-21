@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CPU_Simp">
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_onchip_mem:onchip_mem|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_2bi1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_cpu:cpu|cpu_cpu_ic_data_module:cpu_cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ekj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_cpu:cpu|cpu_cpu_register_bank_b_module:cpu_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_dfm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_cpu:cpu|cpu_cpu_ic_tag_module:cpu_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_7mm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_cpu:cpu|cpu_cpu_nios2_oci:the_cpu_cpu_nios2_oci|cpu_cpu_nios2_ocimem:the_cpu_cpu_nios2_ocimem|cpu_cpu_ociram_sp_ram_module:cpu_cpu_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_c5e1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_cpu:cpu|cpu_cpu_register_bank_a_module:cpu_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_cfm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_jtag_uart:jtag_uart|cpu_jtag_uart_scfifo_w:the_cpu_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_3291.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU_Simp|cpu:u0|cpu_jtag_uart:jtag_uart|cpu_jtag_uart_scfifo_r:the_cpu_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_3291.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
