@@ -8,8 +8,8 @@
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Basic Functions,Library/Processors and Peripherals/Peripherals,Library/Basic Functions/Simulation; Debug and Verification,Library/Processors and Peripherals,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Project,Library,Library/Basic Functions/On Chip Memory" />
- <window width="1936" height="1056" x="-129" y="0" />
+   expandedCategories="Project,Library/Processors and Peripherals/Co-Processors,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library/Processors and Peripherals/Hard Processor Systems,Library/Processors and Peripherals/Inter-Process Communication,Library/Processors and Peripherals/Hard Processor Components,Library,Library/Basic Functions" />
+ <window width="1936" height="1176" x="-8" y="-8" />
  <clocktable>
   <columns>
    <clockname preferredWidth="471" />

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Nov 20 16:47:57 2016
-Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Web Edition
+Analysis & Synthesis Status : Successful - Mon Nov 21 12:49:26 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : CPU_Simp
 Top-level Entity Name : CPU_Simp
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1471
+Total registers : 1790
 Total pins : 10
 Total virtual pins : 0
-Total block memory bits : 192,384
-Total DSP Blocks : 0
+Total block memory bits : 192,896
+Total DSP Blocks : 3
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

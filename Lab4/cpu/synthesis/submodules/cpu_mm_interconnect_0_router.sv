@@ -1,4 +1,4 @@
-// (C) 2001-2014 Altera Corporation. All rights reserved.
+// (C) 2001-2016 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files any of the foregoing (including device programming or simulation 
@@ -24,9 +24,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/14.0/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/16.0/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2014/02/16 $
+// $Date: 2016/02/08 $
 // $Author: swbranch $
 
 // -------------------------------------------------------
@@ -44,7 +44,7 @@
 
 module cpu_mm_interconnect_0_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 0,
+     parameter DEFAULT_CHANNEL = 3,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 3 
@@ -58,26 +58,24 @@ module cpu_mm_interconnect_0_router_default_decode
   assign default_destination_id = 
     DEFAULT_DESTID[79 - 77 : 0];
 
-  generate begin : default_decode
-    if (DEFAULT_CHANNEL == -1) begin
+  generate
+    if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
-    else begin
+    else begin : default_channel_assignment
       assign default_src_channel = 6'b1 << DEFAULT_CHANNEL;
     end
-  end
   endgenerate
 
-  generate begin : default_decode_rw
-    if (DEFAULT_RD_CHANNEL == -1) begin
+  generate
+    if (DEFAULT_RD_CHANNEL == -1) begin : no_default_rw_channel_assignment
       assign default_wr_channel = '0;
       assign default_rd_channel = '0;
     end
-    else begin
+    else begin : default_rw_channel_assignment
       assign default_wr_channel = 6'b1 << DEFAULT_WR_CHANNEL;
       assign default_rd_channel = 6'b1 << DEFAULT_RD_CHANNEL;
     end
-  end
   endgenerate
 
 endmodule
@@ -202,19 +200,19 @@ module cpu_mm_interconnect_0_router
 
     // ( 0x8000 .. 0x10000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 17'h8000   ) begin
-            src_channel = 6'b000001;
+            src_channel = 6'b001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x10800 .. 0x11000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 17'h10800   ) begin
-            src_channel = 6'b000010;
+            src_channel = 6'b000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x11000 .. 0x11020 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 17'h11000   ) begin
-            src_channel = 6'b001000;
+            src_channel = 6'b010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
@@ -226,13 +224,13 @@ module cpu_mm_interconnect_0_router
 
     // ( 0x11030 .. 0x11038 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 17'h11030  && read_transaction  ) begin
-            src_channel = 6'b010000;
+            src_channel = 6'b000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x11038 .. 0x11040 )
     if ( {address[RG:PAD5],{PAD5{1'b0}}} == 17'h11038   ) begin
-            src_channel = 6'b000100;
+            src_channel = 6'b000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
