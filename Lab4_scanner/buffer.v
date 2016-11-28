@@ -1,9 +1,9 @@
 module buffer(data_in, data_out, address, scanning, flush, transfer, clk, rst);
-	reg [79:0] mem_out;
+	wire [79:0] mem_out;
 	input [7:0] data_in;
 	output reg [7:0] data_out = 8'b0;
 
-	output reg [3:0] address ;
+	output reg [3:0] address;
 	input rst, clk, scanning, flush, transfer;
 	reg [7:0] m [0:9];
 	reg WE = 1'b0;
