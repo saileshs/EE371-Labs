@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\borenl93\\Desktop\\lab4\\EE371-Labs\\Lab4_1\\software\\lights
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\borenl93\\Desktop\\lab4\\EE371-Labs\\Lab4_1\\nios_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\borenl93\\Desktop\\lab4\\EE371-Labs\\Lab4_1\\software\\lights_bsp
+newApplicationWizardPage.defaultLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab4_1\\software\\hello_world_small
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab4_1\\software\\hello_world_small
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab4_1\\nios_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab4_1\\software\\hello_world_small_bsp

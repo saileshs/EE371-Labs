@@ -1,5 +1,5 @@
 #define switches (volatile char*) 0x0003010
-#define leds(char*) 0x0003000
+#define leds(volatile char*) 0x0003000
 
 void main()
 {

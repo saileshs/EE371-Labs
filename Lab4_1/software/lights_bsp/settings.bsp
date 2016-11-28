@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 21, 2016 2:03:32 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1479765812600</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\borenl93\Desktop\lab4\EE371-Labs\Lab4_1\software\lights_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Nov 22, 2016 12:34:23 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1479846863545</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\zhangw24\Desktop\EE371-Labs\Lab4_1\software\lights_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -900,25 +900,31 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>onchip_memory2_0</slaveDescriptor>
-                <addressRange>0x00001000 - 0x00001FFF</addressRange>
-                <addressSpan>4096</addressSpan>
+                <addressRange>0x00008000 - 0x0000CFFF</addressRange>
+                <addressSpan>20480</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>LEDs</slaveDescriptor>
-                <addressRange>0x00003000 - 0x0000300F</addressRange>
+                <addressRange>0x00011000 - 0x0001100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x00003010 - 0x0000301F</addressRange>
+                <addressRange>0x00011010 - 0x0001101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
+                <addressRange>0x00011020 - 0x00011027</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00003020 - 0x00003027</addressRange>
+                <addressRange>0x00011028 - 0x0001102F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
