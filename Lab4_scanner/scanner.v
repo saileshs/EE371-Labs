@@ -1,6 +1,6 @@
 //`include "buffer.v"
 
-module scanner (data_out, start_scan, data_in, address, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
+module scanner (data_out, start_scan, data_in, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
 	output reg [2:0] state;
 	output wire [7:0] data_out;
 	input [7:0] data_in;
