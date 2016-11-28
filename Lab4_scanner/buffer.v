@@ -1,12 +1,12 @@
-module buffer(mem_out, data_in, data_out, data_count, scanning, flush, transfer, clk, rst);
+module buffer(mem_out, data_in, data_out, address, scanning, flush, transfer, clk, rst);
 	output [79:0] mem_out;
 	input [7:0] data_in;
 	output reg [7:0] data_out = 8'b0;
 
-	output reg [3:0] data_count ;
+	output reg [3:0] address ;
 	input rst, clk, scanning, flush, transfer;
 	reg [7:0] m [0:9];
-	
+	reg WE = 1'b0;
 	
 
 	reg [1:0] state = 2'b00;
@@ -20,6 +20,13 @@ module buffer(mem_out, data_in, data_out, data_count, scanning, flush, transfer,
 	generate for (k=0; k < 10; k = k+1) begin: memout
 		assign mem_out[8*(k+1)-1 : 8*k] = m[k];
 	end endgenerate
+	
+	always@(*) begin
+		if(WE)
+			m[address] = data_in;
+		
+		data_out = m[address];
+	end
 	
 	always@(posedge clk or negedge rst) begin
 		if(~rst) begin
@@ -35,38 +42,45 @@ module buffer(mem_out, data_in, data_out, data_count, scanning, flush, transfer,
 		if(flush) begin
 			next <= dump;
 		end else if (scanning) begin
+			WE <= 1'b1;
 			next <= writing;
-			if(state != writing)
-				data_count <= 4'd0;
+			if(state!= writing)
+				address <= 4'd0;
 		end else if (transfer) begin
 			next <= reading;
-			if(state != reading)
-				data_count <= 4'd0;
+			if(state!= reading)
+				address <= 4'd0;
 		end
 	
 	
 	
 		case(state)
-			writing: if(data_count <= 4'd9 && next == writing) begin
-							m[data_count] = data_in;
-							data_count = data_count + 1'd1;
-						end
-			reading: if(data_count <= 4'd9 && next == reading) begin
-							data_out = m[data_count];
-							data_count = data_count + 1'd1;
-						end
+			writing: if(address <= 4'd9 && next == writing) begin
+							WE <= 1'b1;
+							address <= address + 4'd1;
+					end else 
+							WE <= 1'b0;
+			reading: if(address <= 4'd9 && next == reading) begin
+							address = address + 1'd1;
+					end else if(address <= 4'd10) begin
+							for(i=0; i<10; i=i+1) 
+							m[i] <= 8'b0;
+					end		
 			hold: begin
-						data_count <= data_count;
+						address <= address;
 					end
 			dump: begin
 
 					for(i=0; i<10; i=i+1) 
 						m[i] <= 8'b0;			
 
-					data_count <= 4'd0;
+					address <= 4'd0;
 					end
 		endcase
 	end
+	
+	always@(negedge clk)
+		WE <= 1'b0;
 
 	
 	

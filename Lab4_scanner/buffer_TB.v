@@ -4,9 +4,9 @@ module buffer_TB();
 	reg [7:0] data_in;
 	reg rst, clk, scanning, flush, transfer;
 	wire [7:0] data_out;
-	wire [3:0] data_count;
+	wire [3:0] address;
 	wire [79:0] mem_out;
-	buffer dut(mem_out, data_in, data_out, data_count, scanning, flush, transfer, clk, rst);
+	buffer dut(mem_out, data_in, data_out, address, scanning, flush, transfer, clk, rst);
 	
 	
 	always #1 clk = ~clk;
