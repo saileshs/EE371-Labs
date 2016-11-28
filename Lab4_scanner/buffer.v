@@ -1,5 +1,5 @@
-module buffer(mem_out, data_in, data_out, address, scanning, flush, transfer, clk, rst);
-	output [79:0] mem_out;
+module buffer(data_in, data_out, address, scanning, flush, transfer, clk, rst);
+	reg [79:0] mem_out;
 	input [7:0] data_in;
 	output reg [7:0] data_out = 8'b0;
 
