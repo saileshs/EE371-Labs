@@ -50,7 +50,8 @@ module buffer(mem_out, data_in, data_out, address, scanning, flush, transfer, cl
 			next <= reading;
 			if(state!= reading)
 				address <= 4'd0;
-		end
+		end else
+			next <= hold;
 	
 	
 	
@@ -62,7 +63,7 @@ module buffer(mem_out, data_in, data_out, address, scanning, flush, transfer, cl
 							WE <= 1'b0;
 			reading: if(address <= 4'd9 && next == reading) begin
 							address = address + 1'd1;
-					end else if(address <= 4'd10) begin
+					end else if(address >= 4'd10) begin
 							for(i=0; i<10; i=i+1) 
 							m[i] <= 8'b0;
 					end		
