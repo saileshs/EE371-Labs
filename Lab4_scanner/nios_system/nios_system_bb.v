@@ -1,12 +1,24 @@
 
 module nios_system (
 	clk_clk,
-	leds_export,
+	cpu_data_in_0_external_connection_export,
+	cpu_data_in_1_external_connection_export,
+	cpu_data_out_0_external_connection_export,
+	cpu_data_out_1_external_connection_export,
+	ready_to_transfer_in_0_external_connection_export,
+	ready_to_transfer_in_1_external_connection_export,
 	reset_reset_n,
-	switches_export);	
+	start_scanning_external_connection_export,
+	start_transfer_external_connection_export);	
 
 	input		clk_clk;
-	output	[7:0]	leds_export;
+	input	[7:0]	cpu_data_in_0_external_connection_export;
+	input	[7:0]	cpu_data_in_1_external_connection_export;
+	output	[7:0]	cpu_data_out_0_external_connection_export;
+	output	[7:0]	cpu_data_out_1_external_connection_export;
+	input		ready_to_transfer_in_0_external_connection_export;
+	input		ready_to_transfer_in_1_external_connection_export;
 	input		reset_reset_n;
-	input	[7:0]	switches_export;
+	output	[7:0]	start_scanning_external_connection_export;
+	output	[7:0]	start_transfer_external_connection_export;
 endmodule

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Nov 27 17:57:17 2016
+Analysis & Elaboration Status : Successful - Mon Nov 28 16:23:23 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : lights
-Top-level Entity Name : buffer
+Top-level Entity Name : lights
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

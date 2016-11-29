@@ -1,4 +1,4 @@
-`include "scanner.v"
+//`include "scanner.v"
 
 module top (data_out1, data_out2, data_out_cpu1, data_out_cpu2, state, state2, ready_to_transfer, ready_to_transfer2, data_in1, data_in2, start_scan, transfer_input, clk, rst);
 	output [2:0] state, state2;

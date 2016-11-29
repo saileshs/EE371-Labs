@@ -9,22 +9,6 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element LEDs
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-   }
-   element LEDs.s1
-   {
-      datum baseAddress
-      {
-         value = "69632";
-         type = "String";
-      }
-   }
    element clk_0
    {
       datum _sortIndex
@@ -33,7 +17,39 @@
          type = "int";
       }
    }
-   element jtag_uart_0
+   element cpu_data_in_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element cpu_data_in_0.s1
+   {
+      datum baseAddress
+      {
+         value = "69696";
+         type = "String";
+      }
+   }
+   element cpu_data_in_1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element cpu_data_in_1.s1
+   {
+      datum baseAddress
+      {
+         value = "69712";
+         type = "String";
+      }
+   }
+   element cpu_data_out_0
    {
       datum _sortIndex
       {
@@ -41,11 +57,43 @@
          type = "int";
       }
    }
+   element cpu_data_out_0.s1
+   {
+      datum baseAddress
+      {
+         value = "69744";
+         type = "String";
+      }
+   }
+   element cpu_data_out_1
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element cpu_data_out_1.s1
+   {
+      datum baseAddress
+      {
+         value = "69728";
+         type = "String";
+      }
+   }
+   element jtag_uart_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
    element jtag_uart_0.avalon_jtag_slave
    {
       datum baseAddress
       {
-         value = "69672";
+         value = "69768";
          type = "String";
       }
    }
@@ -81,15 +129,47 @@
          type = "String";
       }
    }
-   element switches
+   element ready_to_transfer_in_0
    {
       datum _sortIndex
       {
-         value = "3";
+         value = "9";
          type = "int";
       }
    }
-   element switches.s1
+   element ready_to_transfer_in_0.s1
+   {
+      datum baseAddress
+      {
+         value = "69680";
+         type = "String";
+      }
+   }
+   element ready_to_transfer_in_1
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element ready_to_transfer_in_1.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
+         type = "String";
+      }
+   }
+   element start_scanning
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element start_scanning.s1
    {
       datum baseAddress
       {
@@ -97,11 +177,27 @@
          type = "String";
       }
    }
+   element start_transfer
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element start_transfer.s1
+   {
+      datum baseAddress
+      {
+         value = "69632";
+         type = "String";
+      }
+   }
    element sysid_qsys_0
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "4";
          type = "int";
       }
    }
@@ -109,7 +205,7 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69760";
          type = "String";
       }
    }
@@ -136,17 +232,93 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="leds"
-   internal="LEDs.external_connection"
+   name="cpu_data_in_0_external_connection"
+   internal="cpu_data_in_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="cpu_data_in_1_external_connection"
+   internal="cpu_data_in_1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="cpu_data_out_0_external_connection"
+   internal="cpu_data_out_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="cpu_data_out_1_external_connection"
+   internal="cpu_data_out_1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="ready_to_transfer_in_0_external_connection"
+   internal="ready_to_transfer_in_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="ready_to_transfer_in_1_external_connection"
+   internal="ready_to_transfer_in_1.external_connection"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="switches"
-   internal="switches.external_connection"
+   name="start_scanning_external_connection"
+   internal="start_scanning.external_connection"
    type="conduit"
    dir="end" />
- <module name="LEDs" kind="altera_avalon_pio" version="16.0" enabled="1">
+ <interface
+   name="start_transfer_external_connection"
+   internal="start_transfer.external_connection"
+   type="conduit"
+   dir="end" />
+ <module name="clk_0" kind="clock_source" version="16.0" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="cpu_data_in_0"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
+ <module
+   name="cpu_data_in_1"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
+ <module
+   name="cpu_data_out_0"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -160,11 +332,23 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="8" />
  </module>
- <module name="clk_0" kind="clock_source" version="16.0" enabled="1">
-  <parameter name="clockFrequency" value="50000000" />
-  <parameter name="clockFrequencyKnown" value="true" />
-  <parameter name="inputClockFrequency" value="0" />
-  <parameter name="resetSynchronousEdges" value="NONE" />
+ <module
+   name="cpu_data_out_1"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
  </module>
  <module
    name="jtag_uart_0"
@@ -209,7 +393,7 @@
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='LEDs.s1' start='0x11000' end='0x11010' type='altera_avalon_pio.s1' /><slave name='switches.s1' start='0x11010' end='0x11020' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x11020' end='0x11028' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11028' end='0x11030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='start_transfer.s1' start='0x11000' end='0x11010' type='altera_avalon_pio.s1' /><slave name='start_scanning.s1' start='0x11010' end='0x11020' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_1.s1' start='0x11020' end='0x11030' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_0.s1' start='0x11030' end='0x11040' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_0.s1' start='0x11040' end='0x11050' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_1.s1' start='0x11050' end='0x11060' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_1.s1' start='0x11060' end='0x11070' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_0.s1' start='0x11070' end='0x11080' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x11080' end='0x11088' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11088' end='0x11090' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -397,12 +581,70 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
- <module name="switches" kind="altera_avalon_pio" version="16.0" enabled="1">
+ <module
+   name="ready_to_transfer_in_0"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="ready_to_transfer_in_1"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="start_scanning"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
+ <module
+   name="start_transfer"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
   <parameter name="irqType" value="LEVEL" />
@@ -424,7 +666,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011028" />
+  <parameter name="baseAddress" value="0x00011088" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -433,7 +675,7 @@
    start="nios2_gen2_0.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -458,7 +700,61 @@
    kind="avalon"
    version="16.0"
    start="nios2_gen2_0.data_master"
-   end="switches.s1">
+   end="cpu_data_out_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="cpu_data_out_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="cpu_data_in_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="cpu_data_in_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="ready_to_transfer_in_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="ready_to_transfer_in_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="start_scanning.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011010" />
   <parameter name="defaultConnection" value="false" />
@@ -467,7 +763,7 @@
    kind="avalon"
    version="16.0"
    start="nios2_gen2_0.data_master"
-   end="LEDs.s1">
+   end="start_transfer.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
@@ -491,10 +787,40 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="16.0" start="clk_0.clk" end="nios2_gen2_0.clk" />
- <connection kind="clock" version="16.0" start="clk_0.clk" end="switches.clk" />
- <connection kind="clock" version="16.0" start="clk_0.clk" end="LEDs.clk" />
  <connection kind="clock" version="16.0" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection kind="clock" version="16.0" start="clk_0.clk" end="sysid_qsys_0.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="cpu_data_out_0.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="cpu_data_out_1.clk" />
+ <connection kind="clock" version="16.0" start="clk_0.clk" end="cpu_data_in_0.clk" />
+ <connection kind="clock" version="16.0" start="clk_0.clk" end="cpu_data_in_1.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="ready_to_transfer_in_0.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="ready_to_transfer_in_1.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="start_scanning.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="start_transfer.clk" />
  <connection
    kind="clock"
    version="16.0"
@@ -516,12 +842,6 @@
    kind="reset"
    version="16.0"
    start="clk_0.clk_reset"
-   end="switches.reset" />
- <connection kind="reset" version="16.0" start="clk_0.clk_reset" end="LEDs.reset" />
- <connection
-   kind="reset"
-   version="16.0"
-   start="clk_0.clk_reset"
    end="jtag_uart_0.reset" />
  <connection
    kind="reset"
@@ -532,22 +852,52 @@
    kind="reset"
    version="16.0"
    start="clk_0.clk_reset"
+   end="cpu_data_out_0.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="cpu_data_out_1.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="cpu_data_in_0.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="cpu_data_in_1.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="ready_to_transfer_in_0.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="ready_to_transfer_in_1.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="start_scanning.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="start_transfer.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
    end="onchip_memory2_0.reset1" />
  <connection
    kind="reset"
    version="16.0"
    start="nios2_gen2_0.debug_reset_request"
    end="nios2_gen2_0.reset" />
- <connection
-   kind="reset"
-   version="16.0"
-   start="nios2_gen2_0.debug_reset_request"
-   end="switches.reset" />
- <connection
-   kind="reset"
-   version="16.0"
-   start="nios2_gen2_0.debug_reset_request"
-   end="LEDs.reset" />
  <connection
    kind="reset"
    version="16.0"

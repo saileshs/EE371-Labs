@@ -1,4 +1,4 @@
-`include "buffer.v"
+//`include "buffer.v"
 
 module scanner (address, data_out, start_scan, data_in, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, go_to_standby, state, clk, rst);
 	output reg [2:0] state;
@@ -11,6 +11,7 @@ module scanner (address, data_out, start_scan, data_in, ready_second_buffer, sta
 
 	reg [2:0] next;
 	reg flush_buffer = 1'b0;
+	
 	buffer buff (data_in, data_out, address, scanning, flush_signal, transferring, clk, rst);
 
 	parameter lowPower = 3'b000, active = 3'b001, standby = 3'b010, idle = 3'b011, flush = 3'b100, transtage = 3'b101;
