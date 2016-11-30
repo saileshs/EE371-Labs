@@ -4,71 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "leds[0]",
+					"name" : "ready_to_transfer_in_0",
 					"strict" : false
 				},
 				{
-					"name" : "leds[1]",
+					"name" : "ready_to_transfer_in_1",
 					"strict" : false
 				},
 				{
-					"name" : "leds[2]",
+					"name" : "state[0]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[3]",
+					"name" : "state[1]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[4]",
+					"name" : "state[2]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[5]",
+					"name" : "state2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[6]",
+					"name" : "state2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "leds[7]",
+					"name" : "state2[2]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "sw[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[3]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[4]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[5]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[7]",
 					"strict" : false
 				},
 				{

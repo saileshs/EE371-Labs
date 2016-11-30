@@ -37,6 +37,8 @@ module buffer_TB();
 			#delay;
 		end
 		#delay;
+		#delay;
+		#delay;
 		$finish;
 	end
 	

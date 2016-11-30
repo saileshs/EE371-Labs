@@ -9,7 +9,9 @@ module nios_system (
 	ready_to_transfer_in_1_external_connection_export,
 	reset_reset_n,
 	start_scanning_external_connection_export,
-	start_transfer_external_connection_export);	
+	start_transfer_external_connection_export,
+	scanner_rst_external_connection_export,
+	scanner_clk_ctrl_external_connection_export);	
 
 	input		clk_clk;
 	input	[7:0]	cpu_data_in_0_external_connection_export;
@@ -21,4 +23,6 @@ module nios_system (
 	input		reset_reset_n;
 	output	[7:0]	start_scanning_external_connection_export;
 	output	[7:0]	start_transfer_external_connection_export;
+	output		scanner_rst_external_connection_export;
+	output		scanner_clk_ctrl_external_connection_export;
 endmodule
