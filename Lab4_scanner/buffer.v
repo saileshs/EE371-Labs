@@ -81,10 +81,8 @@ module buffer(data_in, data_out, address, scanning, flush, transfer, clk, rst);
 							address <= address;
 						end
 				dump: begin
-
-						WIPE <= 1'b1;			
-
-						address <= 4'd0;
+							WIPE <= 1'b1;			
+							address <= 4'd0;
 						end
 			endcase
 		end
