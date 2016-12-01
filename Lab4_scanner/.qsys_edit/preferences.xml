@@ -9,7 +9,7 @@
  </systemtable>
  <library
    expandedCategories="Project,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library" />
- <window width="974" height="1167" x="-7" y="0" />
+ <window width="1936" height="1176" x="-8" y="-8" />
  <generation block_symbol_file="1" />
  <hdlexample language="VERILOG" />
 </preferences>

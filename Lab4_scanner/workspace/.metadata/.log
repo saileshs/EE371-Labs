@@ -743,3 +743,291 @@ Binding(CTRL+SHIFT+H,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:43:55.402
 !MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:50:38.099
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:50:38.436
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:50:40.050
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:56:15.993
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:56:16.302
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 14:56:17.852
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:10:55.514
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:10:55.826
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:10:57.392
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:26:30.928
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:26:31.244
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:26:32.812
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:27:58.520
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:27:58.835
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:28:00.414
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:30:09.409
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:30:09.719
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:30:11.320
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:31:44.297
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:31:44.614
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:31:46.186
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:13.631
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:13.941
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:15.498
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:29.950
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:30.262
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:32:31.852
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:33:28.820
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:33:29.132
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:33:30.714
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:35:44.054
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:35:44.369
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:35:45.951
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:38:28.419
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:38:28.740
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:38:30.306
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:39:18.184
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:39:18.499
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:39:20.063
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:41:45.314
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:41:45.624
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:41:47.194
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:43:06.732
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:43:07.073
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:43:08.658
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:44:16.629
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:44:16.948
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:44:18.560
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:45:46.620
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:45:46.931
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:45:48.516
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:46:27.729
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:46:28.040
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:46:29.607
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:48:49.786
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:48:50.095
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:48:51.664
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:49:25.703
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:49:26.007
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:49:27.566
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:51:56.182
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:51:56.506
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:51:58.068
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:08.351
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:08.679
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:10.268
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:31.951
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:32.259
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:52:33.845
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:53:09.961
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:53:10.271
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:53:11.830
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:02.338
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:02.652
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:04.240
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:08.276
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:08.586
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:54:10.137
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:57:57.505
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:57:57.817
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:57:59.389
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:58:45.969
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:58:46.282
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 15:58:47.857
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:00:13.105
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:00:13.428
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:00:14.993
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:09.343
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:09.676
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:11.228
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:22.354
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:22.664
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:02:24.256
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:03:31.870
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:03:32.180
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x110a0 --id=0x0 --timestamp=1480540349]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-11-30 16:03:33.716
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x110a0 --id=0x0 --timestamp=1480540349 /cygdrive/c/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration/scanner_integration.elf]

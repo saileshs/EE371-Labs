@@ -10,6 +10,8 @@
 
 #define data_out_0 (volatile char*) 0x00011090
 #define data_out_1 (volatile char*) 0x00011080
+#define data_in_0 (volatile char*) 0x00011060
+#define data_in_1 (volatile char*) 0x00011070
 #define ready_to_transfer_0 (volatile char*) 0x00011050
 #define ready_to_transfer_1 (volatile char*) 0x00011040
 #define start_scanning (volatile char*) 0x00011030
@@ -18,8 +20,9 @@
 #define scanner_clk_ctrl (volatile char*) 0x00011000
 
 void send(){
+	*scanner_clk_ctrl = 0;
 	*scanner_clk_ctrl = 1;
-	usleep(100);
+	usleep(1000000);
 	*scanner_clk_ctrl = 0;
 }
 
@@ -30,6 +33,10 @@ void scanner_init(){
 	*start_transfer = 1;
 	send();
 	*scanner_rst = 1;
+	int i;
+	for(i = 0; i <5; i++){
+		send();
+	}
 }
 
 int main(){
@@ -39,13 +46,14 @@ int main(){
 
 
 	*start_scanning = 0;
-	*data_out_0 = 5;
 	send();
 	*start_scanning = 1;
 
-	for(i=1; i<8; i++){
-		*data_out_0 = 5 + i;
+	for(i=0; i<8; i++){
+		*data_out_0 = i+5;
 		send();
+		alt_putchar(*data_in_0+'0');
+		alt_putstr("\n");
 	}
 
 	if(*ready_to_transfer_0 == 0){
