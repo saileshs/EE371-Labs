@@ -1,12 +1,13 @@
 //`include "scanner.v"
 
-module top (data_out1, data_out2, data_out_cpu1, data_out_cpu2, state, state2, ready_to_transfer, ready_to_transfer2, data_in1, data_in2, start_scan, transfer_input, clk, rst);
+module top (data_out1, data_out2, data_out_cpu1, data_out_cpu2, state, state2, ready_to_transfer, ready_to_transfer2, 
+			data_in1, data_in2, start_scan, transfer_input, wr_en1, read_inc1, wr_en2, read_inc2, clk, rst);
 	output [2:0] state, state2;
 	output ready_to_transfer, ready_to_transfer2;
 	output wire [7:0] data_out1, data_out2;
 	output wire [7:0] data_out_cpu1, data_out_cpu2; 
 	input [7:0] data_in1, data_in2;
-	input start_scan, transfer_input, clk, rst;
+	input start_scan, transfer_input, wr_en1, read_inc1, wr_en2, read_inc2, clk, rst;
 
 	wire start_scan1, start_second_buffer, ready_to_transfer, ready_second_buffer; // For scanner 1
 	wire start_scan2, start_first_buffer, ready_first_buffer, ready_to_transfer2;
@@ -20,8 +21,8 @@ module top (data_out1, data_out2, data_out_cpu1, data_out_cpu2, state, state2, r
 	assign start_scan1 = (~start_scan) ? ~start_scan : start_first_buffer;
 	assign start_scan2 = start_second_buffer;
 	
-	scanner scan (address1, data_out1, start_scan1, data_in1, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, ready_first_buffer, state, clk, rst);
-	scanner scan2 (address2, data_out2, start_scan2, data_in2, ready_first_buffer, start_first_buffer, ready_to_transfer2, transfer2, flush_signal2, ready_second_buffer, state2, clk, rst);
+	scanner scan (address1, data_out1, start_scan1, data_in1, ready_second_buffer, start_second_buffer, ready_to_transfer, transfer, flush_signal, ready_first_buffer, state, wr_en1, read_inc1, clk, rst);
+	scanner scan2 (address2, data_out2, start_scan2, data_in2, ready_first_buffer, start_first_buffer, ready_to_transfer2, transfer2, flush_signal2, ready_second_buffer, state2, wr_en2, read_inc2, clk, rst);
 	
 	always @(posedge clk) begin
 		if (~rst) begin
