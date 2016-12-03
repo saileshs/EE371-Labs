@@ -1,18 +1,4 @@
 
-State Machine - |lights|top:top|scanner:scan2|buffer:buff|state
-Name state.00 state.writing state.reading state.dump 
-state.dump 0 0 0 0 
-state.reading 0 0 1 1 
-state.writing 0 1 0 1 
-state.00 1 0 0 1 
-
-State Machine - |lights|top:top|scanner:scan|buffer:buff|state
-Name state.00 state.writing state.reading state.dump 
-state.dump 0 0 0 0 
-state.reading 0 0 1 1 
-state.writing 0 1 0 1 
-state.00 1 0 0 1 
-
 State Machine - |lights|nios_system:u0|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|nios_system_nios2_gen2_0_cpu_nios2_oci:the_nios_system_nios2_gen2_0_cpu_nios2_oci|nios_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios_system_nios2_gen2_0_cpu_debug_slave_tck|DRsize
 Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
 DRsize.000 0 0 0 0 0 0 

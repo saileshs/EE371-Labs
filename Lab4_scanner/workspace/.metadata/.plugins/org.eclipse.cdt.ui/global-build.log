@@ -1,25 +1,39 @@
-16:03:27 **** Incremental Build of configuration Nios II for project scanner_integration ****
+17:29:57 **** Incremental Build of configuration Nios II for project scanner_integration ****
 make all 
 Info: Building ../scanner_integration_bsp/
 C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/
 [BSP build complete]
 Info: Compiling scanner_integration.c to obj/default/scanner_integration.o
-nios2-elf-gcc -xc -MP -MMD -c -I../scanner_integration_bsp//HAL/inc -I../scanner_integration_bsp/ -I../scanner_integration_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/scanner_integration.o scanner_integration.c
+nios2-elf-gcc -xc -MP -MMD -c -I../scanner_integration_bsp//HAL/inc -I../scanner_integration_bsp/ -I../scanner_integration_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/scanner_integration.o scanner_integration.c
 Info: Linking scanner_integration.elf
 nios2-elf-g++  -T'../scanner_integration_bsp//linker.x' -msys-crt0='../scanner_integration_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../scanner_integration_bsp/  -msmallc  -Wl,-Map=scanner_integration.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o scanner_integration.elf obj/default/scanner_integration.o -lm -msys-lib=m
-nios2-elf-insert scanner_integration.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x110a0 --timestamp 1480540349 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "C:/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner" --jdi ../..//output_files/lights.jdi --sopcinfo C:/Users/borenl93/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration_bsp/../../nios_system.sopcinfo
-Info: (scanner_integration.elf) 7416 Bytes program size (code + initialized data).
-Info:                           12 KBytes free for stack + heap.
+../scanner_integration_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\zhangw24\Desktop\EE371-Labs\Lab4_scanner\software\scanner_integration_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert scanner_integration.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x110d0 --timestamp 1480715520 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "C:/Users/zhangw24/Desktop/EE371-Labs/Lab4_scanner" --jdi ../..//output_files/lights.jdi --sopcinfo C:/Users/zhangw24/Desktop/EE371-Labs/Lab4_scanner/software/scanner_integration_bsp/../../nios_system.sopcinfo
+Info: (scanner_integration.elf) 4868 Bytes program size (code + initialized data).
+Info:                           14 KBytes free for stack + heap.
 Info: Creating scanner_integration.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source scanner_integration.elf >scanner_integration.objdump
 [scanner_integration build complete]
-16:03:30 **** Build of configuration Nios II for project scanner_integration ****
+17:30:04 **** Build of configuration Nios II for project scanner_integration ****
 make all 
 Info: Building ../scanner_integration_bsp/
 C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/
 [BSP build complete]
 [scanner_integration build complete]
-16:03:31 **** Incremental Build of configuration Nios II for project scanner_integration ****
+17:30:05 **** Incremental Build of configuration Nios II for project scanner_integration ****
+make all 
+Info: Building ../scanner_integration_bsp/
+C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/
+[BSP build complete]
+[scanner_integration build complete]
+17:41:17 **** Build of configuration Nios II for project scanner_integration ****
+make all 
+Info: Building ../scanner_integration_bsp/
+C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/
+[BSP build complete]
+[scanner_integration build complete]
+17:41:18 **** Incremental Build of configuration Nios II for project scanner_integration ****
 make all 
 Info: Building ../scanner_integration_bsp/
 C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/

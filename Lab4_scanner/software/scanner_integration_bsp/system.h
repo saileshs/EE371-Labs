@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Wed Nov 30 13:25:27 PST 2016
+ * Generated: Fri Dec 02 14:37:32 PST 2016
  */
 
 /*
@@ -156,19 +156,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x110a8
+#define ALT_STDERR_BASE 0x110d8
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x110a8
+#define ALT_STDIN_BASE 0x110d8
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x110a8
+#define ALT_STDOUT_BASE 0x110d8
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -182,7 +182,7 @@
  */
 
 #define ALT_MODULE_CLASS_cpu_data_in_0 altera_avalon_pio
-#define CPU_DATA_IN_0_BASE 0x11060
+#define CPU_DATA_IN_0_BASE 0x11090
 #define CPU_DATA_IN_0_BIT_CLEARING_EDGE_REGISTER 0
 #define CPU_DATA_IN_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define CPU_DATA_IN_0_CAPTURE 0
@@ -209,7 +209,7 @@
  */
 
 #define ALT_MODULE_CLASS_cpu_data_in_1 altera_avalon_pio
-#define CPU_DATA_IN_1_BASE 0x11070
+#define CPU_DATA_IN_1_BASE 0x110a0
 #define CPU_DATA_IN_1_BIT_CLEARING_EDGE_REGISTER 0
 #define CPU_DATA_IN_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define CPU_DATA_IN_1_CAPTURE 0
@@ -236,7 +236,7 @@
  */
 
 #define ALT_MODULE_CLASS_cpu_data_out_0 altera_avalon_pio
-#define CPU_DATA_OUT_0_BASE 0x11090
+#define CPU_DATA_OUT_0_BASE 0x110c0
 #define CPU_DATA_OUT_0_BIT_CLEARING_EDGE_REGISTER 0
 #define CPU_DATA_OUT_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define CPU_DATA_OUT_0_CAPTURE 0
@@ -263,7 +263,7 @@
  */
 
 #define ALT_MODULE_CLASS_cpu_data_out_1 altera_avalon_pio
-#define CPU_DATA_OUT_1_BASE 0x11080
+#define CPU_DATA_OUT_1_BASE 0x110b0
 #define CPU_DATA_OUT_1_BIT_CLEARING_EDGE_REGISTER 0
 #define CPU_DATA_OUT_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define CPU_DATA_OUT_1_CAPTURE 0
@@ -301,7 +301,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x110a8
+#define JTAG_UART_0_BASE 0x110d8
 #define JTAG_UART_0_IRQ 5
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -343,12 +343,66 @@
 
 
 /*
+ * read_inc1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_read_inc1 altera_avalon_pio
+#define READ_INC1_BASE 0x11020
+#define READ_INC1_BIT_CLEARING_EDGE_REGISTER 0
+#define READ_INC1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define READ_INC1_CAPTURE 0
+#define READ_INC1_DATA_WIDTH 1
+#define READ_INC1_DO_TEST_BENCH_WIRING 0
+#define READ_INC1_DRIVEN_SIM_VALUE 0
+#define READ_INC1_EDGE_TYPE "NONE"
+#define READ_INC1_FREQ 50000000
+#define READ_INC1_HAS_IN 0
+#define READ_INC1_HAS_OUT 1
+#define READ_INC1_HAS_TRI 0
+#define READ_INC1_IRQ -1
+#define READ_INC1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define READ_INC1_IRQ_TYPE "NONE"
+#define READ_INC1_NAME "/dev/read_inc1"
+#define READ_INC1_RESET_VALUE 0
+#define READ_INC1_SPAN 16
+#define READ_INC1_TYPE "altera_avalon_pio"
+
+
+/*
+ * read_inc2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_read_inc2 altera_avalon_pio
+#define READ_INC2_BASE 0x11030
+#define READ_INC2_BIT_CLEARING_EDGE_REGISTER 0
+#define READ_INC2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define READ_INC2_CAPTURE 0
+#define READ_INC2_DATA_WIDTH 1
+#define READ_INC2_DO_TEST_BENCH_WIRING 0
+#define READ_INC2_DRIVEN_SIM_VALUE 0
+#define READ_INC2_EDGE_TYPE "NONE"
+#define READ_INC2_FREQ 50000000
+#define READ_INC2_HAS_IN 0
+#define READ_INC2_HAS_OUT 1
+#define READ_INC2_HAS_TRI 0
+#define READ_INC2_IRQ -1
+#define READ_INC2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define READ_INC2_IRQ_TYPE "NONE"
+#define READ_INC2_NAME "/dev/read_inc2"
+#define READ_INC2_RESET_VALUE 0
+#define READ_INC2_SPAN 16
+#define READ_INC2_TYPE "altera_avalon_pio"
+
+
+/*
  * ready_to_transfer_in_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_ready_to_transfer_in_0 altera_avalon_pio
-#define READY_TO_TRANSFER_IN_0_BASE 0x11050
+#define READY_TO_TRANSFER_IN_0_BASE 0x11080
 #define READY_TO_TRANSFER_IN_0_BIT_CLEARING_EDGE_REGISTER 0
 #define READY_TO_TRANSFER_IN_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define READY_TO_TRANSFER_IN_0_CAPTURE 0
@@ -375,7 +429,7 @@
  */
 
 #define ALT_MODULE_CLASS_ready_to_transfer_in_1 altera_avalon_pio
-#define READY_TO_TRANSFER_IN_1_BASE 0x11040
+#define READY_TO_TRANSFER_IN_1_BASE 0x11070
 #define READY_TO_TRANSFER_IN_1_BIT_CLEARING_EDGE_REGISTER 0
 #define READY_TO_TRANSFER_IN_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define READY_TO_TRANSFER_IN_1_CAPTURE 0
@@ -397,39 +451,12 @@
 
 
 /*
- * scanner_clk_ctrl configuration
- *
- */
-
-#define ALT_MODULE_CLASS_scanner_clk_ctrl altera_avalon_pio
-#define SCANNER_CLK_CTRL_BASE 0x11000
-#define SCANNER_CLK_CTRL_BIT_CLEARING_EDGE_REGISTER 0
-#define SCANNER_CLK_CTRL_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SCANNER_CLK_CTRL_CAPTURE 0
-#define SCANNER_CLK_CTRL_DATA_WIDTH 1
-#define SCANNER_CLK_CTRL_DO_TEST_BENCH_WIRING 0
-#define SCANNER_CLK_CTRL_DRIVEN_SIM_VALUE 0
-#define SCANNER_CLK_CTRL_EDGE_TYPE "NONE"
-#define SCANNER_CLK_CTRL_FREQ 50000000
-#define SCANNER_CLK_CTRL_HAS_IN 0
-#define SCANNER_CLK_CTRL_HAS_OUT 1
-#define SCANNER_CLK_CTRL_HAS_TRI 0
-#define SCANNER_CLK_CTRL_IRQ -1
-#define SCANNER_CLK_CTRL_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SCANNER_CLK_CTRL_IRQ_TYPE "NONE"
-#define SCANNER_CLK_CTRL_NAME "/dev/scanner_clk_ctrl"
-#define SCANNER_CLK_CTRL_RESET_VALUE 0
-#define SCANNER_CLK_CTRL_SPAN 16
-#define SCANNER_CLK_CTRL_TYPE "altera_avalon_pio"
-
-
-/*
  * scanner_rst configuration
  *
  */
 
 #define ALT_MODULE_CLASS_scanner_rst altera_avalon_pio
-#define SCANNER_RST_BASE 0x11010
+#define SCANNER_RST_BASE 0x11040
 #define SCANNER_RST_BIT_CLEARING_EDGE_REGISTER 0
 #define SCANNER_RST_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SCANNER_RST_CAPTURE 0
@@ -456,7 +483,7 @@
  */
 
 #define ALT_MODULE_CLASS_start_scanning altera_avalon_pio
-#define START_SCANNING_BASE 0x11030
+#define START_SCANNING_BASE 0x11060
 #define START_SCANNING_BIT_CLEARING_EDGE_REGISTER 0
 #define START_SCANNING_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define START_SCANNING_CAPTURE 0
@@ -483,7 +510,7 @@
  */
 
 #define ALT_MODULE_CLASS_start_transfer altera_avalon_pio
-#define START_TRANSFER_BASE 0x11020
+#define START_TRANSFER_BASE 0x11050
 #define START_TRANSFER_BIT_CLEARING_EDGE_REGISTER 0
 #define START_TRANSFER_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define START_TRANSFER_CAPTURE 0
@@ -510,13 +537,67 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x110a0
+#define SYSID_QSYS_0_BASE 0x110d0
 #define SYSID_QSYS_0_ID 0
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1480540349
+#define SYSID_QSYS_0_TIMESTAMP 1480715520
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
+
+
+/*
+ * wr_en1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_wr_en1 altera_avalon_pio
+#define WR_EN1_BASE 0x11000
+#define WR_EN1_BIT_CLEARING_EDGE_REGISTER 0
+#define WR_EN1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define WR_EN1_CAPTURE 0
+#define WR_EN1_DATA_WIDTH 1
+#define WR_EN1_DO_TEST_BENCH_WIRING 0
+#define WR_EN1_DRIVEN_SIM_VALUE 0
+#define WR_EN1_EDGE_TYPE "NONE"
+#define WR_EN1_FREQ 50000000
+#define WR_EN1_HAS_IN 0
+#define WR_EN1_HAS_OUT 1
+#define WR_EN1_HAS_TRI 0
+#define WR_EN1_IRQ -1
+#define WR_EN1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WR_EN1_IRQ_TYPE "NONE"
+#define WR_EN1_NAME "/dev/wr_en1"
+#define WR_EN1_RESET_VALUE 0
+#define WR_EN1_SPAN 16
+#define WR_EN1_TYPE "altera_avalon_pio"
+
+
+/*
+ * wr_en2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_wr_en2 altera_avalon_pio
+#define WR_EN2_BASE 0x11010
+#define WR_EN2_BIT_CLEARING_EDGE_REGISTER 0
+#define WR_EN2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define WR_EN2_CAPTURE 0
+#define WR_EN2_DATA_WIDTH 1
+#define WR_EN2_DO_TEST_BENCH_WIRING 0
+#define WR_EN2_DRIVEN_SIM_VALUE 0
+#define WR_EN2_EDGE_TYPE "NONE"
+#define WR_EN2_FREQ 50000000
+#define WR_EN2_HAS_IN 0
+#define WR_EN2_HAS_OUT 1
+#define WR_EN2_HAS_TRI 0
+#define WR_EN2_IRQ -1
+#define WR_EN2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WR_EN2_IRQ_TYPE "NONE"
+#define WR_EN2_NAME "/dev/wr_en2"
+#define WR_EN2_RESET_VALUE 0
+#define WR_EN2_SPAN 16
+#define WR_EN2_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

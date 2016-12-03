@@ -14,26 +14,38 @@ module scanner_testbench();
 	scanner dut (address, data_out, start_scan, data_in, ready_second_buffer, start_second_buffer, 
 				ready_to_transfer, transfer, flush_signal, go_to_standby, state, wr_en, read_inc, clk, rst);
 
-	parameter stimdelay = 5000;
+	parameter stimdelay = 5000, delay = 10;
 	integer i;
 	initial begin
-		rst = 1'b0;clk = 1;transfer = 1'b1;
-		#10;
+		rst = 1'b1;clk = 1;transfer = 1'b0;flush_signal = 0; read_inc = 0;start_scan = 1'b0;wr_en = 0;go_to_standby = 0;
+		#delay;
+		rst= 1'b0;
+		#delay;
 		rst = 1'b1;
-		#10;
-		start_scan = 1'b0;
-		#10;
+		#delay;
 		start_scan = 1'b1;
-		#10;
+		#delay;
+		start_scan = 1'b0;
 		data_in = 8'd5;
-		for (i = 0; i < 9; i=i+1) begin
-			#10;
+		for (i = 0; i < 10; i=i+1) begin
+			#delay;
 			wr_en = 1'b1;
-			#10;
-			data_in = data_in + 1;
-			#10;
+			#delay;
 			wr_en = 1'b0;
+			#delay;
+			data_in = data_in + 1;
 		end
+		#delay
+		transfer = 1'b1;
+		#delay
+		transfer = 1'b0;
+		for (i = 0; i <10; i=i+1) begin
+			#delay;
+			read_inc = 1;
+			#delay;
+			read_inc = 0;
+		end
+			
 		#stimdelay;
 		$finish;
 	end

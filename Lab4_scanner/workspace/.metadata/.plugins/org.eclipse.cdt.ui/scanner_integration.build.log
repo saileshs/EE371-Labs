@@ -1,9 +1,9 @@
-16:03:31 **** Incremental Build of configuration Nios II for project scanner_integration ****
+17:41:18 **** Incremental Build of configuration Nios II for project scanner_integration ****
 make all 
 Info: Building ../scanner_integration_bsp/
 C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../scanner_integration_bsp/
 [BSP build complete]
 [scanner_integration build complete]
 
-16:03:31 Build Finished (took 633ms)
+17:41:19 Build Finished (took 683ms)
 

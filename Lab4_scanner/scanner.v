@@ -1,4 +1,4 @@
-`include "buffer_new.v"
+//`include "buffer_new.v"
 
 module scanner (address, data_out, start_scan, data_in, ready_second_buffer, start_second_buffer, 
 				ready_to_transfer, transfer, flush_signal, go_to_standby, state, wr_en, read_inc, clk, rst);
@@ -22,7 +22,6 @@ module scanner (address, data_out, start_scan, data_in, ready_second_buffer, sta
 	always @(posedge clk or negedge rst) begin
 		if (~rst) begin
 			state <= lowPower;
-			read_address <= 4'b0;
 		end else begin
 			state <= next;
 		end
@@ -52,7 +51,7 @@ module scanner (address, data_out, start_scan, data_in, ready_second_buffer, sta
 							mem_rst <= 1'b1;
 							if(transfer) begin
 								next <= transtage;
-							end else if (address == 4'd9) begin
+							end else if (address == 4'd10) begin
 								next <= idle;
 							end else 
 								next <= active;
@@ -68,7 +67,7 @@ module scanner (address, data_out, start_scan, data_in, ready_second_buffer, sta
 						end
 			standby: 	begin
 							mem_rst <= 1'b1;
-							if (start_scan) 
+							if (start_scan && transfer == 1'b0) 
 								next <= active;
 							else 
 								next <= standby;
@@ -96,7 +95,8 @@ module scanner (address, data_out, start_scan, data_in, ready_second_buffer, sta
 						end
 			transtage : begin
 							mem_rst <= 1'b1;
-							if(address > 4'd9)
+							//start_second_buffer <= 1'b0;
+							if(read_address > 4'd9)
 								next <= lowPower;
 							else if (read_inc_edge && read_inc) begin
 								read_address <= read_address + 1'b1;
