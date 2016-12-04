@@ -16,8 +16,11 @@ module serial_buffer (bit_out, parallel_in, load, sr_clk, rst);
 
 	end
 
-	always@(posedge sr_clk) begin
-		bit_out <= bitShift[0];
+	always@(posedge sr_clk or negedge rst) begin
+		if (~rst)
+			bit_out <= 1'b1;
+		else
+			bit_out <= bitShift[0];
 	end
 
 endmodule
