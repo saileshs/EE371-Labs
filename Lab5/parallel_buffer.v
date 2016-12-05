@@ -1,6 +1,6 @@
-module parallel_buffer (parallel_out, serial_in, sr_clk, rst);	
+module parallel_buffer (parallel_out, ser_data_in, sr_clk, rst);	
 	output wire [10:0] parallel_out;
-	input serial_in;
+	input ser_data_in;
 	input sr_clk, rst;
 
 	reg [10:0] bitShift = 11'b11111111111;
@@ -10,9 +10,8 @@ module parallel_buffer (parallel_out, serial_in, sr_clk, rst);
 		if (~rst) begin
 			bitShift <= 11'b11111111111;
 		end else begin
-			bitShift <= {bitShift[9:0], serial_in};
+			bitShift <= {ser_data_in, bitShift[10:1]};
 		end
-
 	end
 
 	assign parallel_out = bitShift;

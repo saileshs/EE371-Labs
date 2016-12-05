@@ -10,7 +10,8 @@ module serial_out_TB();
 
 	always #1 clk = ~clk;
 
-	parameter delay = 5;
+	parameter delay = 5, bitdelay = 64; 
+	
 
 	initial begin
 		$dumpfile("serial_out.vcd");
@@ -32,7 +33,7 @@ module serial_out_TB();
 		#1;
 		load = 0;
 		#delay;
-
+        
 		trans_en = 1;
 		#5000;
 

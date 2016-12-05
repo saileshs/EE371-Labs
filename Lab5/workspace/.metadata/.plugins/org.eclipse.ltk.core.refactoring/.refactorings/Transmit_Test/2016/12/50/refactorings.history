@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Transmit_Test/scanner_integration.c&apos; to &apos;transmit.c&apos;" description="Rename resource &apos;scanner_integration.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="scanner_integration.c" name="transmit.c" stamp="1480900315440" updateReferences="true"/>
+</session>

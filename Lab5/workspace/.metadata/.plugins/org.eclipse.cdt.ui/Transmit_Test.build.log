@@ -1,0 +1,9 @@
+18:01:22 **** Incremental Build of configuration Nios II for project Transmit_Test ****
+make all 
+Info: Building ../Transmit_Test_bsp/
+C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Transmit_Test_bsp/
+[BSP build complete]
+[Transmit_Test build complete]
+
+18:01:22 Build Finished (took 635ms)
+

@@ -1,5 +1,5 @@
-`include "serial_out_ctrl.v"
-`include "serial_buffer.v"
+//`include "serial_out_ctrl.v"
+//`include "serial_buffer.v"
 
 module serial_out(bit_out, char_sent, trans_en, load, data_in, clk, rst);
 	output wire bit_out, char_sent;
