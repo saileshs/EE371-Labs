@@ -1,6 +1,6 @@
-17:08:13 **** Clean-only build of configuration Nios II for project Transmit_Test_bsp ****
-make clean 
-[BSP clean complete]
+16:12:44 **** Build of configuration Nios II for project Transmit_Test_bsp ****
+make all 
+[BSP build complete]
 
-17:08:15 Build Finished (took 1s.412ms)
+16:12:45 Build Finished (took 560ms)
 

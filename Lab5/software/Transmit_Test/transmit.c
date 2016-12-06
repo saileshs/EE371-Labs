@@ -19,8 +19,8 @@
 
 #define data_out_0 (volatile char*) 0x00011130
 #define data_out_1 (volatile char*) 0x00011120
-#define data_in_0 (volatile char*)  0x00011110
-#define data_in_1 (volatile char*) 0x000110a0
+#define data_in_0 (volatile char*)  0x00011100
+#define data_in_1 (volatile char*) 0x00011110
 #define ready_to_transfer_0 (volatile char*) 0x000110f0
 #define ready_to_transfer_1 (volatile char*) 0x000110e0
 #define start_scanning (volatile char*) 0x000110d0
@@ -34,55 +34,39 @@
 
 
 
-void scanner_init(){
-	*scanner_rst = 0;
-	*start_scanning = 0;
-	*start_transfer = 0;
-	*scanner_rst = 1;
-	*wr_en_1 = 0;
-	*wr_en_2 = 0;
-	*read_inc_1 = 0;
-	*read_inc_2 = 0;
-}
+char data_buf[10];
 
-void scan_inq(){
-	char buf = 'n';
-	while (buf == 'n'){
-		alt_putstr("start scanning?(y/n)\n");
-		buf = alt_getchar();
-		alt_getchar();
-		if(buf == 'y'){
-			*start_scanning = 1;
-			*start_scanning = 0;
-			alt_putstr("scanning...\n");
-		} else {
-			*start_scanning = 0;
-		}
-	}
-}
-
-
+void scanner_init(void);
+int scan_inq(void);
 void scanner_rout(void);
 
 int main(){
-	char buf;
+	//char buf;
 	alt_putstr("Initialized\n");
 	while(1){
-		buf = alt_getchar();
-		//alt_getchar();
-		*net_data_out = buf;
-		*load = 1;
-		*load = 0;
-		while(*char_sent==0){
-			*transmit_en = 1;
-		}
-		*transmit_en = 0;
-		while(1){
-			if(*char_received == 1){
-				alt_putchar(*net_data_in);
-				break;
+		scanner_rout();
+		int i;
+		for(i = 0; i < 10; i++){
+			//buf = alt_getchar();
+			//alt_getchar();
+			*net_data_out = data_buf[i];
+			*load = 1;
+			*load = 0;
+			while(*char_sent==0){
+				*transmit_en = 1;
 			}
+			*transmit_en = 0;
+			//while loop for receive test
+			while(1){
+				if(*char_received == 1){
+					alt_putchar(*net_data_in);
+					break;
+				}
+			}
+			//test end
+			usleep(50);
 		}
+		alt_putstr("\n");
 	}
 
 	return 0;
@@ -99,17 +83,17 @@ void scanner_rout(void){
 
 	while(1){
 
-	for(i=0; i<10; i++){
-		*data_out_0 = i;
-		*wr_en_1 = 1;
-		usleep(500000);
-		*wr_en_1 = 0;
-		if (*ready_to_transfer_0 == 1 && i == 8) {
-			alt_putstr("\nscanner 1 ready to transfer\n");
+		for(i=0; i<10; i++){
+			*data_out_0 = i;
+			*wr_en_1 = 1;
+			usleep(100000);
+			*wr_en_1 = 0;
+			if (*ready_to_transfer_0 == 1 && i == 8) {
+				alt_putstr("\nscanner 1 ready to transfer\n");
+			}
 		}
-	}
-	usleep(10);
-	*data_out_0 = 0;
+		usleep(10);
+		*data_out_0 = 0;
 
 
 		alt_putstr("start scanner 1 transfer?(y/n)\n");
@@ -120,22 +104,25 @@ void scanner_rout(void){
 			*start_transfer = 0;
 			alt_putstr("transferring...\n");
 			for(i=0; i<10; i++){
-				alt_putchar(*data_in_0 + '0');
-				alt_putstr("\n");
+				//alt_putchar(*data_in_0 + '0');
+				//alt_putstr("\n");
+				data_buf[i] = *data_in_0 + '0';
 				*read_inc_1 = 1;
 				usleep(10);
 				*read_inc_1 = 0;
-				usleep(500000);
+				usleep(100000);
 			}
 			alt_putstr("transfer complete\n");
-			scan_inq();
+			if(!scan_inq()){
+				break;
+			}
 		}
 
 
 		for(i=0; i<10; i++){
 			*data_out_1 = i;
 			*wr_en_2 = 1;
-			usleep(500000);
+			usleep(100000);
 			*wr_en_2 = 0;
 			if (*ready_to_transfer_1 == 1 && i == 8) {
 				alt_putstr("\nscanner 2 ready to transfer\n");
@@ -152,18 +139,48 @@ void scanner_rout(void){
 			*start_transfer = 0;
 			alt_putstr("transferring...\n");
 
-			for(i=0; i<10; i++){
-				alt_putchar(*data_in_1 + '0');
-				alt_putstr("\n");
+			for(i = 9; i >= 0; i--){
+				//alt_putchar(*data_in_1 + '0');
+				//alt_putstr("\n");
+				data_buf[i] = *data_in_1 + '0';
 				*read_inc_2 = 1;
 				usleep(10);
 				*read_inc_2 = 0;
-				usleep(500000);
+				usleep(100000);
 			}
 			alt_putstr("transfer complete\n");
-			scan_inq();
+			if(!scan_inq()){
+				break;
+			}
 		}
 
+	}
+}
+
+void scanner_init(void){
+	*scanner_rst = 0;
+	*start_scanning = 0;
+	*start_transfer = 0;
+	*scanner_rst = 1;
+	*wr_en_1 = 0;
+	*wr_en_2 = 0;
+	*read_inc_1 = 0;
+	*read_inc_2 = 0;
+}
+
+int scan_inq(void){
+	char buf = 'n';
+	alt_putstr("start scanning?(y/n)\n");
+	buf = alt_getchar();
+	alt_getchar();
+	if(buf == 'y'){
+		*start_scanning = 1;
+		*start_scanning = 0;
+		alt_putstr("scanning...\n");
+		return 1;
+	} else {
+		*start_scanning = 0;
+		return 0;
 	}
 }
 

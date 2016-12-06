@@ -1,9 +1,20 @@
-18:01:22 **** Incremental Build of configuration Nios II for project Transmit_Test ****
+16:08:46 **** Incremental Build of configuration Nios II for project Transmit_Test ****
 make all 
 Info: Building ../Transmit_Test_bsp/
 C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Transmit_Test_bsp/
 [BSP build complete]
+Info: Compiling transmit.c to obj/default/transmit.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Transmit_Test_bsp//HAL/inc -I../Transmit_Test_bsp/ -I../Transmit_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/transmit.o transmit.c
+Info: Linking Transmit_Test.elf
+nios2-elf-g++  -T'../Transmit_Test_bsp//linker.x' -msys-crt0='../Transmit_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Transmit_Test_bsp/  -msmallc  -Wl,-Map=Transmit_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o Transmit_Test.elf obj/default/transmit.o -lm -msys-lib=m
+../Transmit_Test_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\software\Transmit_Test_bsp/HAL/src/alt_main.c:155: warning: warning: close is not implemented and will always fail
+nios2-elf-insert Transmit_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x11140 --timestamp 1480898402 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "C:/Users/zhangw24/Desktop/EE371-Labs/Lab5" --jdi ../..//output_files/lights.jdi --sopcinfo C:/Users/zhangw24/Desktop/EE371-Labs/Lab5/software/Transmit_Test_bsp/../../nios_system.sopcinfo
+Info: (Transmit_Test.elf) 5188 Bytes program size (code + initialized data).
+Info:                     14 KBytes free for stack + heap.
+Info: Creating Transmit_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Transmit_Test.elf >Transmit_Test.objdump
 [Transmit_Test build complete]
 
-18:01:22 Build Finished (took 635ms)
+16:08:47 Build Finished (took 1s.220ms)
 

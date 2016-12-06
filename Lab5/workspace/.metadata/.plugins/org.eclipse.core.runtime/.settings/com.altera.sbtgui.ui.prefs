@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 newApplicationWizardPage.defaultLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab4_1\\software\\hello_world_small
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab5\\software\\Transmit_Test
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab5\\software\\receive
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab5\\nios_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab5\\software\\Transmit_Test_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\zhangw24\\Desktop\\EE371-Labs\\Lab5\\software\\receive_bsp

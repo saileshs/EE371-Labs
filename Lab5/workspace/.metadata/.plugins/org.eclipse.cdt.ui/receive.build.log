@@ -1,0 +1,9 @@
+16:26:10 **** Incremental Build of configuration Nios II for project receive ****
+make all 
+Info: Building ../receive_bsp/
+C:/altera/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../receive_bsp/
+[BSP build complete]
+[receive build complete]
+
+16:26:10 Build Finished (took 690ms)
+
