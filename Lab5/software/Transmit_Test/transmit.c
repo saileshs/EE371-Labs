@@ -85,7 +85,6 @@ int main(){
 
 void scanner_rout(void){
 	int i = 0;
-	char buf1 = 'n';
 	scanner_init();
 	alt_putstr("\nscanners initialized\n");
 	while(*start_scan_receive == 0){
@@ -113,9 +112,11 @@ void scanner_rout(void){
 		//alt_putstr("start scanner 1 transfer?(y/n)\n");
 		//buf1 = alt_getchar();
 		//alt_getchar();
-		alt_printf("waiting for transfer sig");
-		while(*transfer_receive == 0){
-
+		alt_printf("waiting for transfer sig\n");
+		i=0;
+		while(*transfer_receive == 0 && i < 50000){
+			usleep(10);
+			i++;
 		}
 
 		if(*transfer_receive == 1){
@@ -129,13 +130,14 @@ void scanner_rout(void){
 				*read_inc_1 = 1;
 				usleep(10);
 				*read_inc_1 = 0;
-				usleep(10);
+				usleep(1000000);
 			}
 			alt_putstr("transfer complete\n");
 			//if(!scan_inq()){
 				break;
 			//}
 		}
+		*ready_transfer_send = 0;
 
 
 		for(i=0; i<10; i++){
@@ -145,15 +147,20 @@ void scanner_rout(void){
 			*wr_en_2 = 0;
 			if (*ready_to_transfer_1 == 1 && i == 8) {
 				alt_putstr("\nscanner 2 ready to transfer\n");
+				*ready_transfer_send = 1;
 			}
 		}
 		*data_out_1 = 0;
 
 
-		alt_putstr("start scanner 2 transfer?(y/n)\n");
-		buf1 = alt_getchar();
-		alt_getchar();
-		if(buf1 == 'y'){
+		alt_printf("waiting for transfer sig\n");
+		i=0;
+		while(*transfer_receive == 0 && i < 50000){
+			usleep(10);
+			i++;
+		}
+
+		if(*transfer_receive == 1){
 			*start_transfer = 1;
 			*start_transfer = 0;
 			alt_putstr("transferring...\n");
@@ -168,10 +175,11 @@ void scanner_rout(void){
 				usleep(100000);
 			}
 			alt_putstr("transfer complete\n");
-			if(!scan_inq()){
-				break;
-			}
+
+			break;
+
 		}
+		*ready_transfer_send = 0;
 
 	}
 }

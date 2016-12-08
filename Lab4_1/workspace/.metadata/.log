@@ -314,3 +314,55 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2016-11-22 13:08:47.955
 !MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/hello_world_small/hello_world_small.elf]
+!SESSION 2016-12-08 12:31:22.384 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/altera/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/altera/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-08 12:32:35.416
+!MESSAGE Indexed 'Count_binary' (1 sources, 1 headers) in 0.03 sec: 20 declarations; 76 references; 6 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.57%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-08 12:33:29.772
+!MESSAGE Indexed 'Count_binary_bsp' (80 sources, 111 headers) in 1.66 sec: 3,283 declarations; 5,757 references; 16 unresolved inclusions; 5 syntax errors; 51 unresolved names (0.56%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:53:39.888
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11020 --id=0x0 --timestamp=1479846589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:53:41.485
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/Count_Binary/Count_Binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:54:24.378
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11020 --id=0x0 --timestamp=1479846589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:54:25.967
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/hello_world_small/hello_world_small.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:55:41.293
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:55:41.619
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11020 --id=0x0 --timestamp=1479846589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:55:43.242
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/Count_Binary/Count_Binary.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:19.173
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:19.494
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11020 --id=0x0 --timestamp=1479846589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:21.091
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/lights/lights.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:45.735
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:46.059
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11020 --id=0x0 --timestamp=1479846589]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-08 12:58:47.669
+!MESSAGE Executing: [C:/altera/16.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11020 --id=0x0 --timestamp=1479846589 /cygdrive/c/Users/zhangw24/Desktop/EE371-Labs/Lab4_1/software/hello_world_small/hello_world_small.elf]

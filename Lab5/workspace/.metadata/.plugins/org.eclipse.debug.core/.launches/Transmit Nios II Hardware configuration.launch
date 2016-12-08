@@ -4,12 +4,12 @@
 <stringAttribute key="byteStreamDeviceDeviceID" value="2"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <booleanAttribute key="downloadProgram" value="true"/>
-<stringAttribute key="elfFile" value="C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\software\Transmit_Test\Transmit_Test.elf"/>
+<stringAttribute key="elfFile" value="C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\software\Transmit_Test\Transmit_Test.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Transmit_Test.elf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Transmit"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="transmit"/>
 <stringAttribute key="processorCableName" value="DE-SoC on localhost [USB-1]"/>
 <stringAttribute key="processorDeviceIndex" value="2"/>
 <stringAttribute key="processorInstanceId" value="0"/>

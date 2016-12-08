@@ -4,10 +4,14 @@
 <stringAttribute key="byteStreamDeviceDeviceID" value="2"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <booleanAttribute key="downloadProgram" value="true"/>
-<stringAttribute key="elfFile" value="C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\software\scanner_integration\scanner_integration.elf"/>
+<stringAttribute key="elfFile" value="C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\software\scanner_integration\scanner_integration.elf"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="scanner_integration.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="scanner_integration"/>
 <stringAttribute key="processorCableName" value="DE-SoC on localhost [USB-1]"/>

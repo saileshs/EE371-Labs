@@ -77,7 +77,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  29 .jdi          00004239  00000000  00000000  0000c38a  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     0003d26b  00000000  00000000  000105c3  2**0
+ 30 .sopcinfo     0003f33f  00000000  00000000  000105c3  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00008000 l    d  .entry	00000000 .entry
@@ -1989,9 +1989,9 @@ int alt_get_fd (alt_dev* dev)
     9010:	89000015 	stw	r4,0(r17)
     9014:	a8000226 	beq	r21,zero,9020 <__call_exitprocs+0x144>
     9018:	a809883a 	mov	r4,r21
-    901c:	00000000 	call	0 <__reset-0x8000>
+    901c:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
     9020:	9809883a 	mov	r4,r19
-    9024:	00000000 	call	0 <__reset-0x8000>
+    9024:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
     9028:	8cc00017 	ldw	r19,0(r17)
     902c:	003fbd06 	br	8f24 <_gp+0xffff7b74>
     9030:	9823883a 	mov	r17,r19
