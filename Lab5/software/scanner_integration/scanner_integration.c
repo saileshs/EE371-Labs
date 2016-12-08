@@ -8,20 +8,37 @@
 #include "sys/alt_stdio.h"
 #include "unistd.h"
 
-#define data_out_0 (volatile char*) 0x000110c0
-#define data_out_1 (volatile char*) 0x000110b0
-#define data_in_0 (volatile char*) 0x00011090
-#define data_in_1 (volatile char*) 0x000110a0
-#define ready_to_transfer_0 (volatile char*) 0x00011080
-#define ready_to_transfer_1 (volatile char*) 0x00011070
-#define start_scanning (volatile char*) 0x00011060
-#define start_transfer (volatile char*) 0x00011050
-#define scanner_rst (volatile char*) 0x00011040
-#define wr_en_1 (volatile char*) 0x00011000
-#define wr_en_2 (volatile char*) 0x00011010
-#define read_inc_1 (volatile char*) 0x00011020
-#define read_inc_2 (volatile char*) 0x00011030
+#define transmit_en (volatile char*)   0x00011060
+#define char_received (volatile char*) 0x00011090
+#define char_sent (volatile char*) 0x00011080
+#define load (volatile char*) 0x00011070
+#define net_data_in (volatile char*) 0x000110b0
+#define net_data_out (volatile char*) 0x000110a0
 
+#define data_out_0 (volatile char*) 0x00011190
+#define data_out_1 (volatile char*) 0x00011180
+
+#define data_in_0 (volatile char*)  0x00011160
+#define data_in_1 (volatile char*) 0x00011170
+
+#define ready_to_transfer_0 (volatile char*) 0x00011150
+#define ready_to_transfer_1 (volatile char*) 0x00011140
+#define start_scanning (volatile char*) 0x00011130
+#define start_transfer (volatile char*) 0x00011120
+#define scanner_rst (volatile char*)    0x00011110
+#define wr_en_1 (volatile char*) 0x000110d0
+#define wr_en_2 (volatile char*) 0x000110e0
+#define read_inc_1 (volatile char*) 0x000110f0
+#define read_inc_2 (volatile char*) 0x00011100
+
+
+#define start_scan_receive (volatile char*) 0x00011050
+#define start_scan_send (volatile char*) 0x00011040
+
+#define ready_transfer_send (volatile char*) 0x00011030
+#define ready_transfer_receive (volatile char*) 0x00011020
+#define transfer_receive (volatile char*) 0x00011010
+#define transfer_send (volatile char*) 0x00011000
 
 
 

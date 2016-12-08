@@ -1,9 +1,11 @@
-module network_sys(ready_to_transfer_in_0, ready_to_transfer_in_1,ser_data_out, state, state2, hex0, hex1, hex2, hex3, hex4, hex5,ser_data_in, clk, rst);
+module network_sys(ready_to_transfer_in_0, ready_to_transfer_in_1, start_scan_send, ready_transfer_send, transfer_send, ser_data_out, state, state2, hex0, hex1, hex2, hex3, hex4, hex5, ser_data_in,start_scan_receive, ready_transfer_receive, transfer_receive, clk, rst);
 	output wire [2:0] state, state2;
 	output ready_to_transfer_in_0, ready_to_transfer_in_1;
 	output ser_data_out;
+	output start_scan_send, ready_transfer_send, transfer_send;
 	output reg [6:0] hex0, hex1, hex2, hex3, hex4 = off, hex5 = off;
 	input clk, rst, ser_data_in;
+	input start_scan_receive, ready_transfer_receive, transfer_receive;
 	wire [7:0] cpu_data_in_0, cpu_data_in_1, cpu_data_out_0, cpu_data_out_1;
 	wire ready_to_transfer_in_0, ready_to_transfer_in_1, start_scanning, start_transfer, scanner_rst, scanner_clk_ctrl;
 	wire wr_en1, wr_en2, read_inc1, read_inc2;
@@ -42,12 +44,19 @@ module network_sys(ready_to_transfer_in_0, ready_to_transfer_in_1,ser_data_out, 
     );
 	 */
 	 
-	 nios_system u0 (
+
+    nios_system u0 (
+        .char_received_external_connection_export          (char_received),          //          char_received_external_connection.export
+        .char_sent_external_connection_export              (char_sent),              //              char_sent_external_connection.export
         .clk_clk                                           (clk),                                           //                                        clk.clk
         .cpu_data_in_0_external_connection_export          (cpu_data_in_0),          //          cpu_data_in_0_external_connection.export
         .cpu_data_in_1_external_connection_export          (cpu_data_in_1),          //          cpu_data_in_1_external_connection.export
         .cpu_data_out_0_external_connection_export         (cpu_data_out_0),         //         cpu_data_out_0_external_connection.export
         .cpu_data_out_1_external_connection_export         (cpu_data_out_1),         //         cpu_data_out_1_external_connection.export
+        .led_data_external_connection_export               (led_data),               //               led_data_external_connection.export
+        .load_external_connection_export                   (load),                   //                   load_external_connection.export
+        .net_data_in_external_connection_export            (parallel_data_out),            //            net_data_in_external_connection.export
+        .net_data_out_external_connection_export           (parallel_data_in),           //           net_data_out_external_connection.export
         .read_inc1_external_connection_export              (read_inc1),              //              read_inc1_external_connection.export
         .read_inc2_external_connection_export              (read_inc2),              //              read_inc2_external_connection.export
         .ready_to_transfer_in_0_external_connection_export (ready_to_transfer_in_0), // ready_to_transfer_in_0_external_connection.export
@@ -56,16 +65,17 @@ module network_sys(ready_to_transfer_in_0, ready_to_transfer_in_1,ser_data_out, 
         .scanner_rst_external_connection_export            (scanner_rst),            //            scanner_rst_external_connection.export
         .start_scanning_external_connection_export         (start_scanning),         //         start_scanning_external_connection.export
         .start_transfer_external_connection_export         (start_transfer),         //         start_transfer_external_connection.export
+        .transmit_enable_external_connection_export        (trans_en),        //        transmit_enable_external_connection.export
         .wr_en1_external_connection_export                 (wr_en1),                 //                 wr_en1_external_connection.export
         .wr_en2_external_connection_export                 (wr_en2),                 //                 wr_en2_external_connection.export
-        .transmit_enable_external_connection_export        (trans_en),        //        transmit_enable_external_connection.export
-        .load_external_connection_export                   (load),                   //                   load_external_connection.export
-        .char_sent_external_connection_export              (char_sent),              //              char_sent_external_connection.export
-        .char_received_external_connection_export          (char_received),          //          char_received_external_connection.export
-        .net_data_out_external_connection_export           (parallel_data_in),           //           net_data_out_external_connection.export
-        .net_data_in_external_connection_export            (parallel_data_out),            //            net_data_in_external_connection.export
-        .led_data_external_connection_export               (led_data)                //               led_data_external_connection.export
+        .start_scan_receive_external_connection_export     (start_scan_receive),     //     start_scan_receive_external_connection.export
+        .start_scan_send_external_connection_export        (start_scan_send),        //        start_scan_send_external_connection.export
+        .ready_transfer_send_external_connection_export    (ready_transfer_send),    //    ready_transfer_send_external_connection.export
+        .ready_transfer_receive_external_connection_export (ready_transfer_receive), // ready_transfer_receive_external_connection.export
+        .transfer_receive_external_connection_export       (transfer_receive),       //       transfer_receive_external_connection.export
+        .transfer_send_external_connection_export          (transfer_send)           //          transfer_send_external_connection.export
     );
+
 
 
 

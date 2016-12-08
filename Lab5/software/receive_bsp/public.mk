@@ -152,14 +152,14 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x11140
-SOPC_SYSID_FLAG += --sidp=0x11140
-ELF_PATCH_FLAG  += --sidp 0x11140
+# setting SOPC_SYSID_BASE_ADDRESS is 0x111a0
+SOPC_SYSID_FLAG += --sidp=0x111a0
+ELF_PATCH_FLAG  += --sidp 0x111a0
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1480898402
-SOPC_SYSID_FLAG += --timestamp=1480898402
-ELF_PATCH_FLAG  += --timestamp 1480898402
+# setting SOPC_TIMESTAMP is 1481151789
+SOPC_SYSID_FLAG += --timestamp=1481151789
+ELF_PATCH_FLAG  += --timestamp 1481151789
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 
@@ -204,7 +204,8 @@ ALT_CPPFLAGS += -DALT_NO_C_PLUS_PLUS
 # devices. If true, adds -DALT_USE_DIRECT_DRIVERS to ALT_CPPFLAGS in public.mk. 
 # The Altera Host and read-only ZIP file systems can't be used if 
 # hal.enable_lightweight_device_driver_api is true. 
-# setting hal.enable_lightweight_device_driver_api is false
+# setting hal.enable_lightweight_device_driver_api is true
+ALT_CPPFLAGS += -DALT_USE_DIRECT_DRIVERS
 
 # Adds code to emulate multiply and divide instructions in case they are 
 # executed but aren't present in the CPU. Normally this isn't required because 

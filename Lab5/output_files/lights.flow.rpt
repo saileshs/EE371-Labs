@@ -1,5 +1,5 @@
 Flow report for lights
-Sun Dec 04 17:05:23 2016
+Wed Dec 07 16:22:38 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Dec 04 17:05:23 2016           ;
+; Flow Status                     ; Successful - Wed Dec 07 16:22:38 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; lights                                          ;
 ; Top-level Entity Name           ; network_sys                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1,054 / 32,070 ( 3 % )                          ;
-; Total registers                 ; 1508                                            ;
-; Total pins                      ; 54 / 457 ( 12 % )                               ;
+; Logic utilization (in ALMs)     ; 1,088 / 32,070 ( 3 % )                          ;
+; Total registers                 ; 1557                                            ;
+; Total pins                      ; 60 / 457 ( 13 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 175,104 / 4,065,280 ( 4 % )                     ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/04/2016 17:03:06 ;
+; Start date & time ; 12/07/2016 16:20:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lights              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 273440549240476.148089978608148                               ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273440549346168.148115642602196                               ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                     ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                          ; --            ; --          ; eda_simulation ;
@@ -95,7 +95,7 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --             ;
 ; SLD_FILE                            ; nios_system/synthesis/nios_system.regmap                      ; --            ; --          ; --             ;
 ; SLD_FILE                            ; nios_system/synthesis/nios_system.debuginfo                   ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1480898402 ; --            ; nios_system ; --             ;
+; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1481151789 ; --            ; nios_system ; --             ;
 ; SOPCINFO_FILE                       ; nios_system/synthesis/../../nios_system.sopcinfo              ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; network_sys                                                   ; lights        ; --          ; --             ;
@@ -107,12 +107,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:36     ; 1.0                     ; 1147 MB             ; 00:01:03                           ;
-; Fitter                    ; 00:01:08     ; 1.1                     ; 2862 MB             ; 00:02:16                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 954 MB              ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:10     ; 1.6                     ; 1317 MB             ; 00:00:15                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 882 MB              ; 00:00:04                           ;
-; Total                     ; 00:02:08     ; --                      ; --                  ; 00:03:46                           ;
+; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 1179 MB             ; 00:01:03                           ;
+; Fitter                    ; 00:01:03     ; 1.1                     ; 2846 MB             ; 00:02:14                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 959 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.7                     ; 1319 MB             ; 00:00:16                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 883 MB              ; 00:00:04                           ;
+; Total                     ; 00:02:04     ; --                      ; --                  ; 00:03:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,11 +121,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EE-137PC27       ; Windows 8 ; 6.2        ; x86_64         ;
-; Fitter                    ; EE-137PC27       ; Windows 8 ; 6.2        ; x86_64         ;
-; Assembler                 ; EE-137PC27       ; Windows 8 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EE-137PC27       ; Windows 8 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; EE-137PC27       ; Windows 8 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; EE-137PC24       ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; EE-137PC24       ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; EE-137PC24       ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EE-137PC24       ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; EE-137PC24       ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

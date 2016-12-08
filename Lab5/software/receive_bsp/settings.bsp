@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Dec 5, 2016 4:20:37 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1480983637199</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\software\receive_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Dec 7, 2016 3:49:24 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1481154564668</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\software\receive_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -806,7 +806,7 @@
                 <SettingName>hal.enable_lightweight_device_driver_api</SettingName>
                 <Identifier>ALT_USE_DIRECT_DRIVERS</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Enables lightweight device driver API. This reduces code and data footprint by removing the HAL layer that maps device names (e.g. /dev/uart0) to file descriptors. Instead, driver routines are called directly. The open(), close(), and lseek() routines will always fail if called. The read(), write(), fstat(), ioctl(), and isatty() routines only work for the stdio devices. If true, adds -DALT_USE_DIRECT_DRIVERS to ALT_CPPFLAGS in public.mk.</Description>
@@ -905,134 +905,170 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>Transmit_enable</slaveDescriptor>
+                <slaveDescriptor>Transfer_send</slaveDescriptor>
                 <addressRange>0x00011000 - 0x0001100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>load</slaveDescriptor>
+                <slaveDescriptor>Transfer_receive</slaveDescriptor>
                 <addressRange>0x00011010 - 0x0001101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>char_sent</slaveDescriptor>
+                <slaveDescriptor>Ready_transfer_receive</slaveDescriptor>
                 <addressRange>0x00011020 - 0x0001102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>char_received</slaveDescriptor>
+                <slaveDescriptor>Ready_transfer_send</slaveDescriptor>
                 <addressRange>0x00011030 - 0x0001103F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>net_data_out</slaveDescriptor>
+                <slaveDescriptor>Start_scan_send</slaveDescriptor>
                 <addressRange>0x00011040 - 0x0001104F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>net_data_in</slaveDescriptor>
+                <slaveDescriptor>Start_scan_receive</slaveDescriptor>
                 <addressRange>0x00011050 - 0x0001105F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led_data</slaveDescriptor>
+                <slaveDescriptor>Transmit_enable</slaveDescriptor>
                 <addressRange>0x00011060 - 0x0001106F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>wr_en1</slaveDescriptor>
+                <slaveDescriptor>load</slaveDescriptor>
                 <addressRange>0x00011070 - 0x0001107F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>wr_en2</slaveDescriptor>
+                <slaveDescriptor>char_sent</slaveDescriptor>
                 <addressRange>0x00011080 - 0x0001108F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>read_inc1</slaveDescriptor>
+                <slaveDescriptor>char_received</slaveDescriptor>
                 <addressRange>0x00011090 - 0x0001109F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>read_inc2</slaveDescriptor>
+                <slaveDescriptor>net_data_out</slaveDescriptor>
                 <addressRange>0x000110A0 - 0x000110AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>scanner_rst</slaveDescriptor>
+                <slaveDescriptor>net_data_in</slaveDescriptor>
                 <addressRange>0x000110B0 - 0x000110BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>start_transfer</slaveDescriptor>
+                <slaveDescriptor>led_data</slaveDescriptor>
                 <addressRange>0x000110C0 - 0x000110CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>start_scanning</slaveDescriptor>
+                <slaveDescriptor>wr_en1</slaveDescriptor>
                 <addressRange>0x000110D0 - 0x000110DF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>ready_to_transfer_in_1</slaveDescriptor>
+                <slaveDescriptor>wr_en2</slaveDescriptor>
                 <addressRange>0x000110E0 - 0x000110EF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>ready_to_transfer_in_0</slaveDescriptor>
+                <slaveDescriptor>read_inc1</slaveDescriptor>
                 <addressRange>0x000110F0 - 0x000110FF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>cpu_data_in_0</slaveDescriptor>
+                <slaveDescriptor>read_inc2</slaveDescriptor>
                 <addressRange>0x00011100 - 0x0001110F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>cpu_data_in_1</slaveDescriptor>
+                <slaveDescriptor>scanner_rst</slaveDescriptor>
                 <addressRange>0x00011110 - 0x0001111F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>cpu_data_out_1</slaveDescriptor>
+                <slaveDescriptor>start_transfer</slaveDescriptor>
                 <addressRange>0x00011120 - 0x0001112F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>cpu_data_out_0</slaveDescriptor>
+                <slaveDescriptor>start_scanning</slaveDescriptor>
                 <addressRange>0x00011130 - 0x0001113F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>ready_to_transfer_in_1</slaveDescriptor>
+                <addressRange>0x00011140 - 0x0001114F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>ready_to_transfer_in_0</slaveDescriptor>
+                <addressRange>0x00011150 - 0x0001115F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>cpu_data_in_0</slaveDescriptor>
+                <addressRange>0x00011160 - 0x0001116F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>cpu_data_in_1</slaveDescriptor>
+                <addressRange>0x00011170 - 0x0001117F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>cpu_data_out_1</slaveDescriptor>
+                <addressRange>0x00011180 - 0x0001118F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>cpu_data_out_0</slaveDescriptor>
+                <addressRange>0x00011190 - 0x0001119F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x00011140 - 0x00011147</addressRange>
+                <addressRange>0x000111A0 - 0x000111A7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00011148 - 0x0001114F</addressRange>
+                <addressRange>0x000111A8 - 0x000111AF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

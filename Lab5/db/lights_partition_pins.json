@@ -12,6 +12,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "start_scan_send",
+					"strict" : false
+				},
+				{
+					"name" : "ready_transfer_send",
+					"strict" : false
+				},
+				{
+					"name" : "transfer_send",
+					"strict" : false
+				},
+				{
 					"name" : "ser_data_out",
 					"strict" : false
 				},
@@ -157,6 +169,18 @@
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "ready_transfer_receive",
+					"strict" : false
+				},
+				{
+					"name" : "transfer_receive",
+					"strict" : false
+				},
+				{
+					"name" : "start_scan_receive",
 					"strict" : false
 				},
 				{

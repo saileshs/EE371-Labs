@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00000330  00000000  00000000  00002318  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00002a04  00000000  00000000  00002648  2**0
+  9 .debug_info   000029fa  00000000  00000000  00002648  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 000010ff  00000000  00000000  0000504c  2**0
+ 10 .debug_abbrev 000010ff  00000000  00000000  00005042  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   000013d5  00000000  00000000  0000614b  2**0
+ 11 .debug_line   000013d5  00000000  00000000  00006141  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00000544  00000000  00000000  00007520  2**2
+ 12 .debug_frame  00000544  00000000  00000000  00007518  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00000ff6  00000000  00000000  00007a64  2**0
+ 13 .debug_str    00001035  00000000  00000000  00007a5c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    000006d4  00000000  00000000  00008a5a  2**0
+ 14 .debug_loc    000006d4  00000000  00000000  00008a91  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000040  00000000  00000000  00009130  2**2
+ 15 .debug_alt_sim_info 00000040  00000000  00000000  00009168  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 000000e0  00000000  00000000  00009170  2**3
+ 16 .debug_ranges 000000e0  00000000  00000000  000091a8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0000a522  2**0
+ 17 .thread_model 00000003  00000000  00000000  0000a55a  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  0000a525  2**0
+ 18 .cpu          0000000c  00000000  00000000  0000a55d  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0000a531  2**0
+ 19 .qsys         00000001  00000000  00000000  0000a569  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0000a532  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  0000a56a  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  0000a533  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  0000a56b  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  0000a537  2**0
+ 22 .sysid_base   00000004  00000000  00000000  0000a56f  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  0000a53b  2**0
+ 23 .sysid_time   00000004  00000000  00000000  0000a573  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   0000000b  00000000  00000000  0000a53f  2**0
+ 24 .stderr_dev   0000000b  00000000  00000000  0000a577  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    0000000b  00000000  00000000  0000a54a  2**0
+ 25 .stdin_dev    0000000b  00000000  00000000  0000a582  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   0000000b  00000000  00000000  0000a555  2**0
+ 26 .stdout_dev   0000000b  00000000  00000000  0000a58d  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 0000000b  00000000  00000000  0000a560  2**0
+ 27 .sopc_system_name 0000000b  00000000  00000000  0000a598  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000031  00000000  00000000  0000a56b  2**0
+ 28 .quartus_project_dir 00000027  00000000  00000000  0000a5a3  2**0
                   CONTENTS, READONLY
- 29 .jdi          00004239  00000000  00000000  0000a59c  2**0
+ 29 .jdi          00004239  00000000  00000000  0000a5ca  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     0007e1aa  00000000  00000000  0000e7d5  2**0
+ 30 .sopcinfo     000cb0ee  00000000  00000000  0000e803  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00008000 l    d  .entry	00000000 .entry
@@ -272,8 +272,8 @@ alt_after_alt_main:
     8058:	003fff06 	br	8058 <_gp+0xffff6d88>
 
 0000805c <scanner_init>:
-#define read_inc_2 (volatile char*) 0x00011030
-
+#define transfer_receive (volatile char*) 0x00011010
+#define transfer_send (volatile char*) 0x00011000
 
 
 
@@ -283,36 +283,36 @@ void scanner_init(){
     8064:	d839883a 	mov	fp,sp
 	*scanner_rst = 0;
     8068:	00800074 	movhi	r2,1
-    806c:	10841004 	addi	r2,r2,4160
+    806c:	10844404 	addi	r2,r2,4368
     8070:	10000005 	stb	zero,0(r2)
 	*start_scanning = 0;
     8074:	00800074 	movhi	r2,1
-    8078:	10841804 	addi	r2,r2,4192
+    8078:	10844c04 	addi	r2,r2,4400
     807c:	10000005 	stb	zero,0(r2)
 	*start_transfer = 0;
     8080:	00800074 	movhi	r2,1
-    8084:	10841404 	addi	r2,r2,4176
+    8084:	10844804 	addi	r2,r2,4384
     8088:	10000005 	stb	zero,0(r2)
 	*scanner_rst = 1;
     808c:	00800074 	movhi	r2,1
-    8090:	10841004 	addi	r2,r2,4160
+    8090:	10844404 	addi	r2,r2,4368
     8094:	00c00044 	movi	r3,1
     8098:	10c00005 	stb	r3,0(r2)
 	*wr_en_1 = 0;
     809c:	00800074 	movhi	r2,1
-    80a0:	10840004 	addi	r2,r2,4096
+    80a0:	10843404 	addi	r2,r2,4304
     80a4:	10000005 	stb	zero,0(r2)
 	*wr_en_2 = 0;
     80a8:	00800074 	movhi	r2,1
-    80ac:	10840404 	addi	r2,r2,4112
+    80ac:	10843804 	addi	r2,r2,4320
     80b0:	10000005 	stb	zero,0(r2)
 	*read_inc_1 = 0;
     80b4:	00800074 	movhi	r2,1
-    80b8:	10840804 	addi	r2,r2,4128
+    80b8:	10843c04 	addi	r2,r2,4336
     80bc:	10000005 	stb	zero,0(r2)
 	*read_inc_2 = 0;
     80c0:	00800074 	movhi	r2,1
-    80c4:	10840c04 	addi	r2,r2,4144
+    80c4:	10844004 	addi	r2,r2,4352
     80c8:	10000005 	stb	zero,0(r2)
 }
     80cc:	0001883a 	nop
@@ -348,12 +348,12 @@ void scan_inq(){
     811c:	10000b1e 	bne	r2,zero,814c <scan_inq+0x6c>
 			*start_scanning = 1;
     8120:	00800074 	movhi	r2,1
-    8124:	10841804 	addi	r2,r2,4192
+    8124:	10844c04 	addi	r2,r2,4400
     8128:	00c00044 	movi	r3,1
     812c:	10c00005 	stb	r3,0(r2)
 			*start_scanning = 0;
     8130:	00800074 	movhi	r2,1
-    8134:	10841804 	addi	r2,r2,4192
+    8134:	10844c04 	addi	r2,r2,4400
     8138:	10000005 	stb	zero,0(r2)
 			alt_putstr("scanning...\n");
     813c:	01000074 	movhi	r4,1
@@ -363,7 +363,7 @@ void scan_inq(){
 		} else {
 			*start_scanning = 0;
     814c:	00800074 	movhi	r2,1
-    8150:	10841804 	addi	r2,r2,4192
+    8150:	10844c04 	addi	r2,r2,4400
     8154:	10000005 	stb	zero,0(r2)
 	*read_inc_2 = 0;
 }
@@ -419,12 +419,12 @@ int main(){
     81b8:	00001f06 	br	8238 <main+0xbc>
 		*data_out_0 = i;
     81bc:	00800074 	movhi	r2,1
-    81c0:	10843004 	addi	r2,r2,4288
+    81c0:	10846404 	addi	r2,r2,4496
     81c4:	e0fffe17 	ldw	r3,-8(fp)
     81c8:	10c00005 	stb	r3,0(r2)
 		*wr_en_1 = 1;
     81cc:	00800074 	movhi	r2,1
-    81d0:	10840004 	addi	r2,r2,4096
+    81d0:	10843404 	addi	r2,r2,4304
     81d4:	00c00044 	movi	r3,1
     81d8:	10c00005 	stb	r3,0(r2)
 		usleep(500000);
@@ -433,11 +433,11 @@ int main(){
     81e4:	00086f40 	call	86f4 <usleep>
 		*wr_en_1 = 0;
     81e8:	00800074 	movhi	r2,1
-    81ec:	10840004 	addi	r2,r2,4096
+    81ec:	10843404 	addi	r2,r2,4304
     81f0:	10000005 	stb	zero,0(r2)
 		if (*ready_to_transfer_0 == 1 && i == 8) {
     81f4:	00800074 	movhi	r2,1
-    81f8:	10842004 	addi	r2,r2,4224
+    81f8:	10845404 	addi	r2,r2,4432
     81fc:	10800003 	ldbu	r2,0(r2)
     8200:	10803fcc 	andi	r2,r2,255
     8204:	1080201c 	xori	r2,r2,128
@@ -473,7 +473,7 @@ int main(){
     8248:	00086f40 	call	86f4 <usleep>
 	*data_out_0 = 0;
     824c:	00800074 	movhi	r2,1
-    8250:	10843004 	addi	r2,r2,4288
+    8250:	10846404 	addi	r2,r2,4496
     8254:	10000005 	stb	zero,0(r2)
 
 
@@ -492,12 +492,12 @@ int main(){
     8278:	10002e1e 	bne	r2,zero,8334 <main+0x1b8>
 			*start_transfer = 1;
     827c:	00800074 	movhi	r2,1
-    8280:	10841404 	addi	r2,r2,4176
+    8280:	10844804 	addi	r2,r2,4384
     8284:	00c00044 	movi	r3,1
     8288:	10c00005 	stb	r3,0(r2)
 			*start_transfer = 0;
     828c:	00800074 	movhi	r2,1
-    8290:	10841404 	addi	r2,r2,4176
+    8290:	10844804 	addi	r2,r2,4384
     8294:	10000005 	stb	zero,0(r2)
 			alt_putstr("transferring...\n");
     8298:	01000074 	movhi	r4,1
@@ -508,7 +508,7 @@ int main(){
     82a8:	00001b06 	br	8318 <main+0x19c>
 				alt_putchar(*data_in_0 + '0');
     82ac:	00800074 	movhi	r2,1
-    82b0:	10842404 	addi	r2,r2,4240
+    82b0:	10845804 	addi	r2,r2,4448
     82b4:	10800003 	ldbu	r2,0(r2)
     82b8:	10803fcc 	andi	r2,r2,255
     82bc:	1080201c 	xori	r2,r2,128
@@ -522,7 +522,7 @@ int main(){
     82d8:	00086ac0 	call	86ac <alt_putstr>
 				*read_inc_1 = 1;
     82dc:	00800074 	movhi	r2,1
-    82e0:	10840804 	addi	r2,r2,4128
+    82e0:	10843c04 	addi	r2,r2,4336
     82e4:	00c00044 	movi	r3,1
     82e8:	10c00005 	stb	r3,0(r2)
 				usleep(10);
@@ -530,7 +530,7 @@ int main(){
     82f0:	00086f40 	call	86f4 <usleep>
 				*read_inc_1 = 0;
     82f4:	00800074 	movhi	r2,1
-    82f8:	10840804 	addi	r2,r2,4128
+    82f8:	10843c04 	addi	r2,r2,4336
     82fc:	10000005 	stb	zero,0(r2)
 				usleep(500000);
     8300:	01000234 	movhi	r4,8
@@ -567,12 +567,12 @@ int main(){
     8338:	00001f06 	br	83b8 <main+0x23c>
 			*data_out_1 = i;
     833c:	00800074 	movhi	r2,1
-    8340:	10842c04 	addi	r2,r2,4272
+    8340:	10846004 	addi	r2,r2,4480
     8344:	e0fffe17 	ldw	r3,-8(fp)
     8348:	10c00005 	stb	r3,0(r2)
 			*wr_en_2 = 1;
     834c:	00800074 	movhi	r2,1
-    8350:	10840404 	addi	r2,r2,4112
+    8350:	10843804 	addi	r2,r2,4320
     8354:	00c00044 	movi	r3,1
     8358:	10c00005 	stb	r3,0(r2)
 			usleep(500000);
@@ -581,11 +581,11 @@ int main(){
     8364:	00086f40 	call	86f4 <usleep>
 			*wr_en_2 = 0;
     8368:	00800074 	movhi	r2,1
-    836c:	10840404 	addi	r2,r2,4112
+    836c:	10843804 	addi	r2,r2,4320
     8370:	10000005 	stb	zero,0(r2)
 			if (*ready_to_transfer_1 == 1 && i == 8) {
     8374:	00800074 	movhi	r2,1
-    8378:	10841c04 	addi	r2,r2,4208
+    8378:	10845004 	addi	r2,r2,4416
     837c:	10800003 	ldbu	r2,0(r2)
     8380:	10803fcc 	andi	r2,r2,255
     8384:	1080201c 	xori	r2,r2,128
@@ -618,7 +618,7 @@ int main(){
 		}
 		*data_out_1 = 0;
     83c4:	00800074 	movhi	r2,1
-    83c8:	10842c04 	addi	r2,r2,4272
+    83c8:	10846004 	addi	r2,r2,4480
     83cc:	10000005 	stb	zero,0(r2)
 
 
@@ -637,12 +637,12 @@ int main(){
     83f0:	103f701e 	bne	r2,zero,81b4 <_gp+0xffff6ee4>
 			*start_transfer = 1;
     83f4:	00800074 	movhi	r2,1
-    83f8:	10841404 	addi	r2,r2,4176
+    83f8:	10844804 	addi	r2,r2,4384
     83fc:	00c00044 	movi	r3,1
     8400:	10c00005 	stb	r3,0(r2)
 			*start_transfer = 0;
     8404:	00800074 	movhi	r2,1
-    8408:	10841404 	addi	r2,r2,4176
+    8408:	10844804 	addi	r2,r2,4384
     840c:	10000005 	stb	zero,0(r2)
 			alt_putstr("transferring...\n");
     8410:	01000074 	movhi	r4,1
@@ -654,7 +654,7 @@ int main(){
     8420:	00001b06 	br	8490 <main+0x314>
 				alt_putchar(*data_in_1 + '0');
     8424:	00800074 	movhi	r2,1
-    8428:	10842804 	addi	r2,r2,4256
+    8428:	10845c04 	addi	r2,r2,4464
     842c:	10800003 	ldbu	r2,0(r2)
     8430:	10803fcc 	andi	r2,r2,255
     8434:	1080201c 	xori	r2,r2,128
@@ -668,7 +668,7 @@ int main(){
     8450:	00086ac0 	call	86ac <alt_putstr>
 				*read_inc_2 = 1;
     8454:	00800074 	movhi	r2,1
-    8458:	10840c04 	addi	r2,r2,4144
+    8458:	10844004 	addi	r2,r2,4352
     845c:	00c00044 	movi	r3,1
     8460:	10c00005 	stb	r3,0(r2)
 				usleep(10);
@@ -676,7 +676,7 @@ int main(){
     8468:	00086f40 	call	86f4 <usleep>
 				*read_inc_2 = 0;
     846c:	00800074 	movhi	r2,1
-    8470:	10840c04 	addi	r2,r2,4144
+    8470:	10844004 	addi	r2,r2,4352
     8474:	10000005 	stb	zero,0(r2)
 				usleep(500000);
     8478:	01000234 	movhi	r4,8
@@ -758,27 +758,16 @@ alt_getchar(void)
     8510:	f800283a 	ret
 
 00008514 <alt_load_section>:
- */
-
-static void ALT_INLINE alt_load_section (alt_u32* from, 
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
     8514:	defffc04 	addi	sp,sp,-16
     8518:	df000315 	stw	fp,12(sp)
     851c:	df000304 	addi	fp,sp,12
     8520:	e13ffd15 	stw	r4,-12(fp)
     8524:	e17ffe15 	stw	r5,-8(fp)
     8528:	e1bfff15 	stw	r6,-4(fp)
-  if (to != from)
     852c:	e0fffe17 	ldw	r3,-8(fp)
     8530:	e0bffd17 	ldw	r2,-12(fp)
     8534:	18800c26 	beq	r3,r2,8568 <alt_load_section+0x54>
-  {
-    while( to != end )
     8538:	00000806 	br	855c <alt_load_section+0x48>
-    {
-      *to++ = *from++;
     853c:	e0bffe17 	ldw	r2,-8(fp)
     8540:	10c00104 	addi	r3,r2,4
     8544:	e0fffe15 	stw	r3,-8(fp)
@@ -787,20 +776,9 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
     8550:	e13ffd15 	stw	r4,-12(fp)
     8554:	18c00017 	ldw	r3,0(r3)
     8558:	10c00015 	stw	r3,0(r2)
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
-  if (to != from)
-  {
-    while( to != end )
     855c:	e0fffe17 	ldw	r3,-8(fp)
     8560:	e0bfff17 	ldw	r2,-4(fp)
     8564:	18bff51e 	bne	r3,r2,853c <_gp+0xffff726c>
-    {
-      *to++ = *from++;
-    }
-  }
-}
     8568:	0001883a 	nop
     856c:	e037883a 	mov	sp,fp
     8570:	df000017 	ldw	fp,0(sp)
@@ -808,21 +786,10 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
     8578:	f800283a 	ret
 
 0000857c <alt_load>:
- * there is no bootloader, so this application is responsible for loading to
- * RAM any sections that are required.
- */  
-
-void alt_load (void)
-{
     857c:	defffe04 	addi	sp,sp,-8
     8580:	dfc00115 	stw	ra,4(sp)
     8584:	df000015 	stw	fp,0(sp)
     8588:	d839883a 	mov	fp,sp
-  /* 
-   * Copy the .rwdata section. 
-   */
-
-  alt_load_section (&__flash_rwdata_start, 
     858c:	01800074 	movhi	r6,1
     8590:	31a4bd04 	addi	r6,r6,-27916
     8594:	01400074 	movhi	r5,1
@@ -830,12 +797,6 @@ void alt_load (void)
     859c:	01000074 	movhi	r4,1
     85a0:	2124bd04 	addi	r4,r4,-27916
     85a4:	00085140 	call	8514 <alt_load_section>
-
-  /*
-   * Copy the exception handler.
-   */
-
-  alt_load_section (&__flash_exceptions_start, 
     85a8:	01800074 	movhi	r6,1
     85ac:	31a00804 	addi	r6,r6,-32736
     85b0:	01400074 	movhi	r5,1
@@ -843,12 +804,6 @@ void alt_load (void)
     85b8:	01000074 	movhi	r4,1
     85bc:	21200804 	addi	r4,r4,-32736
     85c0:	00085140 	call	8514 <alt_load_section>
-
-  /*
-   * Copy the .rodata section.
-   */
-
-  alt_load_section (&__flash_rodata_start, 
     85c4:	01800074 	movhi	r6,1
     85c8:	31a41204 	addi	r6,r6,-28600
     85cc:	01400074 	movhi	r5,1
@@ -856,16 +811,8 @@ void alt_load (void)
     85d4:	01000074 	movhi	r4,1
     85d8:	2123d404 	addi	r4,r4,-28848
     85dc:	00085140 	call	8514 <alt_load_section>
-  
-  /*
-   * Now ensure that the caches are in synch.
-   */
-  
-  alt_dcache_flush_all();
     85e0:	0008ae40 	call	8ae4 <alt_dcache_flush_all>
-  alt_icache_flush_all();
     85e4:	0008b300 	call	8b30 <alt_icache_flush_all>
-}
     85e8:	0001883a 	nop
     85ec:	e037883a 	mov	sp,fp
     85f0:	dfc00117 	ldw	ra,4(sp)
@@ -1010,21 +957,13 @@ alt_putstr(const char* str)
     86f0:	f800283a 	ret
 
 000086f4 <usleep>:
-#if defined (__GNUC__) && __GNUC__ >= 4
-int ALT_USLEEP (useconds_t us)
-#else
-unsigned int ALT_USLEEP (unsigned int us)
-#endif
-{
     86f4:	defffd04 	addi	sp,sp,-12
     86f8:	dfc00215 	stw	ra,8(sp)
     86fc:	df000115 	stw	fp,4(sp)
     8700:	df000104 	addi	fp,sp,4
     8704:	e13fff15 	stw	r4,-4(fp)
-  return alt_busy_sleep(us);
     8708:	e13fff17 	ldw	r4,-4(fp)
     870c:	00089000 	call	8900 <alt_busy_sleep>
-}
     8710:	e037883a 	mov	sp,fp
     8714:	dfc00117 	ldw	ra,4(sp)
     8718:	df000017 	ldw	fp,0(sp)

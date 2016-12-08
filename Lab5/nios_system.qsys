@@ -9,6 +9,102 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element Ready_transfer_receive
+   {
+      datum _sortIndex
+      {
+         value = "28";
+         type = "int";
+      }
+   }
+   element Ready_transfer_receive.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
+         type = "String";
+      }
+   }
+   element Ready_transfer_send
+   {
+      datum _sortIndex
+      {
+         value = "27";
+         type = "int";
+      }
+   }
+   element Ready_transfer_send.s1
+   {
+      datum baseAddress
+      {
+         value = "69680";
+         type = "String";
+      }
+   }
+   element Start_scan_receive
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
+      }
+   }
+   element Start_scan_receive.s1
+   {
+      datum baseAddress
+      {
+         value = "69712";
+         type = "String";
+      }
+   }
+   element Start_scan_send
+   {
+      datum _sortIndex
+      {
+         value = "26";
+         type = "int";
+      }
+   }
+   element Start_scan_send.s1
+   {
+      datum baseAddress
+      {
+         value = "69696";
+         type = "String";
+      }
+   }
+   element Transfer_receive
+   {
+      datum _sortIndex
+      {
+         value = "29";
+         type = "int";
+      }
+   }
+   element Transfer_receive.s1
+   {
+      datum baseAddress
+      {
+         value = "69648";
+         type = "String";
+      }
+   }
+   element Transfer_send
+   {
+      datum _sortIndex
+      {
+         value = "30";
+         type = "int";
+      }
+   }
+   element Transfer_send.s1
+   {
+      datum baseAddress
+      {
+         value = "69632";
+         type = "String";
+      }
+   }
    element Transmit_enable
    {
       datum _sortIndex
@@ -21,7 +117,7 @@
    {
       datum baseAddress
       {
-         value = "69632";
+         value = "69728";
          type = "String";
       }
    }
@@ -37,7 +133,7 @@
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69776";
          type = "String";
       }
    }
@@ -53,7 +149,7 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69760";
          type = "String";
       }
    }
@@ -77,7 +173,7 @@
    {
       datum baseAddress
       {
-         value = "69888";
+         value = "69984";
          type = "String";
       }
    }
@@ -93,7 +189,7 @@
    {
       datum baseAddress
       {
-         value = "69904";
+         value = "70000";
          type = "String";
       }
    }
@@ -109,7 +205,7 @@
    {
       datum baseAddress
       {
-         value = "69936";
+         value = "70032";
          type = "String";
       }
    }
@@ -125,7 +221,7 @@
    {
       datum baseAddress
       {
-         value = "69920";
+         value = "70016";
          type = "String";
       }
    }
@@ -141,7 +237,7 @@
    {
       datum baseAddress
       {
-         value = "69960";
+         value = "70056";
          type = "String";
       }
    }
@@ -157,7 +253,7 @@
    {
       datum baseAddress
       {
-         value = "69728";
+         value = "69824";
          type = "String";
       }
    }
@@ -173,7 +269,7 @@
    {
       datum baseAddress
       {
-         value = "69648";
+         value = "69744";
          type = "String";
       }
    }
@@ -189,7 +285,7 @@
    {
       datum baseAddress
       {
-         value = "69712";
+         value = "69808";
          type = "String";
       }
    }
@@ -205,7 +301,7 @@
    {
       datum baseAddress
       {
-         value = "69696";
+         value = "69792";
          type = "String";
       }
    }
@@ -253,7 +349,7 @@
    {
       datum baseAddress
       {
-         value = "69776";
+         value = "69872";
          type = "String";
       }
    }
@@ -269,7 +365,7 @@
    {
       datum baseAddress
       {
-         value = "69792";
+         value = "69888";
          type = "String";
       }
    }
@@ -285,7 +381,7 @@
    {
       datum baseAddress
       {
-         value = "69872";
+         value = "69968";
          type = "String";
       }
    }
@@ -301,7 +397,7 @@
    {
       datum baseAddress
       {
-         value = "69856";
+         value = "69952";
          type = "String";
       }
    }
@@ -317,7 +413,7 @@
    {
       datum baseAddress
       {
-         value = "69808";
+         value = "69904";
          type = "String";
       }
    }
@@ -333,7 +429,7 @@
    {
       datum baseAddress
       {
-         value = "69840";
+         value = "69936";
          type = "String";
       }
    }
@@ -349,7 +445,7 @@
    {
       datum baseAddress
       {
-         value = "69824";
+         value = "69920";
          type = "String";
       }
    }
@@ -365,7 +461,7 @@
    {
       datum baseAddress
       {
-         value = "69952";
+         value = "70048";
          type = "String";
       }
    }
@@ -381,7 +477,7 @@
    {
       datum baseAddress
       {
-         value = "69744";
+         value = "69840";
          type = "String";
       }
    }
@@ -397,7 +493,7 @@
    {
       datum baseAddress
       {
-         value = "69760";
+         value = "69856";
          type = "String";
       }
    }
@@ -493,10 +589,30 @@
    internal="ready_to_transfer_in_1.external_connection"
    type="conduit"
    dir="end" />
+ <interface
+   name="ready_transfer_receive_external_connection"
+   internal="Ready_transfer_receive.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="ready_transfer_send_external_connection"
+   internal="Ready_transfer_send.external_connection"
+   type="conduit"
+   dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
    name="scanner_rst_external_connection"
    internal="scanner_rst.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="start_scan_receive_external_connection"
+   internal="Start_scan_receive.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="start_scan_send_external_connection"
+   internal="Start_scan_send.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -507,6 +623,16 @@
  <interface
    name="start_transfer_external_connection"
    internal="start_transfer.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="transfer_receive_external_connection"
+   internal="Transfer_receive.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="transfer_send_external_connection"
+   internal="Transfer_send.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -524,6 +650,114 @@
    internal="wr_en2.external_connection"
    type="conduit"
    dir="end" />
+ <module
+   name="Ready_transfer_receive"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="Ready_transfer_send"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="Start_scan_receive"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="Start_scan_send"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="Transfer_receive"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="Transfer_send"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <module
    name="Transmit_enable"
    kind="altera_avalon_pio"
@@ -759,7 +993,7 @@
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='Transmit_enable.s1' start='0x11000' end='0x11010' type='altera_avalon_pio.s1' /><slave name='load.s1' start='0x11010' end='0x11020' type='altera_avalon_pio.s1' /><slave name='char_sent.s1' start='0x11020' end='0x11030' type='altera_avalon_pio.s1' /><slave name='char_received.s1' start='0x11030' end='0x11040' type='altera_avalon_pio.s1' /><slave name='net_data_out.s1' start='0x11040' end='0x11050' type='altera_avalon_pio.s1' /><slave name='net_data_in.s1' start='0x11050' end='0x11060' type='altera_avalon_pio.s1' /><slave name='led_data.s1' start='0x11060' end='0x11070' type='altera_avalon_pio.s1' /><slave name='wr_en1.s1' start='0x11070' end='0x11080' type='altera_avalon_pio.s1' /><slave name='wr_en2.s1' start='0x11080' end='0x11090' type='altera_avalon_pio.s1' /><slave name='read_inc1.s1' start='0x11090' end='0x110A0' type='altera_avalon_pio.s1' /><slave name='read_inc2.s1' start='0x110A0' end='0x110B0' type='altera_avalon_pio.s1' /><slave name='scanner_rst.s1' start='0x110B0' end='0x110C0' type='altera_avalon_pio.s1' /><slave name='start_transfer.s1' start='0x110C0' end='0x110D0' type='altera_avalon_pio.s1' /><slave name='start_scanning.s1' start='0x110D0' end='0x110E0' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_1.s1' start='0x110E0' end='0x110F0' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_0.s1' start='0x110F0' end='0x11100' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_0.s1' start='0x11100' end='0x11110' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_1.s1' start='0x11110' end='0x11120' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_1.s1' start='0x11120' end='0x11130' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_0.s1' start='0x11130' end='0x11140' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x11140' end='0x11148' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11148' end='0x11150' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='Transfer_send.s1' start='0x11000' end='0x11010' type='altera_avalon_pio.s1' /><slave name='Transfer_receive.s1' start='0x11010' end='0x11020' type='altera_avalon_pio.s1' /><slave name='Ready_transfer_receive.s1' start='0x11020' end='0x11030' type='altera_avalon_pio.s1' /><slave name='Ready_transfer_send.s1' start='0x11030' end='0x11040' type='altera_avalon_pio.s1' /><slave name='Start_scan_send.s1' start='0x11040' end='0x11050' type='altera_avalon_pio.s1' /><slave name='Start_scan_receive.s1' start='0x11050' end='0x11060' type='altera_avalon_pio.s1' /><slave name='Transmit_enable.s1' start='0x11060' end='0x11070' type='altera_avalon_pio.s1' /><slave name='load.s1' start='0x11070' end='0x11080' type='altera_avalon_pio.s1' /><slave name='char_sent.s1' start='0x11080' end='0x11090' type='altera_avalon_pio.s1' /><slave name='char_received.s1' start='0x11090' end='0x110A0' type='altera_avalon_pio.s1' /><slave name='net_data_out.s1' start='0x110A0' end='0x110B0' type='altera_avalon_pio.s1' /><slave name='net_data_in.s1' start='0x110B0' end='0x110C0' type='altera_avalon_pio.s1' /><slave name='led_data.s1' start='0x110C0' end='0x110D0' type='altera_avalon_pio.s1' /><slave name='wr_en1.s1' start='0x110D0' end='0x110E0' type='altera_avalon_pio.s1' /><slave name='wr_en2.s1' start='0x110E0' end='0x110F0' type='altera_avalon_pio.s1' /><slave name='read_inc1.s1' start='0x110F0' end='0x11100' type='altera_avalon_pio.s1' /><slave name='read_inc2.s1' start='0x11100' end='0x11110' type='altera_avalon_pio.s1' /><slave name='scanner_rst.s1' start='0x11110' end='0x11120' type='altera_avalon_pio.s1' /><slave name='start_transfer.s1' start='0x11120' end='0x11130' type='altera_avalon_pio.s1' /><slave name='start_scanning.s1' start='0x11130' end='0x11140' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_1.s1' start='0x11140' end='0x11150' type='altera_avalon_pio.s1' /><slave name='ready_to_transfer_in_0.s1' start='0x11150' end='0x11160' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_0.s1' start='0x11160' end='0x11170' type='altera_avalon_pio.s1' /><slave name='cpu_data_in_1.s1' start='0x11170' end='0x11180' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_1.s1' start='0x11180' end='0x11190' type='altera_avalon_pio.s1' /><slave name='cpu_data_out_0.s1' start='0x11190' end='0x111A0' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x111A0' end='0x111A8' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x111A8' end='0x111B0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1106,7 +1340,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011148" />
+  <parameter name="baseAddress" value="0x000111a8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1115,7 +1349,7 @@
    start="nios2_gen2_0.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011140" />
+  <parameter name="baseAddress" value="0x000111a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1142,7 +1376,7 @@
    start="nios2_gen2_0.data_master"
    end="cpu_data_out_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011130" />
+  <parameter name="baseAddress" value="0x00011190" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1151,7 +1385,7 @@
    start="nios2_gen2_0.data_master"
    end="cpu_data_out_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011120" />
+  <parameter name="baseAddress" value="0x00011180" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1160,7 +1394,7 @@
    start="nios2_gen2_0.data_master"
    end="cpu_data_in_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011110" />
+  <parameter name="baseAddress" value="0x00011170" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1169,7 +1403,7 @@
    start="nios2_gen2_0.data_master"
    end="cpu_data_in_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011100" />
+  <parameter name="baseAddress" value="0x00011160" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1178,7 +1412,7 @@
    start="nios2_gen2_0.data_master"
    end="ready_to_transfer_in_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110f0" />
+  <parameter name="baseAddress" value="0x00011150" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1187,7 +1421,7 @@
    start="nios2_gen2_0.data_master"
    end="ready_to_transfer_in_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110e0" />
+  <parameter name="baseAddress" value="0x00011140" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1196,7 +1430,7 @@
    start="nios2_gen2_0.data_master"
    end="start_scanning.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110d0" />
+  <parameter name="baseAddress" value="0x00011130" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1205,7 +1439,7 @@
    start="nios2_gen2_0.data_master"
    end="start_transfer.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110c0" />
+  <parameter name="baseAddress" value="0x00011120" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1214,7 +1448,7 @@
    start="nios2_gen2_0.data_master"
    end="scanner_rst.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110b0" />
+  <parameter name="baseAddress" value="0x00011110" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1223,7 +1457,7 @@
    start="nios2_gen2_0.data_master"
    end="read_inc2.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x000110a0" />
+  <parameter name="baseAddress" value="0x00011100" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1232,7 +1466,7 @@
    start="nios2_gen2_0.data_master"
    end="read_inc1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011090" />
+  <parameter name="baseAddress" value="0x000110f0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1241,7 +1475,7 @@
    start="nios2_gen2_0.data_master"
    end="wr_en2.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011080" />
+  <parameter name="baseAddress" value="0x000110e0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1250,7 +1484,7 @@
    start="nios2_gen2_0.data_master"
    end="wr_en1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011070" />
+  <parameter name="baseAddress" value="0x000110d0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1259,7 +1493,7 @@
    start="nios2_gen2_0.data_master"
    end="led_data.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="baseAddress" value="0x000110c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1268,7 +1502,7 @@
    start="nios2_gen2_0.data_master"
    end="net_data_in.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="baseAddress" value="0x000110b0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1277,7 +1511,7 @@
    start="nios2_gen2_0.data_master"
    end="net_data_out.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="baseAddress" value="0x000110a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1286,7 +1520,7 @@
    start="nios2_gen2_0.data_master"
    end="char_received.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1295,7 +1529,7 @@
    start="nios2_gen2_0.data_master"
    end="char_sent.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1304,7 +1538,7 @@
    start="nios2_gen2_0.data_master"
    end="load.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011010" />
+  <parameter name="baseAddress" value="0x00011070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1312,6 +1546,60 @@
    version="16.0"
    start="nios2_gen2_0.data_master"
    end="Transmit_enable.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Start_scan_receive.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Start_scan_send.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Ready_transfer_send.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Ready_transfer_receive.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Transfer_receive.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="nios2_gen2_0.data_master"
+   end="Transfer_send.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
@@ -1385,6 +1673,32 @@
  <connection kind="clock" version="16.0" start="clk_0.clk" end="net_data_in.clk" />
  <connection kind="clock" version="16.0" start="clk_0.clk" end="net_data_out.clk" />
  <connection kind="clock" version="16.0" start="clk_0.clk" end="led_data.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="Start_scan_receive.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="Start_scan_send.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="Ready_transfer_send.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="Ready_transfer_receive.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_0.clk"
+   end="Transfer_receive.clk" />
+ <connection kind="clock" version="16.0" start="clk_0.clk" end="Transfer_send.clk" />
  <connection
    kind="clock"
    version="16.0"
@@ -1508,6 +1822,36 @@
    version="16.0"
    start="clk_0.clk_reset"
    end="led_data.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Start_scan_receive.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Start_scan_send.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Ready_transfer_send.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Ready_transfer_receive.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Transfer_receive.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_0.clk_reset"
+   end="Transfer_send.reset" />
  <connection
    kind="reset"
    version="16.0"

@@ -10,26 +10,37 @@
 
 
 
-#define transmit_en (volatile char*) 0x00011000
-#define char_received (volatile char*) 0x00011030
-#define char_sent (volatile char*) 0x00011020
-#define load (volatile char*) 0x00011010
-#define net_data_in (volatile char*) 0x00011050
-#define net_data_out (volatile char*) 0x00011040
+#define transmit_en (volatile char*)   0x00011060
+#define char_received (volatile char*) 0x00011090
+#define char_sent (volatile char*) 0x00011080
+#define load (volatile char*) 0x00011070
+#define net_data_in (volatile char*) 0x000110b0
+#define net_data_out (volatile char*) 0x000110a0
 
-#define data_out_0 (volatile char*) 0x00011130
-#define data_out_1 (volatile char*) 0x00011120
-#define data_in_0 (volatile char*)  0x00011100
-#define data_in_1 (volatile char*) 0x00011110
-#define ready_to_transfer_0 (volatile char*) 0x000110f0
-#define ready_to_transfer_1 (volatile char*) 0x000110e0
-#define start_scanning (volatile char*) 0x000110d0
-#define start_transfer (volatile char*) 0x000110c0
-#define scanner_rst (volatile char*)    0x000110b0
-#define wr_en_1 (volatile char*) 0x00011070
-#define wr_en_2 (volatile char*) 0x00011080
-#define read_inc_1 (volatile char*) 0x00011090
-#define read_inc_2 (volatile char*) 0x000110a0
+#define data_out_0 (volatile char*) 0x00011190
+#define data_out_1 (volatile char*) 0x00011180
+
+#define data_in_0 (volatile char*)  0x00011160
+#define data_in_1 (volatile char*) 0x00011170
+
+#define ready_to_transfer_0 (volatile char*) 0x00011150
+#define ready_to_transfer_1 (volatile char*) 0x00011140
+#define start_scanning (volatile char*) 0x00011130
+#define start_transfer (volatile char*) 0x00011120
+#define scanner_rst (volatile char*)    0x00011110
+#define wr_en_1 (volatile char*) 0x000110d0
+#define wr_en_2 (volatile char*) 0x000110e0
+#define read_inc_1 (volatile char*) 0x000110f0
+#define read_inc_2 (volatile char*) 0x00011100
+
+
+#define start_scan_receive (volatile char*) 0x00011050
+#define start_scan_send (volatile char*) 0x00011040
+
+#define ready_transfer_send (volatile char*) 0x00011030
+#define ready_transfer_receive (volatile char*) 0x00011020
+#define transfer_receive (volatile char*) 0x00011010
+#define transfer_send (volatile char*) 0x00011000
 
 
 
@@ -57,14 +68,14 @@ int main(){
 			}
 			*transmit_en = 0;
 			//while loop for receive test
-			while(1){
+			/*while(1){
 				if(*char_received == 1){
 					alt_putchar(*net_data_in);
 					break;
 				}
-			}
+			}*/
 			//test end
-			usleep(50);
+			usleep(10);
 		}
 		alt_putstr("\n");
 	}
@@ -77,9 +88,11 @@ void scanner_rout(void){
 	char buf1 = 'n';
 	scanner_init();
 	alt_putstr("\nscanners initialized\n");
-	usleep(10);
+	while(*start_scan_receive == 0){
 
-	scan_inq();
+	}
+	*start_scanning = 1;
+	*start_scanning = 0;
 
 	while(1){
 
@@ -90,16 +103,22 @@ void scanner_rout(void){
 			*wr_en_1 = 0;
 			if (*ready_to_transfer_0 == 1 && i == 8) {
 				alt_putstr("\nscanner 1 ready to transfer\n");
+				*ready_transfer_send = 1;
 			}
 		}
 		usleep(10);
 		*data_out_0 = 0;
 
 
-		alt_putstr("start scanner 1 transfer?(y/n)\n");
-		buf1 = alt_getchar();
-		alt_getchar();
-		if(buf1 == 'y'){
+		//alt_putstr("start scanner 1 transfer?(y/n)\n");
+		//buf1 = alt_getchar();
+		//alt_getchar();
+		alt_printf("waiting for transfer sig");
+		while(*transfer_receive == 0){
+
+		}
+
+		if(*transfer_receive == 1){
 			*start_transfer = 1;
 			*start_transfer = 0;
 			alt_putstr("transferring...\n");
@@ -110,12 +129,12 @@ void scanner_rout(void){
 				*read_inc_1 = 1;
 				usleep(10);
 				*read_inc_1 = 0;
-				usleep(100000);
+				usleep(10);
 			}
 			alt_putstr("transfer complete\n");
-			if(!scan_inq()){
+			//if(!scan_inq()){
 				break;
-			}
+			//}
 		}
 
 

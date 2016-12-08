@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lights
-Sun Dec 04 17:05:18 2016
+Wed Dec 07 16:22:33 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -103,14 +103,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.61        ;
+; Average used               ; 1.72        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  20.5%      ;
-;     Processor 3            ;  20.4%      ;
-;     Processor 4            ;  20.4%      ;
+;     Processor 2            ;  24.0%      ;
+;     Processor 3            ;  23.9%      ;
+;     Processor 4            ;  23.8%      ;
 +----------------------------+-------------+
 
 
@@ -119,8 +119,8 @@ agreement for further details.
 +-------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                     ; Status ; Read at                  ;
 +-------------------------------------------------------------------+--------+--------------------------+
-; nios_system/synthesis/submodules/altera_reset_controller.sdc      ; OK     ; Sun Dec 04 17:05:10 2016 ;
-; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc ; OK     ; Sun Dec 04 17:05:10 2016 ;
+; nios_system/synthesis/submodules/altera_reset_controller.sdc      ; OK     ; Wed Dec 07 16:22:25 2016 ;
+; nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc ; OK     ; Wed Dec 07 16:22:25 2016 ;
 +-------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -133,13 +133,13 @@ agreement for further details.
 +---------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                        ;
-+------------+-----------------+---------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
-+------------+-----------------+---------------------+------+
-; 107.49 MHz ; 107.49 MHz      ; altera_reserved_tck ;      ;
-+------------+-----------------+---------------------+------+
++----------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                       ;
++-----------+-----------------+---------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
++-----------+-----------------+---------------------+------+
+; 83.63 MHz ; 83.63 MHz       ; altera_reserved_tck ;      ;
++-----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -154,7 +154,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 12.015 ; 0.000         ;
+; altera_reserved_tck ; 10.688 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -163,7 +163,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.255 ; 0.000         ;
+; altera_reserved_tck ; 0.116 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.060 ; 0.000         ;
+; altera_reserved_tck ; 15.237 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -181,7 +181,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.940 ; 0.000         ;
+; altera_reserved_tck ; 0.977 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -190,7 +190,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; altera_reserved_tck ; 15.803 ; 0.000              ;
+; altera_reserved_tck ; 15.805 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -203,7 +203,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 62.314 ns
+Worst Case Available Settling Time: 62.393 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -212,13 +212,13 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+-----------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                         ;
-+------------+-----------------+---------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
-+------------+-----------------+---------------------+------+
-; 108.71 MHz ; 108.71 MHz      ; altera_reserved_tck ;      ;
-+------------+-----------------+---------------------+------+
++---------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                       ;
++----------+-----------------+---------------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name          ; Note ;
++----------+-----------------+---------------------+------+
+; 84.5 MHz ; 84.5 MHz        ; altera_reserved_tck ;      ;
++----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -227,7 +227,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 12.067 ; 0.000         ;
+; altera_reserved_tck ; 10.749 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -236,7 +236,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.250 ; 0.000         ;
+; altera_reserved_tck ; 0.104 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -245,7 +245,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.140 ; 0.000         ;
+; altera_reserved_tck ; 15.260 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -254,7 +254,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.897 ; 0.000         ;
+; altera_reserved_tck ; 0.911 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -263,7 +263,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; altera_reserved_tck ; 15.803 ; 0.000             ;
+; altera_reserved_tck ; 15.827 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -276,7 +276,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 62.390 ns
+Worst Case Available Settling Time: 62.460 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -290,7 +290,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.040 ; 0.000         ;
+; altera_reserved_tck ; 13.151 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -299,7 +299,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.087 ; 0.000         ;
+; altera_reserved_tck ; 0.022 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -308,7 +308,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 15.105 ; 0.000         ;
+; altera_reserved_tck ; 16.022 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -317,7 +317,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.479 ; 0.000         ;
+; altera_reserved_tck ; 0.487 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -326,7 +326,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; altera_reserved_tck ; 15.755 ; 0.000              ;
+; altera_reserved_tck ; 15.788 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -339,7 +339,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 63.650 ns
+Worst Case Available Settling Time: 63.724 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -353,7 +353,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.341 ; 0.000         ;
+; altera_reserved_tck ; 13.535 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -362,7 +362,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.070 ; 0.000         ;
+; altera_reserved_tck ; 0.010 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -371,7 +371,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 15.323 ; 0.000         ;
+; altera_reserved_tck ; 16.108 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -380,7 +380,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.424 ; 0.000         ;
+; altera_reserved_tck ; 0.427 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -389,7 +389,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; altera_reserved_tck ; 15.778 ; 0.000             ;
+; altera_reserved_tck ; 15.811 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -402,7 +402,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 63.866 ns
+Worst Case Available Settling Time: 63.930 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -416,8 +416,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------------------+--------+-------+----------+---------+---------------------+
 ; Clock                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 12.015 ; 0.070 ; 14.060   ; 0.424   ; 15.755              ;
-;  altera_reserved_tck ; 12.015 ; 0.070 ; 14.060   ; 0.424   ; 15.755              ;
+; Worst-case Slack     ; 10.688 ; 0.010 ; 15.237   ; 0.427   ; 15.788              ;
+;  altera_reserved_tck ; 10.688 ; 0.010 ; 15.237   ; 0.427   ; 15.788              ;
 ; Design-wide TNS      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  altera_reserved_tck ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 +----------------------+--------+-------+----------+---------+---------------------+
@@ -430,6 +430,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; ready_to_transfer_in_0 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ready_to_transfer_in_1 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; start_scan_send        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ready_transfer_send    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; transfer_send          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ser_data_out           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; state[0]               ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; state[1]               ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -483,18 +486,21 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+------------------------------------------------------------------------+
-; Input Transition Times                                                 ;
-+---------------------+--------------+-----------------+-----------------+
-; Pin                 ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+---------------------+--------------+-----------------+-----------------+
-; clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; rst                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ser_data_in         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; altera_reserved_tms ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; altera_reserved_tck ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; altera_reserved_tdi ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+---------------------+--------------+-----------------+-----------------+
++---------------------------------------------------------------------------+
+; Input Transition Times                                                    ;
++------------------------+--------------+-----------------+-----------------+
+; Pin                    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++------------------------+--------------+-----------------+-----------------+
+; clk                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ready_transfer_receive ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; transfer_receive       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; start_scan_receive     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ser_data_in            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tms    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tck    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tdi    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++------------------------+--------------+-----------------+-----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -504,7 +510,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; ready_to_transfer_in_0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; ready_to_transfer_in_1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; start_scan_send        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; ready_transfer_send    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; transfer_send          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; state[0]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; state[1]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; state[2]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
@@ -564,7 +573,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; ready_to_transfer_in_0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; ready_to_transfer_in_1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; start_scan_send        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; ready_transfer_send    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; transfer_send          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; state[0]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; state[1]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; state[2]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
@@ -624,7 +636,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; ready_to_transfer_in_0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; ready_to_transfer_in_1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; start_scan_send        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; ready_transfer_send    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; transfer_send          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; state[0]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; state[1]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; state[2]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
@@ -684,7 +699,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; ready_to_transfer_in_0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; ready_to_transfer_in_1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; start_scan_send        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; ready_transfer_send    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; transfer_send          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; ser_data_out           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; state[0]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; state[1]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; state[2]               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
@@ -742,7 +760,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1538     ; 0        ; 39       ; 2        ;
+; altera_reserved_tck ; altera_reserved_tck ; 1511     ; 0        ; 39       ; 2        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -752,7 +770,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1538     ; 0        ; 39       ; 2        ;
+; altera_reserved_tck ; altera_reserved_tck ; 1511     ; 0        ; 39       ; 2        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -762,7 +780,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 71       ; 0        ; 2        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 67       ; 0        ; 2        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -772,7 +790,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 71       ; 0        ; 2        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 67       ; 0        ; 2        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -796,10 +814,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 8     ; 8    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 128   ; 128  ;
-; Unconstrained Output Ports      ; 38    ; 38   ;
-; Unconstrained Output Port Paths ; 42    ; 42   ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 129   ; 129  ;
+; Unconstrained Output Ports      ; 41    ; 41   ;
+; Unconstrained Output Port Paths ; 45    ; 45   ;
 +---------------------------------+-------+------+
 
 
@@ -820,16 +838,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------------------------------+---------------------+------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                                  ;
-+---------------------+--------------------------------------------------------------------------------------+
-; Input Port          ; Comment                                                                              ;
-+---------------------+--------------------------------------------------------------------------------------+
-; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst                 ; Partially constrained                                                                ;
-; ser_data_in         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+---------------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                     ;
++------------------------+--------------------------------------------------------------------------------------+
+; Input Port             ; Comment                                                                              ;
++------------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tms    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ready_transfer_receive ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst                    ; Partially constrained                                                                ;
+; ser_data_in            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_scan_receive     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; transfer_receive       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------------+--------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -868,26 +889,32 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hex3[6]                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ready_to_transfer_in_0 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ready_to_transfer_in_1 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ready_transfer_send    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ser_data_out           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_scan_send        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[0]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[1]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[2]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[0]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[1]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[2]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; transfer_send          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------------------+---------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                                  ;
-+---------------------+--------------------------------------------------------------------------------------+
-; Input Port          ; Comment                                                                              ;
-+---------------------+--------------------------------------------------------------------------------------+
-; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst                 ; Partially constrained                                                                ;
-; ser_data_in         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+---------------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                     ;
++------------------------+--------------------------------------------------------------------------------------+
+; Input Port             ; Comment                                                                              ;
++------------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tms    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ready_transfer_receive ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst                    ; Partially constrained                                                                ;
+; ser_data_in            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_scan_receive     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; transfer_receive       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------------+--------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -926,13 +953,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hex3[6]                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ready_to_transfer_in_0 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ready_to_transfer_in_1 ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ready_transfer_send    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ser_data_out           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_scan_send        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[0]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[1]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state2[2]              ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[0]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[1]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; state[2]               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; transfer_send          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------------------+---------------------------------------------------------------------------------------+
 
 
@@ -942,7 +972,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Sun Dec 04 17:05:08 2016
+    Info: Processing started: Wed Dec 07 16:22:23 2016
 Info: Command: quartus_sta network_sys -c lights
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -987,17 +1017,17 @@ Info (332164): Evaluating HDL-embedded SDC commands
 Info (332104): Reading SDC File: 'nios_system/synthesis/submodules/altera_reset_controller.sdc'
 Info (332104): Reading SDC File: 'nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc'
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK is being clocked by clk
-Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|BSC[2] is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
-Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
-Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[3]~DUPLICATE is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+    Info (13166): Register nios_system:u0|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|W_alu_result[7] is being clocked by clk
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8]~DUPLICATE is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
+    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[3] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[1] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan|buffer_new:buff|m[8][7] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
+Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|char_sent is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
 Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register serial_out:ser_out|serial_buffer:parallel_to_serial|bit_out is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK
 Warning (332060): Node: rst was determined to be a clock but was found without an associated clock assignment.
@@ -1006,26 +1036,26 @@ Info (332143): No user constrained clock uncertainty found in the design. Callin
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 12.015
+Info (332146): Worst-case setup slack is 10.688
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.015               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.255
+    Info (332119):    10.688               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.116
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.255               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.060
+    Info (332119):     0.116               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.237
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.060               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.940
+    Info (332119):    15.237               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.977
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.940               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.803
+    Info (332119):     0.977               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.805
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.803               0.000 altera_reserved_tck 
+    Info (332119):    15.805               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1033,7 +1063,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 62.314 ns
+    Info (332114): Worst Case Available Settling Time: 62.393 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -1043,42 +1073,42 @@ Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK is being clocked by clk
-Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|BSC[2] is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
-Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
-Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[3]~DUPLICATE is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+    Info (13166): Register nios_system:u0|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|W_alu_result[7] is being clocked by clk
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8]~DUPLICATE is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
+    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[3] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[1] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan|buffer_new:buff|m[8][7] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
+Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|char_sent is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
 Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register serial_out:ser_out|serial_buffer:parallel_to_serial|bit_out is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK
 Warning (332060): Node: rst was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch serial_out:ser_out|serial_buffer:parallel_to_serial|bitShift[1]~5 is being clocked by rst
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 12.067
+Info (332146): Worst-case setup slack is 10.749
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.067               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.250
+    Info (332119):    10.749               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.104
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.250               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.140
+    Info (332119):     0.104               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.260
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.140               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.897
+    Info (332119):    15.260               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.911
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.897               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.803
+    Info (332119):     0.911               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.827
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.803               0.000 altera_reserved_tck 
+    Info (332119):    15.827               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1086,7 +1116,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 62.390 ns
+    Info (332114): Worst Case Available Settling Time: 62.460 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -1096,42 +1126,42 @@ Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK is being clocked by clk
-Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|BSC[2] is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
-Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
-Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[3]~DUPLICATE is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+    Info (13166): Register nios_system:u0|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|W_alu_result[7] is being clocked by clk
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8]~DUPLICATE is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
+    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[3] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[1] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan|buffer_new:buff|m[8][7] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
+Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|char_sent is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
 Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register serial_out:ser_out|serial_buffer:parallel_to_serial|bit_out is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK
 Warning (332060): Node: rst was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch serial_out:ser_out|serial_buffer:parallel_to_serial|bitShift[1]~5 is being clocked by rst
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.040
+Info (332146): Worst-case setup slack is 13.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.040               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.087
+    Info (332119):    13.151               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.087               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 15.105
+    Info (332119):     0.022               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 16.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.105               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.479
+    Info (332119):    16.022               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.479               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.755
+    Info (332119):     0.487               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.788
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.755               0.000 altera_reserved_tck 
+    Info (332119):    15.788               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1139,7 +1169,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 63.650 ns
+    Info (332114): Worst Case Available Settling Time: 63.724 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -1147,42 +1177,42 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
 Info: Analyzing Fast 1100mV 0C Model
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK is being clocked by clk
-Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|BSC[2] is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
-Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
-Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[3]~DUPLICATE is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+    Info (13166): Register nios_system:u0|nios_system_nios2_gen2_0:nios2_gen2_0|nios_system_nios2_gen2_0_cpu:cpu|W_alu_result[7] is being clocked by clk
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8]~DUPLICATE is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
+    Info (13166): Register serial_in:ser_in|parallel_buffer:SR|bitShift[8] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|SR_CLK
 Warning (332060): Node: serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[3] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+    Info (13166): Register serial_in:ser_in|serial_in_ctrl:SR_ctrl|BSC[1] is being clocked by serial_in:ser_in|serial_in_ctrl:SR_ctrl|tBase[7]
+Warning (332060): Node: top:top|scanner:scan|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan|buffer_new:buff|m[8][7] is being clocked by top:top|scanner:scan|buffer_new:buff|wr_en_edge
+Warning (332060): Node: top:top|scanner:scan2|buffer_new:buff|wr_en_edge was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register top:top|scanner:scan2|buffer_new:buff|address[0] is being clocked by top:top|scanner:scan2|buffer_new:buff|wr_en_edge
+Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register serial_out:ser_out|serial_out_ctrl:serial_ctrl|char_sent is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|tBase[7]
 Warning (332060): Node: serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register serial_out:ser_out|serial_buffer:parallel_to_serial|bit_out is being clocked by serial_out:ser_out|serial_out_ctrl:serial_ctrl|SR_CLK
 Warning (332060): Node: rst was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch serial_out:ser_out|serial_buffer:parallel_to_serial|bitShift[1]~5 is being clocked by rst
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.341
+Info (332146): Worst-case setup slack is 13.535
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.341               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.070
+    Info (332119):    13.535               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.070               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 15.323
+    Info (332119):     0.010               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 16.108
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.323               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.424
+    Info (332119):    16.108               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.427
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.424               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.778
+    Info (332119):     0.427               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.811
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.778               0.000 altera_reserved_tck 
+    Info (332119):    15.811               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1190,7 +1220,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 63.866 ns
+    Info (332114): Worst Case Available Settling Time: 63.930 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -1199,9 +1229,9 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 1317 megabytes
-    Info: Processing ended: Sun Dec 04 17:05:18 2016
+    Info: Peak virtual memory: 1319 megabytes
+    Info: Processing ended: Wed Dec 07 16:22:33 2016
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 

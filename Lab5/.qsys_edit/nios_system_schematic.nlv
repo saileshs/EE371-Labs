@@ -1,45 +1,59 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst nios_system.nios2_gen2_0 -pg 1 -lvl 2 -y 130
-preplace inst nios_system.cpu_data_in_0 -pg 1 -lvl 3 -y 590
-preplace inst nios_system.wr_en1 -pg 1 -lvl 3 -y 990
-preplace inst nios_system.jtag_uart_0 -pg 1 -lvl 3 -y 210
-preplace inst nios_system.cpu_data_in_1 -pg 1 -lvl 3 -y 690
-preplace inst nios_system.wr_en2 -pg 1 -lvl 3 -y 1490
+preplace inst nios_system.nios2_gen2_0 -pg 1 -lvl 2 -y 520
+preplace inst nios_system.led_data -pg 1 -lvl 3 -y 230
+preplace inst nios_system.cpu_data_in_0 -pg 1 -lvl 3 -y 890
+preplace inst nios_system.wr_en1 -pg 1 -lvl 3 -y 1590
+preplace inst nios_system.jtag_uart_0 -pg 1 -lvl 3 -y 510
+preplace inst nios_system.cpu_data_in_1 -pg 1 -lvl 3 -y 990
+preplace inst nios_system.wr_en2 -pg 1 -lvl 3 -y 2170
 preplace inst nios_system.nios2_gen2_0.clock_bridge -pg 1
 preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst nios_system.ready_to_transfer_in_0 -pg 1 -lvl 3 -y 890
-preplace inst nios_system.cpu_data_out_0 -pg 1 -lvl 3 -y 790
-preplace inst nios_system.ready_to_transfer_in_1 -pg 1 -lvl 3 -y 1090
-preplace inst nios_system.onchip_memory2_0 -pg 1 -lvl 3 -y 130
-preplace inst nios_system.cpu_data_out_1 -pg 1 -lvl 3 -y 1390
-preplace inst nios_system.sysid_qsys_0 -pg 1 -lvl 3 -y 510
-preplace inst nios_system.start_scanning -pg 1 -lvl 3 -y 1190
-preplace inst nios_system.start_transfer -pg 1 -lvl 3 -y 1290
+preplace inst nios_system.ready_to_transfer_in_0 -pg 1 -lvl 3 -y 1490
+preplace inst nios_system.load -pg 1 -lvl 3 -y 1190
+preplace inst nios_system.cpu_data_out_0 -pg 1 -lvl 3 -y 1090
+preplace inst nios_system.ready_to_transfer_in_1 -pg 1 -lvl 3 -y 1690
+preplace inst nios_system.onchip_memory2_0 -pg 1 -lvl 3 -y 430
+preplace inst nios_system.net_data_in -pg 1 -lvl 3 -y 1290
+preplace inst nios_system.cpu_data_out_1 -pg 1 -lvl 3 -y 2070
+preplace inst nios_system.sysid_qsys_0 -pg 1 -lvl 3 -y 810
+preplace inst nios_system.Transmit_enable -pg 1 -lvl 3 -y 2270
+preplace inst nios_system.start_scanning -pg 1 -lvl 3 -y 1870
+preplace inst nios_system.char_sent -pg 1 -lvl 3 -y 130
+preplace inst nios_system.start_transfer -pg 1 -lvl 3 -y 1970
+preplace inst nios_system.net_data_out -pg 1 -lvl 3 -y 1390
 preplace inst nios_system.nios2_gen2_0.cpu -pg 1
-preplace inst nios_system.scanner_rst -pg 1 -lvl 3 -y 310
-preplace inst nios_system.read_inc1 -pg 1 -lvl 3 -y 30
-preplace inst nios_system.read_inc2 -pg 1 -lvl 3 -y 410
+preplace inst nios_system.scanner_rst -pg 1 -lvl 3 -y 610
+preplace inst nios_system.read_inc1 -pg 1 -lvl 3 -y 330
+preplace inst nios_system.char_received -pg 1 -lvl 3 -y 30
+preplace inst nios_system.read_inc2 -pg 1 -lvl 3 -y 710
 preplace inst nios_system.nios2_gen2_0.reset_bridge -pg 1
-preplace inst nios_system.clk_0 -pg 1 -lvl 1 -y 150
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)wr_en2.external_connection,(SLAVE)nios_system.wr_en2_external_connection) 1 0 3 NJ 1520 NJ 1520 NJ
+preplace inst nios_system.clk_0 -pg 1 -lvl 1 -y 550
 preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1,(SLAVE)ready_to_transfer_in_1.s1,(SLAVE)start_scanning.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)cpu_data_in_1.s1,(SLAVE)cpu_data_in_0.s1,(SLAVE)read_inc1.s1,(SLAVE)ready_to_transfer_in_0.s1,(SLAVE)start_transfer.s1,(SLAVE)wr_en1.s1,(SLAVE)cpu_data_out_1.s1,(SLAVE)wr_en2.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)cpu_data_out_0.s1,(SLAVE)scanner_rst.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)read_inc2.s1) 1 1 2 450 270 870
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.wr_en1_external_connection,(SLAVE)wr_en1.external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)read_inc1.external_connection,(SLAVE)nios_system.read_inc1_external_connection) 1 0 3 NJ 50 NJ 50 NJ
-preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)nios2_gen2_0.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)ready_to_transfer_in_1.reset,(SLAVE)read_inc2.reset,(SLAVE)read_inc1.reset,(SLAVE)wr_en2.reset,(SLAVE)cpu_data_out_0.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)start_transfer.reset,(MASTER)clk_0.clk_reset,(SLAVE)wr_en1.reset,(SLAVE)ready_to_transfer_in_0.reset,(SLAVE)cpu_data_out_1.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)cpu_data_in_0.reset,(SLAVE)scanner_rst.reset,(SLAVE)cpu_data_in_1.reset,(SLAVE)start_scanning.reset,(SLAVE)onchip_memory2_0.reset1) 1 1 2 430 90 850
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_out_0.external_connection,(SLAVE)nios_system.cpu_data_out_0_external_connection) 1 0 3 NJ 820 NJ 820 NJ
-preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)sysid_qsys_0.clk,(MASTER)clk_0.clk,(SLAVE)wr_en1.clk,(SLAVE)wr_en2.clk,(SLAVE)cpu_data_in_1.clk,(SLAVE)ready_to_transfer_in_1.clk,(SLAVE)start_scanning.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)cpu_data_in_0.clk,(SLAVE)start_transfer.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)cpu_data_out_1.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)read_inc2.clk,(SLAVE)ready_to_transfer_in_0.clk,(SLAVE)scanner_rst.clk,(SLAVE)read_inc1.clk,(SLAVE)cpu_data_out_0.clk) 1 1 2 410 70 830
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.ready_to_transfer_in_1_external_connection,(SLAVE)ready_to_transfer_in_1.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)ready_to_transfer_in_0.external_connection,(SLAVE)nios_system.ready_to_transfer_in_0_external_connection) 1 0 3 NJ 920 NJ 920 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)read_inc2.external_connection,(SLAVE)nios_system.read_inc2_external_connection) 1 0 3 NJ 440 NJ 440 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_out_1.external_connection,(SLAVE)nios_system.cpu_data_out_1_external_connection) 1 0 3 NJ 1420 NJ 1420 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.start_transfer_external_connection,(SLAVE)start_transfer.external_connection) 1 0 3 NJ 1320 NJ 1320 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)scanner_rst.external_connection,(SLAVE)nios_system.scanner_rst_external_connection) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_in_0.external_connection,(SLAVE)nios_system.cpu_data_in_0_external_connection) 1 0 3 NJ 620 NJ 620 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.cpu_data_in_1_external_connection,(SLAVE)cpu_data_in_1.external_connection) 1 0 3 NJ 720 NJ 720 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)start_scanning.external_connection,(SLAVE)nios_system.start_scanning_external_connection) 1 0 3 NJ 1220 NJ 1220 NJ
-preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)nios_system.clk) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 810
-levelinfo -pg 1 0 200 1090
-levelinfo -hier nios_system 210 240 570 920 1080
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.read_inc1_external_connection,(SLAVE)read_inc1.external_connection) 1 0 3 NJ 680 NJ 680 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.scanner_rst_external_connection,(SLAVE)scanner_rst.external_connection) 1 0 3 NJ 720 NJ 720 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)wr_en1.external_connection,(SLAVE)nios_system.wr_en1_external_connection) 1 0 3 NJ 1540 NJ 1540 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_out_0.external_connection,(SLAVE)nios_system.cpu_data_out_0_external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)char_received.external_connection,(SLAVE)nios_system.char_received_external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.ready_to_transfer_in_1_external_connection,(SLAVE)ready_to_transfer_in_1.external_connection) 1 0 3 NJ 1720 NJ 1720 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)onchip_memory2_0.s1,(SLAVE)char_received.s1,(SLAVE)cpu_data_in_0.s1,(SLAVE)cpu_data_out_0.s1,(SLAVE)read_inc1.s1,(SLAVE)Transmit_enable.s1,(SLAVE)led_data.s1,(SLAVE)net_data_in.s1,(SLAVE)wr_en1.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)read_inc2.s1,(SLAVE)cpu_data_in_1.s1,(SLAVE)ready_to_transfer_in_1.s1,(SLAVE)scanner_rst.s1,(SLAVE)ready_to_transfer_in_0.s1,(SLAVE)wr_en2.s1,(MASTER)nios2_gen2_0.instruction_master,(MASTER)nios2_gen2_0.data_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)net_data_out.s1,(SLAVE)start_transfer.s1,(SLAVE)char_sent.s1,(SLAVE)load.s1,(SLAVE)start_scanning.s1,(SLAVE)cpu_data_out_1.s1) 1 1 2 430 700 870
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.start_scanning_external_connection,(SLAVE)start_scanning.external_connection) 1 0 3 NJ 1740 NJ 1740 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.net_data_out_external_connection,(SLAVE)net_data_out.external_connection) 1 0 3 NJ 1420 NJ 1420 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.load_external_connection,(SLAVE)load.external_connection) 1 0 3 NJ 1220 NJ 1220 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)char_sent.external_connection,(SLAVE)nios_system.char_sent_external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.wr_en2_external_connection,(SLAVE)wr_en2.external_connection) 1 0 3 NJ 2200 NJ 2200 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)ready_to_transfer_in_0.external_connection,(SLAVE)nios_system.ready_to_transfer_in_0_external_connection) 1 0 3 NJ 1520 NJ 1520 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)read_inc2.external_connection,(SLAVE)nios_system.read_inc2_external_connection) 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_out_1.external_connection,(SLAVE)nios_system.cpu_data_out_1_external_connection) 1 0 3 NJ 2100 NJ 2100 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_in_1.external_connection,(SLAVE)nios_system.cpu_data_in_1_external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.start_transfer_external_connection,(SLAVE)start_transfer.external_connection) 1 0 3 NJ 2000 NJ 2000 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.net_data_in_external_connection,(SLAVE)net_data_in.external_connection) 1 0 3 NJ 1320 NJ 1320 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)led_data.external_connection,(SLAVE)nios_system.led_data_external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)cpu_data_in_0.external_connection,(SLAVE)nios_system.cpu_data_in_0_external_connection) 1 0 3 NJ 920 NJ 920 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.transmit_enable_external_connection,(SLAVE)Transmit_enable.external_connection) 1 0 3 NJ 2300 NJ 2300 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)cpu_data_in_1.reset,(SLAVE)cpu_data_out_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)char_sent.reset,(SLAVE)start_transfer.reset,(SLAVE)read_inc1.reset,(SLAVE)ready_to_transfer_in_0.reset,(SLAVE)wr_en1.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)net_data_out.reset,(SLAVE)Transmit_enable.reset,(SLAVE)cpu_data_in_0.reset,(SLAVE)char_received.reset,(SLAVE)ready_to_transfer_in_1.reset,(SLAVE)scanner_rst.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)cpu_data_out_1.reset,(SLAVE)start_scanning.reset,(SLAVE)read_inc2.reset,(SLAVE)led_data.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)net_data_in.reset,(SLAVE)wr_en2.reset,(SLAVE)load.reset,(SLAVE)sysid_qsys_0.reset) 1 1 2 410 660 910
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 930
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)cpu_data_in_1.clk,(SLAVE)scanner_rst.clk,(SLAVE)cpu_data_in_0.clk,(SLAVE)net_data_in.clk,(SLAVE)char_received.clk,(SLAVE)char_sent.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)wr_en2.clk,(SLAVE)read_inc1.clk,(SLAVE)led_data.clk,(SLAVE)load.clk,(SLAVE)ready_to_transfer_in_0.clk,(SLAVE)cpu_data_out_1.clk,(SLAVE)ready_to_transfer_in_1.clk,(SLAVE)cpu_data_out_0.clk,(SLAVE)start_transfer.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)read_inc2.clk,(SLAVE)start_scanning.clk,(SLAVE)net_data_out.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)wr_en1.clk,(SLAVE)onchip_memory2_0.clk1,(MASTER)clk_0.clk,(SLAVE)Transmit_enable.clk) 1 1 2 410 480 850
+levelinfo -pg 1 0 200 1150
+levelinfo -hier nios_system 210 240 570 980 1140

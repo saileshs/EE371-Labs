@@ -1,7 +1,19 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\nios_system.qsys --block-symbol-file --output-directory=C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\nios_system --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\nios_system.qsys --block-symbol-file --output-directory=C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\nios_system --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Lab5/nios_system.qsys
 Progress: Reading input file
+Progress: Adding Ready_transfer_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Ready_transfer_receive
+Progress: Adding Ready_transfer_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Ready_transfer_send
+Progress: Adding Start_scan_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Start_scan_receive
+Progress: Adding Start_scan_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Start_scan_send
+Progress: Adding Transfer_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Transfer_receive
+Progress: Adding Transfer_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Transfer_send
 Progress: Adding Transmit_enable [altera_avalon_pio 16.0]
 Progress: Parameterizing module Transmit_enable
 Progress: Adding char_received [altera_avalon_pio 16.0]
@@ -56,6 +68,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: nios_system.Ready_transfer_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios_system.Start_scan_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios_system.Transfer_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.char_received: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.char_sent: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.cpu_data_in_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
@@ -70,9 +85,21 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\nios_system.qsys --synthesis=VERILOG --output-directory=C:\Users\zhangw24\Desktop\EE371-Labs\Lab5\nios_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\nios_system.qsys --synthesis=VERILOG --output-directory=C:\Users\fanyaw\Desktop\EE371-Labs\Lab5\nios_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Lab5/nios_system.qsys
 Progress: Reading input file
+Progress: Adding Ready_transfer_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Ready_transfer_receive
+Progress: Adding Ready_transfer_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Ready_transfer_send
+Progress: Adding Start_scan_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Start_scan_receive
+Progress: Adding Start_scan_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Start_scan_send
+Progress: Adding Transfer_receive [altera_avalon_pio 16.0]
+Progress: Parameterizing module Transfer_receive
+Progress: Adding Transfer_send [altera_avalon_pio 16.0]
+Progress: Parameterizing module Transfer_send
 Progress: Adding Transmit_enable [altera_avalon_pio 16.0]
 Progress: Parameterizing module Transmit_enable
 Progress: Adding char_received [altera_avalon_pio 16.0]
@@ -127,6 +154,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
+Info: nios_system.Ready_transfer_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios_system.Start_scan_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios_system.Transfer_receive: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.char_received: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.char_sent: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: nios_system.cpu_data_in_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
@@ -138,29 +168,29 @@ Info: nios_system.ready_to_transfer_in_1: PIO inputs are not hardwired in test b
 Info: nios_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: nios_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
 Info: nios_system: Generating nios_system "nios_system" for QUARTUS_SYNTH
-Info: Transmit_enable: Starting RTL generation for module 'nios_system_Transmit_enable'
-Info: Transmit_enable:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_Transmit_enable --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0001_Transmit_enable_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0001_Transmit_enable_gen//nios_system_Transmit_enable_component_configuration.pl  --do_build_sim=0  ]
-Info: Transmit_enable: Done RTL generation for module 'nios_system_Transmit_enable'
-Info: Transmit_enable: "nios_system" instantiated altera_avalon_pio "Transmit_enable"
-Info: char_received: Starting RTL generation for module 'nios_system_char_received'
-Info: char_received:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_char_received --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0002_char_received_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0002_char_received_gen//nios_system_char_received_component_configuration.pl  --do_build_sim=0  ]
-Info: char_received: Done RTL generation for module 'nios_system_char_received'
-Info: char_received: "nios_system" instantiated altera_avalon_pio "char_received"
+Info: Ready_transfer_receive: Starting RTL generation for module 'nios_system_Ready_transfer_receive'
+Info: Ready_transfer_receive:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_Ready_transfer_receive --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0001_Ready_transfer_receive_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0001_Ready_transfer_receive_gen//nios_system_Ready_transfer_receive_component_configuration.pl  --do_build_sim=0  ]
+Info: Ready_transfer_receive: Done RTL generation for module 'nios_system_Ready_transfer_receive'
+Info: Ready_transfer_receive: "nios_system" instantiated altera_avalon_pio "Ready_transfer_receive"
+Info: Ready_transfer_send: Starting RTL generation for module 'nios_system_Ready_transfer_send'
+Info: Ready_transfer_send:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_Ready_transfer_send --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0002_Ready_transfer_send_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0002_Ready_transfer_send_gen//nios_system_Ready_transfer_send_component_configuration.pl  --do_build_sim=0  ]
+Info: Ready_transfer_send: Done RTL generation for module 'nios_system_Ready_transfer_send'
+Info: Ready_transfer_send: "nios_system" instantiated altera_avalon_pio "Ready_transfer_send"
 Info: cpu_data_in_0: Starting RTL generation for module 'nios_system_cpu_data_in_0'
-Info: cpu_data_in_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_cpu_data_in_0 --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0003_cpu_data_in_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0003_cpu_data_in_0_gen//nios_system_cpu_data_in_0_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu_data_in_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_cpu_data_in_0 --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0003_cpu_data_in_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0003_cpu_data_in_0_gen//nios_system_cpu_data_in_0_component_configuration.pl  --do_build_sim=0  ]
 Info: cpu_data_in_0: Done RTL generation for module 'nios_system_cpu_data_in_0'
 Info: cpu_data_in_0: "nios_system" instantiated altera_avalon_pio "cpu_data_in_0"
 Info: cpu_data_out_0: Starting RTL generation for module 'nios_system_cpu_data_out_0'
-Info: cpu_data_out_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_cpu_data_out_0 --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0004_cpu_data_out_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0004_cpu_data_out_0_gen//nios_system_cpu_data_out_0_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu_data_out_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_cpu_data_out_0 --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0004_cpu_data_out_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0004_cpu_data_out_0_gen//nios_system_cpu_data_out_0_component_configuration.pl  --do_build_sim=0  ]
 Info: cpu_data_out_0: Done RTL generation for module 'nios_system_cpu_data_out_0'
 Info: cpu_data_out_0: "nios_system" instantiated altera_avalon_pio "cpu_data_out_0"
 Info: jtag_uart_0: Starting RTL generation for module 'nios_system_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_system_jtag_uart_0 --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0005_jtag_uart_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0005_jtag_uart_0_gen//nios_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_system_jtag_uart_0 --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0005_jtag_uart_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0005_jtag_uart_0_gen//nios_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'nios_system_jtag_uart_0'
 Info: jtag_uart_0: "nios_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "nios_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'nios_system_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_system_onchip_memory2_0 --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0006_onchip_memory2_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0006_onchip_memory2_0_gen//nios_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/altera/16.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/16.0/quartus/bin64/perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_system_onchip_memory2_0 --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0006_onchip_memory2_0_gen/ --quartus_dir=C:/altera/16.0/quartus --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0006_onchip_memory2_0_gen//nios_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'nios_system_onchip_memory2_0'
 Info: onchip_memory2_0: "nios_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: sysid_qsys_0: "nios_system" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
@@ -188,22 +218,28 @@ Info: avalon_st_adapter_020: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_021: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_022: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_023: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_024: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_025: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_026: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_027: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_028: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_029: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "nios_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "nios_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "nios_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'nios_system_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/altera/16.0/quartus/bin64//eperlcmd.exe -I C:/altera/16.0/quartus/bin64//perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_system_nios2_gen2_0_cpu --dir=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0010_cpu_gen/ --quartus_bindir=C:/altera/16.0/quartus/bin64/ --verilog --config=C:/Users/zhangw24/AppData/Local/Temp/alt7140_7698139346147544920.dir/0010_cpu_gen//nios_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2016.12.04 16:40:21 (*) Starting Nios II generation
-Info: cpu: # 2016.12.04 16:40:21 (*)   Checking for plaintext license.
-Info: cpu: # 2016.12.04 16:40:21 (*)   Couldn't query license setup in Quartus directory C:/altera/16.0/quartus/bin64/
-Info: cpu: # 2016.12.04 16:40:21 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2016.12.04 16:40:22 (*)   Plaintext license not found.
-Info: cpu: # 2016.12.04 16:40:22 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2016.12.04 16:40:22 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2016.12.04 16:40:22 (*)   Creating all objects for CPU
-Info: cpu: # 2016.12.04 16:40:23 (*)   Generating RTL from CPU objects
-Info: cpu: # 2016.12.04 16:40:23 (*)   Creating plain-text RTL
-Info: cpu: # 2016.12.04 16:40:24 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/altera/16.0/quartus/bin64//eperlcmd.exe -I C:/altera/16.0/quartus/bin64//perl/lib -I C:/altera/16.0/quartus/sopc_builder/bin/europa -I C:/altera/16.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/16.0/quartus/sopc_builder/bin -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/altera/16.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_system_nios2_gen2_0_cpu --dir=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0010_cpu_gen/ --quartus_bindir=C:/altera/16.0/quartus/bin64/ --verilog --config=C:/Users/fanyaw/AppData/Local/Temp/alt7142_1304433449621578748.dir/0010_cpu_gen//nios_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2016.12.07 15:03:28 (*) Starting Nios II generation
+Info: cpu: # 2016.12.07 15:03:28 (*)   Checking for plaintext license.
+Info: cpu: # 2016.12.07 15:03:29 (*)   Couldn't query license setup in Quartus directory C:/altera/16.0/quartus/bin64/
+Info: cpu: # 2016.12.07 15:03:29 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2016.12.07 15:03:29 (*)   Plaintext license not found.
+Info: cpu: # 2016.12.07 15:03:29 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2016.12.07 15:03:29 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2016.12.07 15:03:29 (*)   Creating all objects for CPU
+Info: cpu: # 2016.12.07 15:03:30 (*)   Generating RTL from CPU objects
+Info: cpu: # 2016.12.07 15:03:30 (*)   Creating plain-text RTL
+Info: cpu: # 2016.12.07 15:03:31 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'nios_system_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -219,12 +255,12 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file C:/Users/zhangw24/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/fanyaw/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/zhangw24/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/fanyaw/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/Users/zhangw24/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/fanyaw/Desktop/EE371-Labs/Lab5/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: nios_system: Done "nios_system" with 31 modules, 44 files
