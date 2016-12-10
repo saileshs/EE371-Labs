@@ -1,10 +1,10 @@
 /*
  * linker.x - Linker script
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'cpu'
- * SOPC Builder design path: ../../cpu.sopcinfo
+ * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
+ * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Mon Nov 21 12:58:22 PST 2016
+ * Generated: Wed Dec 07 17:57:57 PST 2016
  */
 
 /*
@@ -51,11 +51,11 @@
 MEMORY
 {
     reset : ORIGIN = 0x8000, LENGTH = 32
-    onchip_mem : ORIGIN = 0x8020, LENGTH = 20448
+    onchip_memory2_0 : ORIGIN = 0x8020, LENGTH = 20448
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_onchip_mem = 0x8000;
+__alt_mem_onchip_memory2_0 = 0x8000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -111,7 +111,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > onchip_mem
+    } > onchip_memory2_0
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
@@ -207,7 +207,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > onchip_mem = 0x3a880100 /* NOP instruction (always in big-endian byte ordering) */
+    } > onchip_memory2_0 = 0x3a880100 /* NOP instruction (always in big-endian byte ordering) */
 
     .rodata :
     {
@@ -217,7 +217,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > onchip_mem
+    } > onchip_memory2_0
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -251,7 +251,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > onchip_mem
+    } > onchip_memory2_0
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -282,7 +282,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > onchip_mem
+    } > onchip_memory2_0
 
     /*
      *
@@ -307,18 +307,18 @@ SECTIONS
      *
      */
 
-    .onchip_mem LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .onchip_memory2_0 LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
-        PROVIDE (_alt_partition_onchip_mem_start = ABSOLUTE(.));
-        *(.onchip_mem .onchip_mem. onchip_mem.*)
+        PROVIDE (_alt_partition_onchip_memory2_0_start = ABSOLUTE(.));
+        *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
         . = ALIGN(4);
-        PROVIDE (_alt_partition_onchip_mem_end = ABSOLUTE(.));
+        PROVIDE (_alt_partition_onchip_memory2_0_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
         end = ABSOLUTE(.);
         __alt_stack_base = ABSOLUTE(.);
-    } > onchip_mem
+    } > onchip_memory2_0
 
-    PROVIDE (_alt_partition_onchip_mem_load_addr = LOADADDR(.onchip_mem));
+    PROVIDE (_alt_partition_onchip_memory2_0_load_addr = LOADADDR(.onchip_memory2_0));
 
     /*
      * Stabs debugging sections.

@@ -3,9 +3,9 @@
 # This script creates the count_binary application in this directory.
 
 
-BSP_DIR=../count_binary_bsp
+BSP_DIR=../Count_Binary_bsp
 QUARTUS_PROJECT_DIR=../../
-NIOS2_APP_GEN_ARGS="--elf-name count_binary.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files count_binary.c"
+NIOS2_APP_GEN_ARGS="--elf-name Count_Binary.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files count_binary.c"
 
 
 # First, check to see if $SOPC_KIT_NIOS2 environmental variable is set.

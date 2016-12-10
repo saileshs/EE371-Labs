@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable>
+ <systemtable filter="All Interfaces">
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Processors and Peripherals/Co-Processors,Library/Processors and Peripherals/Embedded Processors,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library/Processors and Peripherals/Hard Processor Systems,Library/Processors and Peripherals/Inter-Process Communication,Library/Processors and Peripherals/Hard Processor Components,Library,Library/Basic Functions" />
+ <library expandedCategories="Library,Project" />
  <window width="1936" height="1176" x="-8" y="-8" />
- <clocktable>
-  <columns>
-   <clockname preferredWidth="471" />
-   <clocksource preferredWidth="470" />
-   <frequency preferredWidth="452" />
-  </columns>
- </clocktable>
- <generation testbench_system="NONE" block_symbol_file="0" />
+ <generation block_symbol_file="1" />
  <hdlexample language="VERILOG" />
 </preferences>

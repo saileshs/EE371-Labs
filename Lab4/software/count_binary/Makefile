@@ -139,7 +139,7 @@ ACDS_VERSION := 16.0
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := count_binary.elf
+ELF := Count_Binary.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS := count_binary.c
@@ -177,7 +177,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := ../count_binary_bsp/
+BSP_ROOT_DIR := ../Count_Binary_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=

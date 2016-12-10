@@ -1,10 +1,10 @@
 /*
  * linker.h - Linker script mapping information
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'cpu'
- * SOPC Builder design path: ../../cpu.sopcinfo
+ * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
+ * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Mon Nov 21 12:58:22 PST 2016
+ * Generated: Wed Dec 07 17:57:57 PST 2016
  */
 
 /*
@@ -65,8 +65,8 @@
  *
  */
 
-#define ONCHIP_MEM_REGION_BASE 0x8020
-#define ONCHIP_MEM_REGION_SPAN 20448
+#define ONCHIP_MEMORY2_0_REGION_BASE 0x8020
+#define ONCHIP_MEMORY2_0_REGION_SPAN 20448
 #define RESET_REGION_BASE 0x8000
 #define RESET_REGION_SPAN 32
 
@@ -76,11 +76,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM
-#define ALT_RESET_DEVICE ONCHIP_MEM
-#define ALT_RODATA_DEVICE ONCHIP_MEM
-#define ALT_RWDATA_DEVICE ONCHIP_MEM
-#define ALT_TEXT_DEVICE ONCHIP_MEM
+#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RESET_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RODATA_DEVICE ONCHIP_MEMORY2_0
+#define ALT_RWDATA_DEVICE ONCHIP_MEMORY2_0
+#define ALT_TEXT_DEVICE ONCHIP_MEMORY2_0
 
 
 /*

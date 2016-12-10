@@ -23,6 +23,10 @@ module scanner_testbench();
 		#delay;
 		rst = 1'b1;
 		#delay;
+		go_to_standby = 1;
+		#delay;
+		go_to_standby = 0;
+		#delay;
 		start_scan = 1'b1;
 		#delay;
 		start_scan = 1'b0;
@@ -45,6 +49,22 @@ module scanner_testbench();
 			#delay;
 			read_inc = 0;
 		end
+		#delay
+		start_scan = 1'b1;
+		#delay;
+		start_scan = 1'b0;
+		for (i = 0; i < 10; i=i+1) begin
+			#delay;
+			wr_en = 1'b1;
+			#delay;
+			wr_en = 1'b0;
+			#delay;
+			data_in = data_in + 1;
+		end
+		#delay
+		flush_signal = 1;
+		#delay
+		flush_signal = 0;
 			
 		#stimdelay;
 		$finish;
